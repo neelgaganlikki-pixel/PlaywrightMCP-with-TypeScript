@@ -1,0 +1,17 @@
+Generate a Playwright test for the following scenario:
+
+1. Login to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login with username "Admin" and password "admin123"
+
+2. Click on the "Admin" tab in the left navigation and click on Add button
+
+3.Under User 
+    -Role Select 'ESS'.
+    -Employer Name 'auto_manda_29746 akhil user'.
+    -Status 'Enabled'.
+    -Username 'Neelgagan'.
+    -Password '@Neelgagan17'.  
+    -Confirm Password '@Neelgagan17'.
+
+4. Click on Save button.
+
+5. Verify success Message.

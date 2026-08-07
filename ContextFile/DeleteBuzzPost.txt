@@ -1,0 +1,9 @@
+Generate a Playwright test for the following scenario:
+
+1. Login to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login with username "Admin" and password "admin123"
+
+2. Click on the "Buzz" tab in the left navigation.
+
+3. Under "Most Recent Post" delete the first post.
+
+4. Verify success Message.
