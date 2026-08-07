@@ -1,24 +1,31 @@
 pipeline {
     agent any
 
-   tools {
-    nodejs 'NodeJS-24'
-}
+    tools {
+        nodejs 'NodeJS-24'
+    }
 
     stages {
-        stage('Install Dependencies') {
+
+        stage('Checkout') {
             steps {
-                bat 'npm install'
+                checkout scm
             }
         }
 
-        stage('Install Playwright') {
+        stage('Install Dependencies') {
+            steps {
+                bat 'npm ci'
+            }
+        }
+
+        stage('Install Playwright Browsers') {
             steps {
                 bat 'npx playwright install'
             }
         }
 
-        stage('Run Tests') {
+        stage('Run Playwright Tests') {
             steps {
                 bat 'npx playwright test'
             }
@@ -33,8 +40,12 @@ pipeline {
                 keepAll: true,
                 reportDir: 'playwright-report',
                 reportFiles: 'index.html',
-                reportName: 'Playwright Report'
+                reportName: 'Playwright HTML Report'
             ])
+
+            archiveArtifacts artifacts: 'playwright-report/**', fingerprint: true
+
+            archiveArtifacts artifacts: 'test-results/**', allowEmptyArchive: true
         }
     }
 }
