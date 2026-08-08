@@ -1,27 +1,19 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'NodeJS-24'
+    triggers {
+        // Run every day at 6:00 PM
+        cron('0 18 * * *')
+
+        // Run whenever code is pushed to GitHub
+        githubPush()
     }
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 bat 'npm ci'
-            }
-        }
-
-        stage('Install Playwright Browsers') {
-            steps {
-                bat 'npx playwright install'
             }
         }
 
@@ -34,18 +26,24 @@ pipeline {
 
     post {
         always {
-            publishHTML([
-                allowMissing: true,
-                alwaysLinkToLastBuild: true,
-                keepAll: true,
-                reportDir: 'playwright-report',
-                reportFiles: 'index.html',
-                reportName: 'Playwright HTML Report'
-            ])
+            emailext(
+                subject: "Playwright Test Report - Build #${BUILD_NUMBER} - ${currentBuild.currentResult}",
+                body: """
+Hello Neel,
 
-            archiveArtifacts artifacts: 'playwright-report/**', fingerprint: true
+Playwright automation execution is completed.
 
-            archiveArtifacts artifacts: 'test-results/**', allowEmptyArchive: true
+Build Number: ${BUILD_NUMBER}
+Build Status: ${currentBuild.currentResult}
+
+Jenkins Build:
+${BUILD_URL}
+
+Regards,
+Jenkins
+                """,
+                to: 'neelgaganat97@gmail.com'
+            )
         }
     }
 }
