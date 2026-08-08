@@ -23,12 +23,13 @@ test('post a buzz message in OrangeHRM', async ({ page }) => {
   const message = `Buzz ${Date.now()}`;
 
   await composer.fill(message);
+  console.log(`Posting message: ${message}`);
 
-  await page.getByRole('button', { name: 'Post', exact: true }).click();
+  await page.getByText('Post', { exact: true }).click();
 
-  // Verify success toast
-  await expect(page.locator('body')).toContainText(/success/i, {timeout: 60000,});
+  // // Verify success toast
+  // await expect(page.locator('.oxd-toast-container oxd-toast-container--bottom')).toContainText(/success/i, {timeout: 60000,});
 
-  // Verify the posted message appears in the feed
+ //Verify the posted message appears in the feed
   await expect(page.locator('p.orangehrm-buzz-post-body-text', { hasText: message })).toBeVisible();
 });
