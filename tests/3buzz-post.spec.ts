@@ -28,22 +28,37 @@ test('post a buzz message in OrangeHRM', async ({ page }) => {
   });
 
   // Generate a unique message for every test run
-  const message = `Buzz ${Date.now()}`;
+  // Generate a unique message for every test run
+const message = `Buzz ${Date.now()}`;
 
-  await composer.fill(message);
+await composer.fill(message);
 
-  console.log(`Posting message: ${message}`);
+console.log(`Posting message: ${message}`);
 
-  // Wait 3 seconds after entering the message
-  await page.waitForTimeout(3000);
+// Wait 3 seconds after entering the message
+await page.waitForTimeout(3000);
 
-  // Click Post
-  await page.getByText('Post', { exact: true }).click();
+// Locate the actual Post button
+const postButton = page.getByRole('button', {
+  name: 'Post',
+  exact: true
+});
 
-  // Verify the posted message appears in the feed
-  await expect(
-    page.locator('p.orangehrm-buzz-post-body-text', {
-      hasText: message
-    })
-  ).toBeVisible();
+// Make sure Post button is available
+await expect(postButton).toBeVisible({ timeout: 20000 });
+await expect(postButton).toBeEnabled({ timeout: 20000 });
+
+// Click Post
+await postButton.click();
+
+// Wait for the posted message to appear
+const postedMessage = page
+  .locator('p.orangehrm-buzz-post-body-text')
+  .filter({ hasText: message });
+
+await expect(postedMessage).toBeVisible({
+  timeout: 30000
+});
+
+console.log(`Successfully verified: ${message}`);
 });
