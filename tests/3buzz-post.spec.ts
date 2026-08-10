@@ -28,12 +28,12 @@ await composer.fill(message);
 
 console.log(`Posting message: ${message}`);
 
-// Wait 4 seconds after entering the message
+// Wait 1 second after entering the message
 await page.waitForTimeout(1000);
 
 await expect(composer).toHaveValue(message, {timeout: 10000});
 
-  console.log('Message is still present in composer');
+console.log('Message is still present in composer');
 
 // Locate the actual Post button
 const postButton = page.getByRole('button', { name: 'Post', exact: true });
