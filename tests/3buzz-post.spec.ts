@@ -23,19 +23,24 @@ test('post a buzz message in OrangeHRM', async ({ page }) => {
   // Generate a unique message for every test run
 const message = `Buzz ${Date.now()}`;
 
+await composer.click();
 await composer.fill(message);
 
 console.log(`Posting message: ${message}`);
 
 // Wait 4 seconds after entering the message
-await page.waitForTimeout(4000);
+await page.waitForTimeout(1000);
+
+await expect(composer).toHaveValue(message, {timeout: 10000});
+
+  console.log('Message is still present in composer');
 
 // Locate the actual Post button
-const postButton = page.getByText('Post', { exact: true });
+const postButton = page.getByRole('button', { name: 'Post', exact: true });
 
 // Make sure Post button is available
 await expect(postButton).toBeVisible({ timeout: 20000 });
-
+await expect(postButton).toBeEnabled({ timeout: 20000 });
 // Click Post
 await postButton.click();
 
