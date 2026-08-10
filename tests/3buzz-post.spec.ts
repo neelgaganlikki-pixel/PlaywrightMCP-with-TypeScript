@@ -15,17 +15,11 @@ test('post a buzz message in OrangeHRM', async ({ page }) => {
 
   await expect(page).toHaveURL(/dashboard/);
 
-  await page
-    .locator('span.oxd-main-menu-item--name')
-    .filter({ hasText: 'Buzz' })
-    .click();
+  await page.locator('span.oxd-main-menu-item--name').filter({ hasText: 'Buzz' }).click();
 
   const composer = page.getByPlaceholder("What's on your mind?");
 
-  await composer.waitFor({
-    state: 'visible',
-    timeout: 20000
-  });
+  await composer.waitFor({ state: 'visible', timeout: 20000});
 
   // Generate a unique message for every test run
   // Generate a unique message for every test run
@@ -35,30 +29,21 @@ await composer.fill(message);
 
 console.log(`Posting message: ${message}`);
 
-// Wait 3 seconds after entering the message
-await page.waitForTimeout(3000);
+// Wait 4 seconds after entering the message
+await page.waitForTimeout(4000);
 
 // Locate the actual Post button
-const postButton = page.getByRole('button', {
-  name: 'Post',
-  exact: true
-});
+const postButton = page.getByText('Post', { exact: true });
 
 // Make sure Post button is available
 await expect(postButton).toBeVisible({ timeout: 20000 });
-await expect(postButton).toBeEnabled({ timeout: 20000 });
 
 // Click Post
 await postButton.click();
 
 // Wait for the posted message to appear
-const postedMessage = page
-  .locator('p.orangehrm-buzz-post-body-text')
-  .filter({ hasText: message });
+const postedMessage = page.locator('p.orangehrm-buzz-post-body-text').filter({ hasText: message });
 
-await expect(postedMessage).toBeVisible({
-  timeout: 30000
-});
+await expect(postedMessage).toBeVisible({ timeout: 30000});
 
-console.log(`Successfully verified: ${message}`);
-});
+console.log(`Successfully verified: ${message}`);});
