@@ -4,9 +4,7 @@ test.setTimeout(180000);
 
 test('post a buzz message in OrangeHRM', async ({ page }) => {
 
-  await page.goto(
-    'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'
-  );
+  await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 
   await page.getByPlaceholder('Username').fill('Admin');
   await page.getByPlaceholder('Password').fill('admin123');

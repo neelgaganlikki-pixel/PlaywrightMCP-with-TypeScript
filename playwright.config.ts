@@ -9,7 +9,7 @@ export default defineConfig({
     timeout: 5000,
   },
 
-  retries: 2, // Retry failed tests up to 2 times
+  retries: 0, // Retry failed tests up to 0 times
 
   workers: 1,
   fullyParallel: false,
