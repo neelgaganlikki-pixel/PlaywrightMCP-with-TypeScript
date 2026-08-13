@@ -1,0 +1,18 @@
+Generate a Playwright test for the following scenario:
+
+1. Login to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login with username "Admin" and password "admin123"
+
+2. Click on the "Recruitment" tab in the left navigation.
+
+3. Click on "Vacancies" button. 
+
+4. Click on "Add" button to add a new vacancy.
+
+5. Fill in the vacancy details:
+   - Vacancy Name: "Senior Software Test Engineer"
+   - Job Title: click on dropdown and select "Automation Tester"
+   - Hiring Manager: "krish M gandhi"
+   - Number of Positions: "3"
+   - Description: "We are looking for a skilled backend software engineer to join our team."
+
+6. Click on the "Save" button.

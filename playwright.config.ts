@@ -3,7 +3,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: 'tests',
 
-  timeout: 30000,
+  timeout: 40000,
 
   expect: {
     timeout: 5000,
@@ -11,7 +11,7 @@ export default defineConfig({
 
   retries: 2, // Retry failed tests up to 2 times
 
-  workers: 1,
+  workers: 2,
   fullyParallel: false,
 
   projects: [
@@ -26,7 +26,7 @@ export default defineConfig({
         screenshot: 'only-on-failure',
         trace: 'retain-on-failure',
         launchOptions: {
-          slowMo: 1000,
+          slowMo: 1500,
         },
       },
     },
