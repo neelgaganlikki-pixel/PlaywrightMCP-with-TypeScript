@@ -26,7 +26,7 @@ export default defineConfig({
         screenshot: 'only-on-failure',
         trace: 'retain-on-failure',
         launchOptions: {
-          slowMo:0,
+          slowMo:1000,
         },
       },
     },
