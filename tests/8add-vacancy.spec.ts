@@ -52,7 +52,7 @@
 
     console.log('Waiting for Job Title option...');
 
-    const jobTitleOption = page.getByRole('option', { name: 'Automaton Tester' });
+    const jobTitleOption = page.getByRole('option', { name: 'QA Engineer' });
 
     await expect(jobTitleOption).toBeVisible({ timeout: 15000 });
 
@@ -84,36 +84,44 @@
     
 
   // Click Save
-  console.log('Clicking Save button...');
-  await page.getByRole('button', { name: 'Save' }).click();
-  console.log('Save button clicked');
-  // await page.waitForTimeout(1000);
+const toastPromise = page.evaluate(() => {
+  return new Promise<string>((resolve) => {
+    const observer = new MutationObserver(() => {
+      const toast = document.querySelector(
+        '.oxd-toast-content.oxd-toast-content--success .oxd-toast-content-text'
+      );
 
-  const toast = page.locator('.oxd-toast');
-  console.log('Waiting for save operation...');
-  await page.waitForTimeout(1000);
+      if (toast) {
+        const text = toast.textContent?.trim() || '';
 
-  //New code to test if the vacancy was added successfully
-  console.log('Current URL after Save:', page.url());
+        if (text) {
+          observer.disconnect();
+          resolve(text);
+        }
+      }
+    });
 
-    console.log('Checking if toast is present...');
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  });
+});
 
-    const toastCount = await toast.count();
+console.log('Clicking Save...');
 
-    console.log('Toast count:', toastCount);
+await page.getByRole('button', { name: 'Save' }).click();
 
-    if (toastCount > 0) {
-      console.log('Toast found');
+console.log('Save button clicked');
 
-      const toastText = await toast.innerText();
+const message = await toastPromise;
 
-      console.log('Toast message:', toastText);
-    } else {
-      console.log('No toast found');
-    }
+console.log('================================');
+console.log('TOAST MESSAGE:', JSON.stringify(message));
+console.log('================================');
 
-    console.log('Current page title:', await page.title());
+expect(message).toMatch(/Successfully Saved|Success/i);
+console.log('message:', message);
 
-    console.log('Vacancy creation test completed');
-  // await expect(toast).toBeVisible({ timeout: 2000 });
+console.log('Toast message verified successfully');
   });
