@@ -9,9 +9,9 @@ export default defineConfig({
     timeout: 10000,
   },
 
-  retries: 2, // Retry failed tests up to 2 times
+  retries: 1, // Retry failed tests up to 2 times
 
-  workers: 2,
+  workers: 1,
   fullyParallel: false,
 
   projects: [

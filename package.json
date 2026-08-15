@@ -2,7 +2,8 @@
   "name": "playwright-mcp",
   "private": true,
   "devDependencies": {
-    "@playwright/test": "^1.43.0"
+    "@playwright/test": "^1.43.0",
+    "@types/node": "^26.2.0"
   },
   "scripts": {
     "test": "playwright test"

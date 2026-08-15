@@ -1,4 +1,6 @@
   import { test, expect } from '@playwright/test';
+
+  import * as fs from 'fs';
   test('add a new vacancy in OrangeHRM', async ({ page }) => {
     // Step 1: Login
     console.log('Step 1: Navigating to OrangeHRM login page...');
@@ -56,7 +58,7 @@
 
     await expect(jobTitleOption).toBeVisible({ timeout: 15000 });
 
-    console.log('Selecting Job Title: Automaton Tester...');
+    console.log('Selecting Job Title: QA Engineer...');
 
     await jobTitleOption.click();
 
@@ -124,4 +126,7 @@ expect(message).toMatch(/Successfully Saved|Success/i);
 console.log('message:', message);
 
 console.log('Toast message verified successfully');
+
+fs.writeFileSync('tests/vacancy-name.txt', uniqueVacancyName);
+console.log('Vacancy name saved:', uniqueVacancyName);
   });

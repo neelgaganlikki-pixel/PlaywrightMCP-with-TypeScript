@@ -1,0 +1,25 @@
+Generate a Playwright test for the following scenario:
+
+1. Login to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login with username "Admin" and password "admin123"
+
+2. Click on the "Recruitment" tab in the left navigation.
+
+3. Click on the "Vacancies" button.
+
+4. Locate the vacancy that was created by the previous test case. The vacancy name starts with "Senior Software Test Engineer" followed by a unique timestamp.
+
+5. Identify the exact vacancy row using the complete vacancy name.
+
+6. Click the delete button only for that specific vacancy row.
+
+7. In the confirmation popup, click on the "Yes, Delete" button.
+
+8. Verify that the specific vacancy has been successfully deleted and is no longer displayed in the vacancies list.
+
+9. Do not delete any other vacancies.
+
+10. Add appropriate Playwright assertions and waits to ensure the test is stable in both headed and headless modes.
+
+11. Add console.log() statements for every major step so the test execution can be easily debugged in Jenkins.
+
+12. Use reliable Playwright locators and avoid unnecessary page.waitForTimeout() calls.
