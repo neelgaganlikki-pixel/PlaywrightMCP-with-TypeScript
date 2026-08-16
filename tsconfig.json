@@ -5,6 +5,7 @@
     "moduleResolution": "Node",
     "types": ["node", "@playwright/test"],
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "ignoreDeprecations": "6.0"
   }
 }
