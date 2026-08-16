@@ -27,7 +27,7 @@ pipeline {
     post {
         always {
             emailext(
-                subject: "Playwright Test Report - Build #${BUILD_NUMBER} - ${currentBuild.currentResult}",
+                subject: " Playwright Test Report - Build #${BUILD_NUMBER} - ${currentBuild.currentResult}",
                 body: """
 Hello Neel,
 
