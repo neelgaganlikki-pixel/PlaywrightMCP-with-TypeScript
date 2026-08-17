@@ -1,7 +1,9 @@
 pipeline {
+
     agent any
 
     triggers {
+
         // Run every day at 6:00 PM
         cron('0 18 * * *')
 
@@ -19,31 +21,184 @@ pipeline {
 
         stage('Run Playwright Tests') {
             steps {
-                bat 'npx playwright test'
+                bat 'npx playwright test --reporter=json > playwright-report.json'
             }
         }
     }
 
     post {
+
         always {
-            emailext(
-                subject: " Playwright Test Report - Build #${BUILD_NUMBER} - ${currentBuild.currentResult}",
-                body: """
-Hello Neel,
 
-Playwright automation execution is completed.
+            script {
 
-Build Number: ${BUILD_NUMBER}
-Build Status: ${currentBuild.currentResult}
+                def reportResult = powershell(
+                    returnStdout: true,
+                    script: '''
+                        $reportFile = "playwright-report.json"
 
-Jenkins Build:
-${BUILD_URL}
+                        $report = Get-Content $reportFile -Raw | ConvertFrom-Json
 
-Regards,
-Jenkins
-                """,
-                to: 'neelgaganat97@gmail.com'
-            )
+                        $total = 0
+                        $passed = 0
+                        $failed = 0
+                        $skipped = 0
+
+                        if ($report.stats) {
+
+                            $passed = [int]$report.stats.expected
+                            $failed = [int]$report.stats.unexpected
+                            $skipped = [int]$report.stats.skipped
+
+                            $flaky = [int]$report.stats.flaky
+
+                            $total = $passed + $failed + $skipped + $flaky
+                        }
+
+                        Write-Output "TOTAL=$total"
+                        Write-Output "PASSED=$passed"
+                        Write-Output "FAILED=$failed"
+                        Write-Output "SKIPPED=$skipped"
+
+                        Write-Output "FAILED_TESTS_START"
+
+                        function Get-FailedTests($suites) {
+
+                            foreach ($suite in $suites) {
+
+                                foreach ($spec in $suite.specs) {
+
+                                    foreach ($test in $spec.tests) {
+
+                                        if ($test.status -eq "unexpected") {
+
+                                            Write-Output "$($suite.title) - $($spec.title)"
+                                        }
+                                    }
+                                }
+
+                                if ($suite.suites) {
+
+                                    Get-FailedTests $suite.suites
+                                }
+                            }
+                        }
+
+                        Get-FailedTests $report.suites
+
+                        Write-Output "FAILED_TESTS_END"
+                    '''
+                ).trim()
+
+
+                def total = 0
+                def passed = 0
+                def failed = 0
+                def skipped = 0
+
+                def failedTests = []
+
+                def readingFailedTests = false
+
+
+                reportResult.split("\\r?\\n").each { line ->
+
+                    if (line.startsWith("TOTAL=")) {
+
+                        total = line.substring(6).toInteger()
+                    }
+
+                    else if (line.startsWith("PASSED=")) {
+
+                        passed = line.substring(7).toInteger()
+                    }
+
+                    else if (line.startsWith("FAILED=")) {
+
+                        failed = line.substring(7).toInteger()
+                    }
+
+                    else if (line.startsWith("SKIPPED=")) {
+
+                        skipped = line.substring(8).toInteger()
+                    }
+
+                    else if (line == "FAILED_TESTS_START") {
+
+                        readingFailedTests = true
+                    }
+
+                    else if (line == "FAILED_TESTS_END") {
+
+                        readingFailedTests = false
+                    }
+
+                    else if (readingFailedTests && line.trim()) {
+
+                        failedTests.add(line.trim())
+                    }
+                }
+
+
+                def failedTestText = "No failed tests."
+
+
+                if (failedTests.size() > 0) {
+
+                    def counter = 1
+
+                    def failedTestLines = []
+
+                    failedTests.each { testName ->
+
+                        failedTestLines.add(
+                            "${counter}. ${testName}"
+                        )
+
+                        counter++
+                    }
+
+                    failedTestText = failedTestLines.join("\n")
+                }
+
+
+                emailext(
+
+                    subject: "Playwright Test Report - Build #${BUILD_NUMBER} - ${currentBuild.currentResult}",
+
+                    body: """
+================================================
+       PLAYWRIGHT AUTOMATION TEST REPORT
+================================================
+
+Build: #${BUILD_NUMBER}
+Environment: QA
+Browser: Chromium
+
+TEST SUMMARY
+-----------------------------------------------
+Total Tests       : ${total}
+Passed            : ${passed}
+Failed            : ${failed}
+Skipped           : ${skipped}
+
+FAILED TESTS
+-----------------------------------------------
+${failedTestText}
+
+BUILD INFORMATION
+-----------------------------------------------
+Job               : ${JOB_NAME}
+Build URL         : ${BUILD_URL}
+Git Commit        : ${GIT_COMMIT ?: 'N/A'}
+Branch            : ${GIT_BRANCH ?: 'main'}
+
+================================================
+""",
+
+                    to: 'neelgaganat97@gmail.com'
+                )
+            }
         }
     }
 }
