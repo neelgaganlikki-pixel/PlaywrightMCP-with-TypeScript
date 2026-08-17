@@ -14,6 +14,11 @@ export default defineConfig({
   workers: 1,
   fullyParallel: false,
 
+  reporter: [
+    ['list'],
+    ['json', { outputFile: 'playwright-report.json' }]
+  ],
+
   projects: [
     {
       name: 'chromium',
@@ -26,7 +31,7 @@ export default defineConfig({
         screenshot: 'only-on-failure',
         trace: 'retain-on-failure',
         launchOptions: {
-          slowMo:1000 ,
+          slowMo: 1000,
         },
       },
     },
