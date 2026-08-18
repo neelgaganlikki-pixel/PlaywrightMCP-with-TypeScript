@@ -19,9 +19,9 @@ pipeline {
             }
         }
 
-        stage('Run Playwright Tests') {
-            steps {
-                bat 'npx playwright test --reporter=json > playwright-report.json'
+    stage('Run Playwright Tests') {
+        steps {
+            bat 'npx playwright test --reporter=line,json=playwright-report.json'
             }
         }
     }
