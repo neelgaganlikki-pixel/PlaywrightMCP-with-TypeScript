@@ -9,7 +9,8 @@ export default defineConfig({
 
     reporter: [
         ['line'],
-        ['json', { outputFile: 'playwright-report.json' }]
+        ['json', { outputFile: 'playwright-report.json' }],
+        ['junit', { outputFile: 'test-results/results.xml' }]
     ],
 
     use: {
