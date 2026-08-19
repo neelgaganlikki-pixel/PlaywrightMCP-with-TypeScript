@@ -17,7 +17,9 @@ test('post a buzz message in OrangeHRM', async ({ page }) => {
   await page.getByRole('button', { name: 'Login' }).click();
 
   // Step 3: Verify Dashboard
-  await expect(page).toHaveURL(/dashboard/, { timeout: 30000 });
+  await expect(page).toHaveURL(/dashboard/, { timeout: 60000 });
+  await expect(
+  page.getByRole('heading', { name: 'Dashboard' })).toBeVisible({ timeout: 60000 });
 
   // Step 4: Navigate to Buzz
   const buzzMenu = page
