@@ -5,20 +5,27 @@ export default defineConfig({
 
     fullyParallel: false,
 
+    workers: 1,
+
     reporter: [
         ['line'],
         ['json', { outputFile: 'playwright-report.json' }]
     ],
 
     use: {
-        headless: false,
-        slowMo: 1500,
+        headless: true,
+
+        launchOptions: {
+            slowMo: 1500
+        },
+
         screenshot: 'only-on-failure'
     },
 
     projects: [
         {
             name: 'chromium',
+
             use: {
                 ...devices['Desktop Chrome']
             }

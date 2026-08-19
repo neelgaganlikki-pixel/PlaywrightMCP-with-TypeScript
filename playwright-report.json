@@ -31,13 +31,13 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 60000
+        "timeout": 30000
       }
     ],
     "quiet": false,
     "reporter": [
       [
-        "list",
+        "line",
         null
       ],
       [
@@ -72,7 +72,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
@@ -82,12 +82,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 18035,
+                  "duration": 12359,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-18T14:35:34.144Z",
+                  "startTime": "2026-08-19T04:32:58.897Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -114,7 +114,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
@@ -124,12 +124,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11501,
+                  "duration": 14554,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-18T14:35:52.967Z",
+                  "startTime": "2026-08-19T04:33:11.580Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -166,22 +166,28 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 15159,
+                  "duration": 14477,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "Posting message: Buzz 1787063775028\n"
+                      "text": "Posting message: Buzz 1787114017456\n"
                     },
                     {
-                      "text": "Message is still present in composer\n"
+                      "text": "Composer value: Buzz 1787114017456\n"
                     },
                     {
-                      "text": "Successfully verified: Buzz 1787063775028\n"
+                      "text": "Post button is ready\n"
+                    },
+                    {
+                      "text": "Post button clicked\n"
+                    },
+                    {
+                      "text": "Successfully verified: Buzz 1787114017456\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-18T14:36:04.497Z",
+                  "startTime": "2026-08-19T04:33:26.165Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -218,7 +224,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 14301,
+                  "duration": 15661,
                   "errors": [],
                   "stdout": [
                     {
@@ -227,7 +233,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-18T14:36:19.686Z",
+                  "startTime": "2026-08-19T04:33:40.673Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -254,7 +260,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
@@ -264,12 +270,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10894,
+                  "duration": 13028,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-18T14:36:34.026Z",
+                  "startTime": "2026-08-19T04:33:56.361Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -306,12 +312,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 22948,
+                  "duration": 28687,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-18T14:36:44.952Z",
+                  "startTime": "2026-08-19T04:34:09.420Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -338,7 +344,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
@@ -348,12 +354,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 28776,
+                  "duration": 12113,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-18T14:37:07.935Z",
+                  "startTime": "2026-08-19T04:34:38.130Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -380,7 +386,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 60000,
+              "timeout": 120000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
@@ -390,7 +396,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 26118,
+                  "duration": 30352,
                   "errors": [],
                   "stdout": [
                     {
@@ -421,7 +427,7 @@
                       "text": "Login successful - Dashboard loaded\n"
                     },
                     {
-                      "text": "Logged-in user: Johnsasas Updated\n"
+                      "text": "Logged-in user: manda userSeleniumAutomation\n"
                     },
                     {
                       "text": "Step 2: Navigating to Recruitment...\n"
@@ -502,12 +508,12 @@
                       "text": "Toast message verified successfully\n"
                     },
                     {
-                      "text": "Vacancy name saved: Senior Software Test Engineer 1787063871186\n"
+                      "text": "Vacancy name saved: Senior Software Test Engineer 1787114105722\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-18T14:37:36.752Z",
+                  "startTime": "2026-08-19T04:34:50.269Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -517,7 +523,7 @@
           ],
           "id": "e9356a73256cdabf06f9-05c51a0437563a85e06c",
           "file": "8add-vacancy.spec.ts",
-          "line": 4,
+          "line": 5,
           "column": 7
         }
       ]
@@ -544,7 +550,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 16996,
+                  "duration": 19750,
                   "errors": [],
                   "stdout": [
                     {
@@ -593,7 +599,7 @@
                       "text": "Step 4: Searching for the vacancy created in the previous test case...\n"
                     },
                     {
-                      "text": "Vacancy to delete: Senior Software Test Engineer 1787063871186\n"
+                      "text": "Vacancy to delete: Senior Software Test Engineer 1787114105722\n"
                     },
                     {
                       "text": "Waiting for created vacancy to appear...\n"
@@ -608,7 +614,7 @@
                       "text": "Created vacancy is now in view\n"
                     },
                     {
-                      "text": "Vacancy found: Senior Software Test Engineer 1787063871186\n"
+                      "text": "Vacancy found: Senior Software Test Engineer 1787114105722\n"
                     },
                     {
                       "text": "Clicking Delete button for the created vacancy...\n"
@@ -659,7 +665,7 @@
                       "text": "VACANCY DELETED SUCCESSFULLY\n"
                     },
                     {
-                      "text": "Deleted Vacancy: Senior Software Test Engineer 1787063871186\n"
+                      "text": "Deleted Vacancy: Senior Software Test Engineer 1787114105722\n"
                     },
                     {
                       "text": "================================\n"
@@ -673,7 +679,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-18T14:38:02.904Z",
+                  "startTime": "2026-08-19T04:35:20.646Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -691,8 +697,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-18T14:35:31.265Z",
-    "duration": 168934.066,
+    "startTime": "2026-08-19T04:32:56.620Z",
+    "duration": 163969.428,
     "expected": 9,
     "skipped": 0,
     "unexpected": 0,

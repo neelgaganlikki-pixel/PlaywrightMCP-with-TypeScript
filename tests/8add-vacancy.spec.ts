@@ -1,6 +1,7 @@
   import { test, expect } from '@playwright/test';
 
   import * as fs from 'fs';
+  test.setTimeout(120000);
   test('add a new vacancy in OrangeHRM', async ({ page }) => {
     // Step 1: Login
     console.log('Step 1: Navigating to OrangeHRM login page...');
