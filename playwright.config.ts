@@ -14,10 +14,10 @@ export default defineConfig({
     ],
 
     use: {
-        headless: true,
+        headless: false,
 
         launchOptions: {
-            slowMo: 1500
+            slowMo: 1000
         },
 
         screenshot: 'only-on-failure'

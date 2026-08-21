@@ -58,8 +58,7 @@ test('post a buzz message in OrangeHRM', async ({ page }) => {
   console.log('Post button is ready');
 
   // Step 9: Click Post
-  await postButton.click();
-
+  await postButton.click({ timeout: 10000 });
   console.log('Post button clicked');
 
   // Step 10: Verify posted message
