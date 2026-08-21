@@ -31,31 +31,39 @@ test('post a buzz message in OrangeHRM', async ({ page }) => {
   await buzzMenu.click();
 
   // Step 5: Wait for Buzz page
-  const composer = page.locator('textarea.oxd-buzz-post-input');
-  await expect(composer).toBeVisible({ timeout: 30000 });
+const composer = page.locator('textarea.oxd-buzz-post-input');
 
-  // Step 6: Generate unique message
-  const message = `Buzz ${Date.now()}`;
+await expect(composer).toBeVisible({ timeout: 30000 });
+await expect(composer).toBeEditable({ timeout: 30000 });
 
-  console.log(`Posting message: ${message}`);
+// Step 6: Generate unique message
+const message = `Buzz ${Date.now()}`;
 
-  // Step 7: Enter message
-  await composer.fill(message);
+console.log(`Posting message: ${message}`);
 
-  // Verify the value immediately after filling
-  console.log(`Composer value: ${await composer.inputValue()}`);
+// Step 7: Enter message
+await composer.click();
+await composer.fill(message);
 
-  // Step 8: Locate Post button
-  const postButton = page.locator('button.oxd-button.oxd-button--medium.oxd-button--main');
+// Verify the value immediately after filling
+await expect(composer).toHaveValue(message, { timeout: 10000 });
 
-  await expect(postButton).toBeVisible({ timeout: 20000 });
-  await expect(postButton).toBeEnabled({ timeout: 20000 });
+console.log(`Composer value: ${await composer.inputValue()}`);
 
-  console.log('Post button is ready');
+// Step 8: Locate Post button
+const postButton = page.locator(
+  'button.oxd-button.oxd-button--medium.oxd-button--main'
+);
 
-  // Step 9: Click Post
-  await postButton.click({ timeout: 10000 });
-  console.log('Post button clicked');
+await expect(postButton).toBeVisible({ timeout: 20000 });
+await expect(postButton).toBeEnabled({ timeout: 20000 });
+
+console.log('Post button is ready');
+
+// Step 9: Click Post
+await postButton.click({ timeout: 10000 });
+
+console.log('Post button clicked');
 
   // Step 10: Verify posted message
   const postedMessage = page
