@@ -31,8 +31,7 @@ test('post a buzz message in OrangeHRM', async ({ page }) => {
   await buzzMenu.click();
 
   // Step 5: Wait for Buzz page
-  const composer = page.getByPlaceholder("What's on your mind?");
-
+  const composer = page.locator('textarea.oxd-buzz-post-input');
   await expect(composer).toBeVisible({ timeout: 30000 });
 
   // Step 6: Generate unique message
@@ -47,10 +46,7 @@ test('post a buzz message in OrangeHRM', async ({ page }) => {
   console.log(`Composer value: ${await composer.inputValue()}`);
 
   // Step 8: Locate Post button
-  const postButton = page.getByRole('button', {
-    name: 'Post',
-    exact: true
-  });
+  const postButton = page.locator('button.oxd-button.oxd-button--medium.oxd-button--main');
 
   await expect(postButton).toBeVisible({ timeout: 20000 });
   await expect(postButton).toBeEnabled({ timeout: 20000 });
@@ -66,9 +62,7 @@ test('post a buzz message in OrangeHRM', async ({ page }) => {
     .locator('p.orangehrm-buzz-post-body-text')
     .filter({ hasText: message });
 
-  await expect(postedMessage).toBeVisible({
-    timeout: 30000
-  });
+  await expect(postedMessage).toBeVisible({timeout: 30000});
 
   console.log(`Successfully verified: ${message}`);
 });
