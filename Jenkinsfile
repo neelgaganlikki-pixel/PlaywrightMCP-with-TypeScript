@@ -272,3 +272,5 @@ Branch            : ${GIT_BRANCH ?: 'main'}
         }
     }
 }
+
+// Jenkins webhook trigger test
