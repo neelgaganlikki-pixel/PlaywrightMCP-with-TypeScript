@@ -37,15 +37,16 @@ pipeline {
 
 
     post {
+    always {
 
-        always {
+        // Archive Playwright screenshots, videos, traces, error-context, etc.
+        archiveArtifacts artifacts: 'test-results/**/*', allowEmptyArchive: true
 
-            // Publish Playwright JUnit results to Jenkins
-            // This creates the Jenkins Test Result Trend graph
-            junit(
-                testResults: 'test-results/results.xml',
-                allowEmptyResults: true
-            )
+        // Publish Playwright JUnit results to Jenkins
+        junit(
+            testResults: 'test-results/results.xml',
+            allowEmptyResults: true
+        )
 
 
             script {
