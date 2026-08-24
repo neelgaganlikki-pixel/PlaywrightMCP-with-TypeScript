@@ -1,9 +1,7 @@
-Generate a Playwright test for the following scenario:
+Scenario:
 
-1. Login to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login with username "Admin" and password "admin123"
-
-2. Click on the "Admin" tab in the left navigation
-
-3. Verify the page contains "System Users
-
-4. Verify that the "Add" button is visible
+1.Navigate to: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Login using:
+	Username: Admin
+	Password: admin123
+3.Logout

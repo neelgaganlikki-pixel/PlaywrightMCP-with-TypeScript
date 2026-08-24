@@ -1,12 +1,139 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="18.778394">
-<testsuite name="3buzz-post.spec.ts" timestamp="2026-08-21T15:40:03.196Z" hostname="chromium" tests="1" failures="0" skipped="0" time="14.876" errors="0">
-<testcase name="post a buzz message in OrangeHRM" classname="3buzz-post.spec.ts" time="14.876">
+<testsuites id="" name="" tests="9" failures="0" skipped="0" errors="0" time="144.76087900000002">
+<testsuite name="1login.spec.ts" timestamp="2026-08-24T13:52:45.068Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.011" errors="0">
+<testcase name="Login to OrangeHRM and verify dashboard" classname="1login.spec.ts" time="9.011">
+</testcase>
+</testsuite>
+<testsuite name="2logout.spec.ts" timestamp="2026-08-24T13:52:45.068Z" hostname="chromium" tests="1" failures="0" skipped="0" time="14.582" errors="0">
+<testcase name="Login and logout from OrangeHRM" classname="2logout.spec.ts" time="14.582">
+</testcase>
+</testsuite>
+<testsuite name="3buzz-post.spec.ts" timestamp="2026-08-24T13:52:45.068Z" hostname="chromium" tests="1" failures="0" skipped="0" time="13.195" errors="0">
+<testcase name="post a buzz message in OrangeHRM" classname="3buzz-post.spec.ts" time="13.195">
 <system-out>
-<![CDATA[Posting message: Buzz 1787326816375
-Composer value: Buzz 1787326816375
+<![CDATA[Posting message: Buzz 1787579600331
+Composer value: Buzz 1787579600331
 Post button is ready
 Post button clicked
-Successfully verified: Buzz 1787326816375
+Successfully verified: Buzz 1787579600331
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="4delete-buzz-post.spec.ts" timestamp="2026-08-24T13:52:45.068Z" hostname="chromium" tests="1" failures="0" skipped="0" time="13.51" errors="0">
+<testcase name="delete the first buzz post in OrangeHRM" classname="4delete-buzz-post.spec.ts" time="13.51">
+<system-out>
+<![CDATA[Success
+
+Successfully Deleted
+
+×
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="5system-user.spec.ts" timestamp="2026-08-24T13:52:45.068Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.7" errors="0">
+<testcase name="login to OrangeHRM and verify Admin system users page" classname="5system-user.spec.ts" time="10.7">
+</testcase>
+</testsuite>
+<testsuite name="6add-user.spec.ts" timestamp="2026-08-24T13:52:45.068Z" hostname="chromium" tests="1" failures="0" skipped="0" time="26.385" errors="0">
+<testcase name="add a new user in OrangeHRM Admin" classname="6add-user.spec.ts" time="26.385">
+</testcase>
+</testsuite>
+<testsuite name="7practice-login.spec.ts" timestamp="2026-08-24T13:52:45.068Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.373" errors="0">
+<testcase name="logs in and out on the practice test site" classname="7practice-login.spec.ts" time="10.373">
+</testcase>
+</testsuite>
+<testsuite name="8add-vacancy.spec.ts" timestamp="2026-08-24T13:52:45.068Z" hostname="chromium" tests="1" failures="0" skipped="0" time="26.06" errors="0">
+<testcase name="add a new vacancy in OrangeHRM" classname="8add-vacancy.spec.ts" time="26.06">
+<system-out>
+<![CDATA[================================
+Adding Vacancy:
+================================
+Step 1: Navigating to OrangeHRM login page...
+Login page loaded
+Entering username...
+Username entered
+Entering password...
+Password entered
+Clicking login button...
+Waiting for Dashboard...
+Login successful - Dashboard loaded
+Logged-in user: Demo Source
+Step 2: Navigating to Recruitment...
+Recruitment page loaded
+Step 3: Clicking on Vacancies...
+Vacancies page loaded
+Step 4: Clicking Add button...
+Add Vacancy page loaded
+Step 5: Filling vacancy details...
+Vacancy name filled
+Opening Job Title dropdown...
+Waiting for Job Title option...
+Selecting Job Title: QA Engineer...
+Job Title selected
+Entering description...
+Description filled
+Selecting Hiring Manager...
+Waiting for Hiring Manager autocomplete...
+Hiring Manager option displayed
+Hiring Manager selected
+Entering Number of Positions...
+Clicking Save...
+Save button clicked
+================================
+TOAST MESSAGE: "Success"
+================================
+message: Success
+Toast message verified successfully
+Vacancy name saved: Senior Software Test Engineer 1787579679234
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="9delete-vacancy.spec.ts" timestamp="2026-08-24T13:52:45.068Z" hostname="chromium" tests="1" failures="0" skipped="0" time="16.531" errors="0">
+<testcase name="delete the vacancy created by the previous test case" classname="9delete-vacancy.spec.ts" time="16.531">
+<system-out>
+<![CDATA[================================
+Deleting Vacancy:
+================================
+Step 1: Navigating to OrangeHRM login page...
+Login page loaded
+Entering username...
+Entering password...
+Clicking login button...
+Waiting for Dashboard...
+Login successful - Dashboard loaded
+Step 2: Navigating to Recruitment...
+Recruitment page loaded
+Step 3: Clicking on Vacancies...
+Vacancies page loaded
+Step 4: Searching for the vacancy created in the previous test case...
+Vacancy to delete: Senior Software Test Engineer 1787579679234
+Waiting for created vacancy to appear...
+Created vacancy found
+Scrolling to the created vacancy...
+Created vacancy is now in view
+Vacancy found: Senior Software Test Engineer 1787579679234
+Clicking Delete button for the created vacancy...
+Delete button clicked
+Step 5: Deleting the vacancy...
+Step 6: Preparing deletion toast listener...
+Deletion toast listener ready
+Step 7: Clicking Yes, Delete...
+Yes, Delete button clicked
+Waiting for deletion toast message...
+================================
+DELETE TOAST MESSAGE: "Success"
+================================
+Success
+Deletion toast message verified successfully
+Step 8: Verifying vacancy was deleted...
+================================
+VACANCY DELETED SUCCESSFULLY
+Deleted Vacancy: Senior Software Test Engineer 1787579679234
+================================
+Step 7: Verifying deletion...
+Vacancy deletion verified successfully
 ]]>
 </system-out>
 </testcase>

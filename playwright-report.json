@@ -67,6 +67,90 @@
   },
   "suites": [
     {
+      "title": "1login.spec.ts",
+      "file": "1login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login to OrangeHRM and verify dashboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9011,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-24T13:52:46.285Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e478731e445e2a18b2ff-b27078146658ed19e1ee",
+          "file": "1login.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "2logout.spec.ts",
+      "file": "2logout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login and logout from OrangeHRM",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14582,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-24T13:52:55.945Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0bf6d01e192d3c91bacc-5ac8c7f84481597bdf80",
+          "file": "2logout.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
       "title": "3buzz-post.spec.ts",
       "file": "3buzz-post.spec.ts",
       "column": 0,
@@ -88,14 +172,14 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 14876,
+                  "duration": 13195,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "Posting message: Buzz 1787326816375\n"
+                      "text": "Posting message: Buzz 1787579600331\n"
                     },
                     {
-                      "text": "Composer value: Buzz 1787326816375\n"
+                      "text": "Composer value: Buzz 1787579600331\n"
                     },
                     {
                       "text": "Post button is ready\n"
@@ -104,12 +188,12 @@
                       "text": "Post button clicked\n"
                     },
                     {
-                      "text": "Successfully verified: Buzz 1787326816375\n"
+                      "text": "Successfully verified: Buzz 1787579600331\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-21T15:40:04.543Z",
+                  "startTime": "2026-08-24T13:53:10.573Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -123,13 +207,514 @@
           "column": 5
         }
       ]
+    },
+    {
+      "title": "4delete-buzz-post.spec.ts",
+      "file": "4delete-buzz-post.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "delete the first buzz post in OrangeHRM",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13510,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Success\n\nSuccessfully Deleted\n\n×\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-24T13:53:23.822Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b82dbde4fdd87e9bd90e-2e16905570fb75d38639",
+          "file": "4delete-buzz-post.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "5system-user.spec.ts",
+      "file": "5system-user.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "login to OrangeHRM and verify Admin system users page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10700,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-24T13:53:37.371Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b3832e99f616a309acde-0cdac6d7482f0f9d5cbe",
+          "file": "5system-user.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "6add-user.spec.ts",
+      "file": "6add-user.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "add a new user in OrangeHRM Admin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 26385,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-24T13:53:48.132Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "88240c835f3df936b99f-d39dbcd811f4b3c9bd8e",
+          "file": "6add-user.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "7practice-login.spec.ts",
+      "file": "7practice-login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "logs in and out on the practice test site",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10373,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-24T13:54:14.578Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6443030c1b41964a277a-af6a5829db2cde0c4ad4",
+          "file": "7practice-login.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "8add-vacancy.spec.ts",
+      "file": "8add-vacancy.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "add a new vacancy in OrangeHRM",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 26060,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "Adding Vacancy:\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "Step 1: Navigating to OrangeHRM login page...\n"
+                    },
+                    {
+                      "text": "Login page loaded\n"
+                    },
+                    {
+                      "text": "Entering username...\n"
+                    },
+                    {
+                      "text": "Username entered\n"
+                    },
+                    {
+                      "text": "Entering password...\n"
+                    },
+                    {
+                      "text": "Password entered\n"
+                    },
+                    {
+                      "text": "Clicking login button...\n"
+                    },
+                    {
+                      "text": "Waiting for Dashboard...\n"
+                    },
+                    {
+                      "text": "Login successful - Dashboard loaded\n"
+                    },
+                    {
+                      "text": "Logged-in user: Demo Source\n"
+                    },
+                    {
+                      "text": "Step 2: Navigating to Recruitment...\n"
+                    },
+                    {
+                      "text": "Recruitment page loaded\n"
+                    },
+                    {
+                      "text": "Step 3: Clicking on Vacancies...\n"
+                    },
+                    {
+                      "text": "Vacancies page loaded\n"
+                    },
+                    {
+                      "text": "Step 4: Clicking Add button...\n"
+                    },
+                    {
+                      "text": "Add Vacancy page loaded\n"
+                    },
+                    {
+                      "text": "Step 5: Filling vacancy details...\n"
+                    },
+                    {
+                      "text": "Vacancy name filled\n"
+                    },
+                    {
+                      "text": "Opening Job Title dropdown...\n"
+                    },
+                    {
+                      "text": "Waiting for Job Title option...\n"
+                    },
+                    {
+                      "text": "Selecting Job Title: QA Engineer...\n"
+                    },
+                    {
+                      "text": "Job Title selected\n"
+                    },
+                    {
+                      "text": "Entering description...\n"
+                    },
+                    {
+                      "text": "Description filled\n"
+                    },
+                    {
+                      "text": "Selecting Hiring Manager...\n"
+                    },
+                    {
+                      "text": "Waiting for Hiring Manager autocomplete...\n"
+                    },
+                    {
+                      "text": "Hiring Manager option displayed\n"
+                    },
+                    {
+                      "text": "Hiring Manager selected\n"
+                    },
+                    {
+                      "text": "Entering Number of Positions...\n"
+                    },
+                    {
+                      "text": "Clicking Save...\n"
+                    },
+                    {
+                      "text": "Save button clicked\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "TOAST MESSAGE: \"Success\"\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "message: Success\n"
+                    },
+                    {
+                      "text": "Toast message verified successfully\n"
+                    },
+                    {
+                      "text": "Vacancy name saved: Senior Software Test Engineer 1787579679234\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-24T13:54:24.998Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e9356a73256cdabf06f9-05c51a0437563a85e06c",
+          "file": "8add-vacancy.spec.ts",
+          "line": 5,
+          "column": 7
+        }
+      ]
+    },
+    {
+      "title": "9delete-vacancy.spec.ts",
+      "file": "9delete-vacancy.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "delete the vacancy created by the previous test case",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16531,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "Deleting Vacancy:\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "Step 1: Navigating to OrangeHRM login page...\n"
+                    },
+                    {
+                      "text": "Login page loaded\n"
+                    },
+                    {
+                      "text": "Entering username...\n"
+                    },
+                    {
+                      "text": "Entering password...\n"
+                    },
+                    {
+                      "text": "Clicking login button...\n"
+                    },
+                    {
+                      "text": "Waiting for Dashboard...\n"
+                    },
+                    {
+                      "text": "Login successful - Dashboard loaded\n"
+                    },
+                    {
+                      "text": "Step 2: Navigating to Recruitment...\n"
+                    },
+                    {
+                      "text": "Recruitment page loaded\n"
+                    },
+                    {
+                      "text": "Step 3: Clicking on Vacancies...\n"
+                    },
+                    {
+                      "text": "Vacancies page loaded\n"
+                    },
+                    {
+                      "text": "Step 4: Searching for the vacancy created in the previous test case...\n"
+                    },
+                    {
+                      "text": "Vacancy to delete: Senior Software Test Engineer 1787579679234\n"
+                    },
+                    {
+                      "text": "Waiting for created vacancy to appear...\n"
+                    },
+                    {
+                      "text": "Created vacancy found\n"
+                    },
+                    {
+                      "text": "Scrolling to the created vacancy...\n"
+                    },
+                    {
+                      "text": "Created vacancy is now in view\n"
+                    },
+                    {
+                      "text": "Vacancy found: Senior Software Test Engineer 1787579679234\n"
+                    },
+                    {
+                      "text": "Clicking Delete button for the created vacancy...\n"
+                    },
+                    {
+                      "text": "Delete button clicked\n"
+                    },
+                    {
+                      "text": "Step 5: Deleting the vacancy...\n"
+                    },
+                    {
+                      "text": "Step 6: Preparing deletion toast listener...\n"
+                    },
+                    {
+                      "text": "Deletion toast listener ready\n"
+                    },
+                    {
+                      "text": "Step 7: Clicking Yes, Delete...\n"
+                    },
+                    {
+                      "text": "Yes, Delete button clicked\n"
+                    },
+                    {
+                      "text": "Waiting for deletion toast message...\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "DELETE TOAST MESSAGE: \"Success\"\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "Success\n"
+                    },
+                    {
+                      "text": "Deletion toast message verified successfully\n"
+                    },
+                    {
+                      "text": "Step 8: Verifying vacancy was deleted...\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "VACANCY DELETED SUCCESSFULLY\n"
+                    },
+                    {
+                      "text": "Deleted Vacancy: Senior Software Test Engineer 1787579679234\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "Step 7: Verifying deletion...\n"
+                    },
+                    {
+                      "text": "Vacancy deletion verified successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-24T13:54:51.108Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2c910f2de3dc33d44088-88aadc57a187f5f85990",
+          "file": "9delete-vacancy.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-21T15:40:01.865Z",
-    "duration": 18778.394,
-    "expected": 1,
+    "startTime": "2026-08-24T13:52:43.630Z",
+    "duration": 144760.87900000002,
+    "expected": 9,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

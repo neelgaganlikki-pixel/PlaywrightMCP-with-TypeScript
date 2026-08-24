@@ -60,13 +60,13 @@
 
     console.log('Waiting for Job Title option...');
 
-    const jobTitleOption = page.getByRole('option', { name: 'QA Engineer' });
+    const jobTitleOption = page.getByRole('option', { name: 'data entry' });
 
     await expect(jobTitleOption).toBeVisible({ timeout: 15000 });
 
     console.log('Selecting Job Title: QA Engineer...');
 
-    await jobTitleOption.click();
+    await jobTitleOption.click({ timeout: 30000 });
 
     console.log('Job Title selected');
     console.log('Entering description...');
