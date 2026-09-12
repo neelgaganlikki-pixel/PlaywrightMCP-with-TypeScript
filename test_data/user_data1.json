@@ -1,0 +1,31 @@
+{
+  "login": {
+    "username": "Admin",
+    "password": "admin123"
+  },
+  "employee": {
+    "first_name": "Olivia",
+    "middle_name": "Anne",
+    "last_name": "Jackson",
+    "employee_id": "6639",
+    "gender": "Female",
+    "other_id": "8GRQ0vmZ",
+    "driver_license_number": "DLdfpULKy",
+    "license_expiry_date": "2037-07-23",
+    "nationality": "Spanish",
+    "marital_status": "Married",
+    "date_of_birth": "2007-09-12",
+    "blood_type": "O-",
+    "test_field": "Q0E8JewEDC"
+  },
+  "employee_login": {
+    "create_login_details": true,
+    "username": "OliviaJacksonXiCvKW",
+    "status": "Enabled",
+    "password": "AutoBbNOf8XOoB9!",
+    "confirm_password": "AutoBbNOf8XOoB9!"
+  },
+  "photo": {
+    "path": "test_data/employee_photo.png"
+  }
+}
