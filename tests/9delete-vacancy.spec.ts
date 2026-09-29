@@ -1,142 +1,413 @@
 import { test, expect } from '@playwright/test';
-import * as fs from 'fs';
-test.setTimeout(180000);
+import fs from 'fs';
+import path from 'path';
 
 test('delete the vacancy created by the previous test case', async ({ page }) => {
 
+  console.log('================================');
+  console.log('Deleting Vacancy:');
+  console.log('================================');
 
-  const uniqueVacancyName = fs.readFileSync('tests/vacancy-name.txt','utf-8').trim();
+  // ============================================================
+  // TEST DATA
+  // ============================================================
 
-    console.log('================================');
-    console.log('Deleting Vacancy:');
-    console.log('================================');
+  const baseUrl =
+    process.env.BASE_URL ||
+    'https://opensource-demo.orangehrmlive.com';
 
-  // Step 1: Login
-  console.log('Step 1: Navigating to OrangeHRM login page...');
-  await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-  console.log('Login page loaded');
+  const username =
+    process.env.USERNAME ||
+    'Admin';
 
-  console.log('Entering username...');
-  await page.getByPlaceholder('Username').fill('Admin');
-  console.log('Entering password...');
-  await page.getByPlaceholder('Password').fill('admin123');
-  console.log('Clicking login button...');
-  await page.getByRole('button', { name: 'Login' }).click();
+  const password =
+    process.env.PASSWORD ||
+    'admin123';
 
-  console.log('Waiting for Dashboard...');
-  await expect(page).toHaveURL(/dashboard/);
-  console.log('Login successful - Dashboard loaded');
+  // ============================================================
+  // READ VACANCY NAME CREATED BY TEST 8
+  // ============================================================
 
-  // Step 2: Navigate to Recruitment
-  console.log('Step 2: Navigating to Recruitment...');
-  await page.locator('span.oxd-main-menu-item--name').filter({ hasText: 'Recruitment' }).click();
-  console.log('Recruitment page loaded');
+  const vacancyFile = path.join(
+    process.cwd(),
+    'tests',
+    'vacancy_name.txt'
+  );
 
-  // Step 3: Click on Vacancies
-  console.log('Step 3: Clicking on Vacancies...');
-  await page.getByRole('link', { name: 'Vacancies' }).click();
-  console.log('Vacancies page loaded');
+  if (!fs.existsSync(vacancyFile)) {
 
-  // Step 4: Search for the vacancy created in the previous test case
-  console.log('Step 4: Searching for the vacancy created in the previous test case...');
-  console.log(`Vacancy to delete: ${uniqueVacancyName}`);
+    throw new Error(
+      `Vacancy file not found: ${vacancyFile}`
+    );
+  }
 
-  const vacancyRow = page.locator('.oxd-table-card').filter({ hasText: uniqueVacancyName })
+  const vacancyName = fs
+    .readFileSync(
+      vacancyFile,
+      'utf-8'
+    )
+    .trim();
 
+  if (!vacancyName) {
 
-  console.log('Waiting for created vacancy to appear...');
+    throw new Error(
+      'Vacancy name file is empty.'
+    );
+  }
 
-  await expect(vacancyRow).toHaveCount(1, { timeout: 30000 });
+  console.log(
+    `Vacancy to delete: ${vacancyName}`
+  );
 
-  console.log('Created vacancy found');
+  // ============================================================
+  // STEP 1 - LOGIN
+  // ============================================================
 
-  // Scroll to the created vacancy
-  console.log('Scrolling to the created vacancy...');
+  console.log('');
+  console.log(
+    'Step 1: Navigating to OrangeHRM login page...'
+  );
+
+  await page.goto(baseUrl, {
+    waitUntil: 'domcontentloaded'
+  });
+
+  await expect(
+    page.getByPlaceholder('Username')
+  ).toBeVisible({
+    timeout: 15000
+  });
+
+  console.log(
+    'Login page loaded'
+  );
+
+  console.log(
+    'Entering username...'
+  );
+
+  await page
+    .getByPlaceholder('Username')
+    .fill(username);
+
+  console.log(
+    'Entering password...'
+  );
+
+  await page
+    .getByPlaceholder('Password')
+    .fill(password);
+
+  console.log(
+    'Clicking login button...'
+  );
+
+  await page
+    .getByRole('button', {
+      name: 'Login'
+    })
+    .click();
+
+  console.log(
+    'Waiting for Dashboard...'
+  );
+
+  await expect(
+    page.getByRole('heading', {
+      name: 'Dashboard'
+    })
+  ).toBeVisible({
+    timeout: 30000
+  });
+
+  console.log(
+    'Login successful - Dashboard loaded'
+  );
+
+  // ============================================================
+  // STEP 2 - RECRUITMENT
+  // ============================================================
+
+  console.log('');
+  console.log(
+    'Step 2: Navigating to Recruitment...'
+  );
+
+  await page
+    .getByRole('link', {
+      name: 'Recruitment'
+    })
+    .click();
+
+  await expect(
+    page
+  ).toHaveURL(
+    /\/web\/index\.php\/recruitment/,
+    {
+      timeout: 15000
+    }
+  );
+
+  console.log(
+    'Recruitment page loaded'
+  );
+
+  // ============================================================
+  // STEP 3 - VACANCIES
+  // ============================================================
+
+  console.log('');
+  console.log(
+    'Step 3: Clicking on Vacancies...'
+  );
+
+  await page
+    .getByRole('link', {
+      name: 'Vacancies'
+    })
+    .click();
+
+  await expect(
+    page.getByRole('heading', {
+      name: 'Vacancies'
+    })
+  ).toBeVisible({
+    timeout: 15000
+  });
+
+  console.log(
+    'Vacancies page loaded'
+  );
+
+  // ============================================================
+  // STEP 4 - SEARCH FOR VACANCY
+  // ============================================================
+
+  console.log('');
+  console.log(
+    'Step 4: Searching for the vacancy created in the previous test case...'
+  );
+
+  const vacancyRow = page
+    .locator('.oxd-table-card')
+    .filter({
+      hasText: vacancyName
+    });
+
+  console.log(
+    'Waiting for created vacancy to appear...'
+  );
+
+  await expect(
+    vacancyRow
+  ).toHaveCount(1, {
+    timeout: 30000
+  });
+
+  console.log(
+    'Created vacancy found'
+  );
+
+  // ============================================================
+  // STEP 5 - DELETE
+  // ============================================================
+
+  console.log('');
+  console.log(
+    'Step 5: Deleting vacancy...'
+  );
 
   await vacancyRow.scrollIntoViewIfNeeded();
 
-  console.log('Created vacancy is now in view');
+  // ------------------------------------------------------------
+  // Find delete button inside row
+  // ------------------------------------------------------------
 
-  // Verify the vacancy name
-  await expect(vacancyRow).toContainText(uniqueVacancyName);
+  const deleteButton = vacancyRow
+    .getByRole('button')
+    .filter({
+      has: page.locator(
+        '.bi-trash'
+      )
+    })
+    .first();
 
-  console.log(`Vacancy found: ${uniqueVacancyName}`);
+  // Fallback if icon locator is not matched
+  if (
+    await deleteButton.count() === 0
+  ) {
 
-  // Click the Delete/Trash button in this vacancy row
-  console.log('Clicking Delete button for the created vacancy...');
-  await vacancyRow.getByRole('button').first().click();
-  console.log('Delete button clicked');
-  console.log('Step 5: Deleting the vacancy...');
-  // const deleteButton = page.locator('button').filter({ hasText: 'Delete' }).first();
-  // await deleteButton.click();
-  // console.log('Delete button clicked');
+    const buttons =
+      vacancyRow.getByRole('button');
 
-  console.log('Step 6: Preparing deletion toast listener...');
+    const buttonCount =
+      await buttons.count();
 
-  const deleteToastPromise = page.evaluate(() => {
-    return new Promise<string>((resolve) => {
+    let foundDeleteButton = false;
 
-      const observer = new MutationObserver(() => {
+    for (
+      let i = 0;
+      i < buttonCount;
+      i++
+    ) {
 
-        const toast = document.querySelector('.oxd-toast-content.oxd-toast-content--success .oxd-toast-content-text');
+      const button = buttons.nth(i);
 
-        if (toast) {
+      const title =
+        await button.getAttribute(
+          'title'
+        );
 
-          const text = toast.textContent?.trim() || '';
+      const ariaLabel =
+        await button.getAttribute(
+          'aria-label'
+        );
 
-          if (text) {
-            observer.disconnect();
-            resolve(text);
-          }
-        }
-      });
+      const text =
+        await button.innerText()
+          .catch(() => '');
 
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true
-      });
-    });
+      if (
+        title?.toLowerCase()
+          .includes('delete') ||
+        ariaLabel?.toLowerCase()
+          .includes('delete') ||
+        text?.toLowerCase()
+          .includes('delete')
+      ) {
+
+        await button.click();
+
+        foundDeleteButton = true;
+
+        break;
+      }
+    }
+
+    if (!foundDeleteButton) {
+
+      throw new Error(
+        'Delete button was not found inside vacancy row.'
+      );
+    }
+
+  } else {
+
+    await deleteButton.click();
+  }
+
+  console.log(
+    'Delete button clicked'
+  );
+
+  // ============================================================
+  // CONFIRM DELETE
+  // ============================================================
+
+  console.log(
+    'Waiting for delete confirmation...'
+  );
+
+  const confirmDeleteButton =
+    page.getByRole(
+      'button',
+      {
+        name: /Yes, Delete/i
+      }
+    );
+
+  await expect(
+    confirmDeleteButton
+  ).toBeVisible({
+    timeout: 10000
   });
 
-  console.log('Deletion toast listener ready');
+  console.log(
+    'Delete confirmation displayed'
+  );
 
-  // Step 8: Confirm deletion
-  console.log('Step 7: Clicking Yes, Delete...');
+  await confirmDeleteButton.click();
 
-  await page.getByRole('button', {
-    name: 'Yes, Delete'
-  }).click();
+  console.log(
+    'Delete confirmation clicked'
+  );
 
-  console.log('Yes, Delete button clicked');
+  // ============================================================
+  // WAIT FOR DELETE TOAST
+  // ============================================================
 
-  // Step 9: Get deletion toast message
-  console.log('Waiting for deletion toast message...');
+  const deleteToast = page
+    .locator(
+      '.oxd-toast-container .oxd-toast'
+    )
+    .filter({
+      hasText: /Successfully Deleted/i
+    });
 
-  const deleteMessage = await deleteToastPromise;
+  await expect(
+    deleteToast
+  ).toBeVisible({
+    timeout: 15000
+  });
 
-  console.log('================================');
-  console.log('DELETE TOAST MESSAGE:', JSON.stringify(deleteMessage));
-  console.log('================================');
+  const toastText =
+    await deleteToast.innerText();
 
-  // Step 10: Verify deletion toast
-  expect(deleteMessage).toMatch(/Successfully Deleted|Success/i);
-  console.log(deleteMessage);
-  console.log('Deletion toast message verified successfully');
+  console.log(
+    `Delete Toast: ${toastText}`
+  );
 
-  // Step 11: Verify vacancy is deleted
-  console.log('Step 8: Verifying vacancy was deleted...');
+  console.log(
+    'Vacancy deleted successfully'
+  );
 
-  await expect(vacancyRow).not.toBeVisible({ timeout: 30000 });
+  // ============================================================
+  // VERIFY VACANCY IS REMOVED
+  // ============================================================
 
-  console.log('================================');
-  console.log('VACANCY DELETED SUCCESSFULLY');
-  console.log('Deleted Vacancy:', uniqueVacancyName);
-  console.log('================================');
+  await expect(
+    page
+      .locator('.oxd-table-card')
+      .filter({
+        hasText: vacancyName
+      })
+  ).toHaveCount(0, {
+    timeout: 30000
+  });
 
-  // Step 7: Verify deletion
-  console.log('Step 7: Verifying deletion...'); 
-  await expect(vacancyRow).toHaveCount(0, { timeout: 30000 });
-  console.log('Vacancy deletion verified successfully');   
+  console.log(
+    `Verified vacancy no longer exists: ${vacancyName}`
+  );
 
-  
+  // ============================================================
+  // CLEANUP
+  // ============================================================
+
+  try {
+
+    fs.unlinkSync(
+      vacancyFile
+    );
+
+    console.log(
+      'Vacancy tracking file deleted'
+    );
+
+  } catch (error) {
+
+    console.log(
+      'Could not delete vacancy tracking file'
+    );
+  }
+
+  console.log('');
+  console.log(
+    '================================'
+  );
+  console.log(
+    'Vacancy Deletion Completed'
+  );
+  console.log(
+    '================================'
+  );
 });
