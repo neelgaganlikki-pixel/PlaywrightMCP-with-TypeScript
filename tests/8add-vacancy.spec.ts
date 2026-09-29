@@ -1,138 +1,500 @@
-  import { test, expect } from '@playwright/test';
+import { test, expect } from '@playwright/test';
+import fs from 'fs';
+import path from 'path';
 
-  import * as fs from 'fs';
-  test.setTimeout(120000);
-  test('add a new vacancy in OrangeHRM', async ({ page }) => {
+test('add a new vacancy in OrangeHRM', async ({ page }) => {
 
-    console.log('================================');
-    console.log('Adding Vacancy:');
-    console.log('================================');
+  console.log('================================');
+  console.log('Adding Vacancy:');
+  console.log('================================');
 
-    // Step 1: Login
-    console.log('Step 1: Navigating to OrangeHRM login page...');
-    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-    console.log('Login page loaded');
+  // ============================================================
+  // TEST DATA
+  // ============================================================
 
-    console.log('Entering username...');
-    await page.getByPlaceholder('Username').fill('Admin');
-    console.log('Username entered');
+  const baseUrl =
+    process.env.BASE_URL ||
+    'https://opensource-demo.orangehrmlive.com';
 
-    console.log('Entering password...');
-    await page.getByPlaceholder('Password').fill('admin123');
-    console.log('Password entered');
+  const username =
+    process.env.USERNAME ||
+    'Admin';
 
-    console.log('Clicking login button...');
-    await page.getByRole('button', { name: 'Login' }).click();
+  const password =
+    process.env.PASSWORD ||
+    'admin123';
 
-    console.log('Waiting for Dashboard...');
-    await expect(page).toHaveURL(/dashboard/);
-    console.log('Login successful - Dashboard loaded');
-    
-    const loggedInUser = (await page.locator('.oxd-userdropdown-name').innerText()).trim();
+  const vacancyName =
+    `Senior Software Test Engineer ${Date.now()}`;
 
-    console.log('Logged-in user:', loggedInUser);
+  const jobTitle = 'QA Engineer';
 
-    console.log('Step 2: Navigating to Recruitment...');
-    await page.locator('span.oxd-main-menu-item--name').filter({ hasText: 'Recruitment' }).click();
-    console.log('Recruitment page loaded');
+  const description =
+    'Automation testing vacancy created using Playwright';
 
-    console.log('Step 3: Clicking on Vacancies...');
-    await page.getByRole('link', { name: 'Vacancies' }).click();
-    console.log('Vacancies page loaded');
+  // ============================================================
+  // SAVE VACANCY NAME FOR DELETE TEST
+  // ============================================================
 
-    // Step 4: Click on Add button
-    console.log('Step 4: Clicking Add button...');
-    await page.getByText('Add', { exact: true }).click();
-    console.log('Add Vacancy page loaded');
-    // await expect(page.getByRole('heading', { name: 'Add Vacancy' })).toBeVisible();
+  const vacancyFile = path.join(
+    process.cwd(),
+    'tests',
+    'vacancy_name.txt'
+  );
 
-    // Step 5: Fill in vacancy details
-    console.log('Step 5: Filling vacancy details...');
-    const vacancyName = page.locator('.oxd-input-group').filter({ hasText: 'Vacancy Name' }).locator('input');
+  fs.writeFileSync(
+    vacancyFile,
+    vacancyName,
+    'utf-8'
+  );
 
-    const uniqueVacancyName = `Senior Software Test Engineer ${Date.now()}`;
+  console.log(`Vacancy name: ${vacancyName}`);
 
-    await vacancyName.fill(uniqueVacancyName);
-    console.log('Vacancy name filled');
-    
-    console.log('Opening Job Title dropdown...');
-    await page.locator('.oxd-select-wrapper').nth(0).click();
+  // ============================================================
+  // STEP 1 - LOGIN
+  // ============================================================
 
-    console.log('Waiting for Job Title option...');
+  console.log('');
+  console.log(
+    'Step 1: Navigating to OrangeHRM login page...'
+  );
 
-    const jobTitleOption = page.getByRole('option', { name: 'QA Engineer' });
-
-    await expect(jobTitleOption).toBeVisible({ timeout: 15000 });
-
-    console.log('Selecting Job Title: QA Engineer...');
-
-    await jobTitleOption.click({ timeout: 30000 });
-
-    console.log('Job Title selected');
-    console.log('Entering description...');
-    await page.getByPlaceholder('Type description here').fill('We are looking for a skilled backend software engineer to join our team.');
-    console.log('Description filled');
-    // for hiring manager, we will use the logged-in user as the hiring manager
-    console.log('Selecting Hiring Manager...');
-    const hiringManager = page.getByPlaceholder('Type for hints...');
-
-    await hiringManager.click();
-    await hiringManager.fill(loggedInUser);
-    console.log('Waiting for Hiring Manager autocomplete...');
-    await page.waitForTimeout(1000);
-
-    const firstOption = page.locator('.oxd-autocomplete-option').first();
-
-    await expect(firstOption).toBeVisible({ timeout: 20000 });
-    console.log('Hiring Manager option displayed');
-    await firstOption.click();
-    console.log('Hiring Manager selected');
-    console.log('Entering Number of Positions...');
-    await page.locator('input.oxd-input').nth(2).fill('3');
-    
-
-  // Click Save
-const toastPromise = page.evaluate(() => {
-  return new Promise<string>((resolve) => {
-    const observer = new MutationObserver(() => {
-      const toast = document.querySelector(
-        '.oxd-toast-content.oxd-toast-content--success .oxd-toast-content-text'
-      );
-
-      if (toast) {
-        const text = toast.textContent?.trim() || '';
-
-        if (text) {
-          observer.disconnect();
-          resolve(text);
-        }
-      }
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
+  await page.goto(baseUrl, {
+    waitUntil: 'domcontentloaded'
   });
+
+  await expect(
+    page.getByPlaceholder('Username')
+  ).toBeVisible({
+    timeout: 15000
+  });
+
+  console.log('Login page loaded');
+
+  console.log('Entering username...');
+
+  await page
+    .getByPlaceholder('Username')
+    .fill(username);
+
+  console.log('Username entered');
+
+  console.log('Entering password...');
+
+  await page
+    .getByPlaceholder('Password')
+    .fill(password);
+
+  console.log('Password entered');
+
+  console.log('Clicking login button...');
+
+  await page
+    .getByRole('button', {
+      name: 'Login'
+    })
+    .click();
+
+  console.log('Waiting for Dashboard...');
+
+  await expect(
+    page.getByRole('heading', {
+      name: 'Dashboard'
+    })
+  ).toBeVisible({
+    timeout: 30000
+  });
+
+  console.log(
+    'Login successful - Dashboard loaded'
+  );
+
+  // ============================================================
+  // STEP 2 - RECRUITMENT
+  // ============================================================
+
+  console.log('');
+  console.log(
+    'Step 2: Navigating to Recruitment...'
+  );
+
+  await page
+    .getByRole('link', {
+      name: 'Recruitment'
+    })
+    .click();
+
+  await expect(
+    page
+  ).toHaveURL(
+    /\/web\/index\.php\/recruitment/,
+    {
+      timeout: 15000
+    }
+  );
+
+  console.log('Recruitment page loaded');
+
+  // ============================================================
+  // STEP 3 - VACANCIES
+  // ============================================================
+
+  console.log('');
+  console.log(
+    'Step 3: Clicking on Vacancies...'
+  );
+
+  await page
+    .getByRole('link', {
+      name: 'Vacancies'
+    })
+    .click();
+
+  await expect(
+    page.getByRole('heading', {
+      name: 'Vacancies'
+    })
+  ).toBeVisible({
+    timeout: 15000
+  });
+
+  console.log('Vacancies page loaded');
+
+  // ============================================================
+  // STEP 4 - ADD
+  // ============================================================
+
+  console.log('');
+  console.log(
+    'Step 4: Clicking Add button...'
+  );
+
+  await page
+    .getByRole('button', {
+      name: 'Add'
+    })
+    .click();
+
+  await expect(
+    page.getByRole('heading', {
+      name: 'Add Vacancy'
+    })
+  ).toBeVisible({
+    timeout: 15000
+  });
+
+  console.log('Add Vacancy page loaded');
+
+  // ============================================================
+  // STEP 5 - FILL VACANCY DETAILS
+  // ============================================================
+
+  console.log('');
+  console.log(
+    'Step 5: Filling vacancy details...'
+  );
+
+  // ------------------------------------------------------------
+  // Vacancy Name
+  // ------------------------------------------------------------
+
+  const vacancyNameInput = page
+    .locator('div.oxd-input-group')
+    .filter({
+      hasText: 'Vacancy Name'
+    })
+    .locator('input')
+    .first();
+
+  await expect(
+    vacancyNameInput
+  ).toBeVisible({
+    timeout: 10000
+  });
+
+  await vacancyNameInput.fill(
+    vacancyName
+  );
+
+  console.log(
+    'Vacancy name filled'
+  );
+
+  // ------------------------------------------------------------
+  // Job Title
+  // ------------------------------------------------------------
+
+  console.log(
+    'Opening Job Title dropdown...'
+  );
+
+  const jobTitleDropdown = page
+    .locator('.oxd-select-text')
+    .first();
+
+  await expect(
+    jobTitleDropdown
+  ).toBeVisible({
+    timeout: 10000
+  });
+
+  await jobTitleDropdown.click();
+
+  console.log(
+    'Waiting for Job Title option...'
+  );
+
+  const jobTitleOption = page
+    .getByRole('option', {
+      name: jobTitle,
+      exact: true
+    });
+
+  await expect(
+    jobTitleOption
+  ).toBeVisible({
+    timeout: 10000
+  });
+
+  console.log(
+    `Selecting Job Title: ${jobTitle}...`
+  );
+
+  await jobTitleOption.click();
+
+  console.log(
+    'Job Title selected'
+  );
+
+  // ------------------------------------------------------------
+  // Description
+  // ------------------------------------------------------------
+
+  console.log(
+    'Entering description...'
+  );
+
+  const descriptionBox = page
+    .getByPlaceholder(
+      'Type description here'
+    );
+
+  await expect(
+    descriptionBox
+  ).toBeVisible({
+    timeout: 10000
+  });
+
+  await descriptionBox.fill(
+    description
+  );
+
+  console.log(
+    'Description filled'
+  );
+
+  // ------------------------------------------------------------
+  // Hiring Manager
+  // ------------------------------------------------------------
+
+  console.log(
+    'Selecting Hiring Manager...'
+  );
+
+  const hiringManagerInput =
+    page.getByPlaceholder(
+      'Type for hints...'
+    );
+
+  await expect(
+    hiringManagerInput
+  ).toBeVisible({
+    timeout: 10000
+  });
+
+  await hiringManagerInput.fill(
+    'a'
+  );
+
+  console.log(
+    'Waiting for Hiring Manager autocomplete...'
+  );
+
+  const managerDropdown = page.locator(
+    '.oxd-autocomplete-dropdown'
+  );
+
+  await expect(
+    managerDropdown
+  ).toBeVisible({
+    timeout: 10000
+  });
+
+  const managerOption = managerDropdown
+    .locator(
+      '.oxd-autocomplete-option'
+    )
+    .first();
+
+  await expect(
+    managerOption
+  ).toBeVisible({
+    timeout: 10000
+  });
+
+  console.log(
+    'Hiring Manager option displayed'
+  );
+
+  await managerOption.click();
+
+  console.log(
+    'Hiring Manager selected'
+  );
+
+  // ------------------------------------------------------------
+  // Number Of Positions
+  // ------------------------------------------------------------
+
+  console.log(
+    'Entering Number of Positions...'
+  );
+
+  const numberOfPositionsInput =
+    page
+      .locator('div.oxd-input-group')
+      .filter({
+        hasText: 'Number of Positions'
+      })
+      .locator('input')
+      .first();
+
+  await expect(
+    numberOfPositionsInput
+  ).toBeVisible({
+    timeout: 10000
+  });
+
+  await numberOfPositionsInput.fill(
+    '1'
+  );
+
+  // ============================================================
+  // STEP 6 - SAVE
+  // ============================================================
+
+  console.log('');
+  console.log(
+    'Clicking Save...'
+  );
+
+  const saveButton =
+    page.getByRole('button', {
+      name: 'Save'
+    });
+
+  await expect(
+    saveButton
+  ).toBeVisible({
+    timeout: 10000
+  });
+
+  await expect(
+    saveButton
+  ).toBeEnabled({
+    timeout: 10000
+  });
+
+  await saveButton.click();
+
+  console.log(
+    'Save button clicked'
+  );
+
+  // ============================================================
+  // WAIT FOR SUCCESS TOAST
+  // ============================================================
+
+  const successToast = page
+    .locator(
+      '.oxd-toast-container .oxd-toast'
+    )
+    .filter({
+      hasText: /Successfully Saved/i
+    });
+
+  await expect(
+    successToast
+  ).toBeVisible({
+    timeout: 15000
+  });
+
+  const toastText =
+    await successToast.innerText();
+
+  console.log(
+    `Success Toast: ${toastText}`
+  );
+
+  console.log(
+    'Vacancy saved successfully'
+  );
+
+  // ============================================================
+  // STEP 7 - GO BACK TO VACANCY LIST
+  // ============================================================
+
+  console.log('');
+  console.log(
+    'Step 7: Returning to vacancy list...'
+  );
+
+  await page
+    .getByRole('link', {
+      name: 'Vacancies'
+    })
+    .click();
+
+  await expect(
+    page.getByRole('heading', {
+      name: 'Vacancies'
+    })
+  ).toBeVisible({
+    timeout: 15000
+  });
+
+  // ============================================================
+  // VERIFY CREATED VACANCY
+  // ============================================================
+
+  console.log(
+    'Searching for created vacancy...'
+  );
+
+  const vacancyRow = page
+    .locator('.oxd-table-card')
+    .filter({
+      hasText: vacancyName
+    });
+
+  await expect(
+    vacancyRow
+  ).toHaveCount(1, {
+    timeout: 30000
+  });
+
+  console.log(
+    `Vacancy verified successfully: ${vacancyName}`
+  );
+
+  console.log('');
+  console.log(
+    '================================'
+  );
+  console.log(
+    'Vacancy Creation Completed'
+  );
+  console.log(
+    '================================'
+  );
 });
-
-console.log('Clicking Save...');
-
-await page.getByRole('button', { name: 'Save' }).click();
-
-console.log('Save button clicked');
-
-const message = await toastPromise;
-
-console.log('================================');
-console.log('TOAST MESSAGE:', JSON.stringify(message));
-console.log('================================');
-
-expect(message).toMatch(/Successfully Saved|Success/i);
-console.log('message:', message);
-
-console.log('Toast message verified successfully');
-
-fs.writeFileSync('tests/vacancy-name.txt', uniqueVacancyName);
-console.log('Vacancy name saved:', uniqueVacancyName);
-  });
