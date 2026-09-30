@@ -1,6 +1,0 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="67.614943">
-<testsuite name="pim\employee.spec.ts" timestamp="2026-09-12T05:44:26.098Z" hostname="chromium" tests="1" failures="0" skipped="0" time="65.235" errors="0">
-<testcase name="PIM employee creation flow in OrangeHRM" classname="pim\employee.spec.ts" time="65.235">
-</testcase>
-</testsuite>
-</testsuites>

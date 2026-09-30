@@ -4,26 +4,26 @@
     "password": "admin123"
   },
   "employee": {
-    "first_name": "Olivia",
-    "middle_name": "Anne",
-    "last_name": "Jackson",
-    "employee_id": "6639",
-    "gender": "Female",
-    "other_id": "8GRQ0vmZ",
-    "driver_license_number": "DLdfpULKy",
-    "license_expiry_date": "2037-07-23",
-    "nationality": "Spanish",
-    "marital_status": "Married",
-    "date_of_birth": "2007-09-12",
-    "blood_type": "O-",
-    "test_field": "Q0E8JewEDC"
+    "first_name": "Ryan",
+    "middle_name": "Henry",
+    "last_name": "Walker",
+    "employee_id": "5576",
+    "gender": "Male",
+    "other_id": "K5KBAYNp",
+    "driver_license_number": "DLPyY03TZ",
+    "license_expiry_date": "2037-01-30",
+    "nationality": "Australian",
+    "marital_status": "Single",
+    "date_of_birth": "1984-09-30",
+    "blood_type": "AB-",
+    "test_field": "MW7ezI7Yn8"
   },
   "employee_login": {
     "create_login_details": true,
-    "username": "OliviaJacksonXiCvKW",
+    "username": "RyanWalkerBcy3OT",
     "status": "Enabled",
-    "password": "AutoBbNOf8XOoB9!",
-    "confirm_password": "AutoBbNOf8XOoB9!"
+    "password": "AutoRItCIwk08u9!",
+    "confirm_password": "AutoRItCIwk08u9!"
   },
   "photo": {
     "path": "test_data/employee_photo.png"

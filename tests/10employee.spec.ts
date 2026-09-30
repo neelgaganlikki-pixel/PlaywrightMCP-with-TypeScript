@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
-import { EmployeePage } from '../../pages/EmployeePage';
 
 type EmployeeTestData = {
   firstName: string;
@@ -78,16 +77,76 @@ function generateEmployeeData(): EmployeeTestData {
 
 async function waitForToast(page: any, regex: RegExp) {
   const toast = page.locator('.oxd-toast-content');
-  await expect(toast.first()).toContainText(regex, { timeout: 30000 });
+  const message = await toast.first().innerText({ timeout: 30000 });
+  console.log(`[TOAST] ${message}`);
+  expect(message).toMatch(regex);
+}
+
+function printStep(message: string) {
+  console.log(`[STEP] ${message}`);
+}
+
+function fieldContainer(page: any, label: string) {
+  return page.locator('.oxd-input-group').filter({ hasText: label }).first();
+}
+
+function inputByLabel(page: any, label: string) {
+  return fieldContainer(page, label).locator('input').first();
+}
+
+async function selectRandomByLabel(page: any, label: string) {
+  printStep(`Opening ${label} dropdown`);
+  const dropdown = fieldContainer(page, label).locator('.oxd-select-text');
+  await dropdown.waitFor({ state: 'visible', timeout: 30000 });
+  await dropdown.click();
+
+  const options = page.locator('.oxd-select-option:visible');
+  const values = (await options.allInnerTexts())
+    .map((value: string) => value.trim())
+    .filter((value: string) => value && !value.startsWith('--'));
+  if (!values.length) throw new Error(`No valid options found for ${label}`);
+
+  const selected = randomFrom(values);
+  await options.filter({ hasText: selected }).first().click();
+  printStep(`${label} selected: ${selected}`);
+  return selected;
+}
+
+async function fillPersonalDetails(page: any, data: EmployeeTestData) {
+  printStep('Filling personal details');
+  await inputByLabel(page, 'Other Id').fill(data.otherId);
+  await inputByLabel(page, "Driver's License Number").fill(data.driverLicenseNumber);
+  await inputByLabel(page, 'License Expiry Date').fill(data.licenseExpiryDate);
+  await inputByLabel(page, 'Date of Birth').fill(data.dateOfBirth);
+  await selectRandomByLabel(page, 'Nationality');
+  await selectRandomByLabel(page, 'Marital Status');
+  await selectRandomByLabel(page, 'Blood Type');
+  await fieldContainer(page, 'Gender').getByText(data.gender, { exact: true }).click();
+  await inputByLabel(page, 'Test_Field').fill(data.testField);
+  printStep('Personal details filled');
+}
+
+async function searchEmployee(page: any, employeeId: string) {
+  printStep(`Searching employee ID: ${employeeId}`);
+  await inputByLabel(page, 'Employee Id').fill(employeeId);
+  await page.getByRole('button', { name: 'Search' }).click();
+}
+
+function employeeRow(page: any, employeeId: string) {
+  return page.locator('div.oxd-table-card').filter({ hasText: employeeId }).first();
 }
 
 test.setTimeout(180000);
 
 test('PIM employee creation flow in OrangeHRM', async ({ page }) => {
-  const employeePage = new EmployeePage(page);
   const employeeData = generateEmployeeData();
   const employeeUsername = `${employeeData.firstName}${employeeData.lastName}${randomAlphaNumeric(6)}`;
   const employeePassword = `Auto${randomAlphaNumeric(10)}9!`;
+
+  printStep(`Generated employee: ${employeeData.firstName} ${employeeData.middleName} ${employeeData.lastName}`);
+  printStep(`Generated employee ID: ${employeeData.employeeId}`);
+  printStep(`Generated username: ${employeeUsername}`);
+  printStep(`Generated password: ${employeePassword}`);
 
   const payload = {
     login: { username: 'Admin', password: 'admin123' },
@@ -118,42 +177,66 @@ test('PIM employee creation flow in OrangeHRM', async ({ page }) => {
 
   fs.mkdirSync('test_data', { recursive: true });
   fs.writeFileSync('test_data/user_data1.json', JSON.stringify(payload, null, 2));
+  printStep('Test data saved to test_data/user_data1.json');
 
+  printStep('Opening OrangeHRM login page');
   await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+  printStep('Logging in as Admin');
   await page.getByPlaceholder('Username').fill('Admin');
   await page.getByPlaceholder('Password').fill('admin123');
   await page.getByRole('button', { name: 'Login' }).click();
   await expect(page).toHaveURL(/dashboard/);
+  printStep('Login successful');
 
+  printStep('Opening PIM employee list');
   await page.locator('span.oxd-main-menu-item--name').filter({ hasText: 'PIM' }).click();
-  await employeePage.openEmployeeList();
+  await page.getByRole('link', { name: 'Employee List' }).click();
+  await page.waitForURL(/\/pim\/viewEmployeeList/);
   await page.getByRole('button', { name: 'Add' }).click();
+  printStep('Add Employee page opened');
 
-  await employeePage.fillEmployeeDetails(employeeData.firstName, employeeData.middleName, employeeData.lastName, employeeData.employeeId);
-  await employeePage.uploadPhoto('test_data/employee_photo.png');
-  await employeePage.enableCreateLoginDetails();
-  await employeePage.fillLoginDetails(employeeUsername, employeePassword);
+  printStep('Filling employee basic details');
+  await page.getByPlaceholder('First Name').fill(employeeData.firstName);
+  await page.getByPlaceholder('Middle Name').fill(employeeData.middleName);
+  await page.getByPlaceholder('Last Name').fill(employeeData.lastName);
+  await inputByLabel(page, 'Employee Id').fill(employeeData.employeeId);
+  await page.locator('input[type="file"]').setInputFiles('test_data/employee_photo.png');
+  printStep('Employee photo uploaded');
+  await page.locator('.oxd-switch-wrapper span').click();
+  printStep('Create Login Details enabled');
+  await inputByLabel(page, 'Username').fill(employeeUsername);
+  await inputByLabel(page, 'Password').fill(employeePassword);
+  await inputByLabel(page, 'Confirm Password').fill(employeePassword);
+  printStep('Username, password, and confirmation password filled');
 
-  await employeePage.saveEmployee();
+  printStep('Saving new employee');
+  await page.getByRole('button', { name: 'Save' }).last().click();
   await waitForToast(page, /Successfully Saved|Success/i);
   await page.waitForURL(/\/pim\/viewPersonalDetails\//, { timeout: 30000 });
 
   await expect(page.locator('body')).toContainText(employeeData.firstName);
-  await employeePage.waitForPersonalDetails();
-  await employeePage.fillPersonalDetails(employeeData);
+  await inputByLabel(page, 'Other Id').waitFor({ state: 'visible', timeout: 30000 });
+  printStep('Personal Details page opened');
+  await fillPersonalDetails(page, employeeData);
 
+  printStep('Saving personal details');
   await page.getByRole('button', { name: 'Save' }).last().click();
   await waitForToast(page, /Successfully Saved|Success/i);
 
   await page.locator('span.oxd-main-menu-item--name').filter({ hasText: 'PIM' }).click();
   await page.getByRole('link', { name: 'Employee List' }).click();
+  printStep('Returned to employee list');
 
-  await employeePage.searchEmployee(employeeData.employeeId);
-  await expect(employeePage.employeeRow(employeeData.employeeId)).toContainText(employeeData.employeeId, { timeout: 20000 });
-  await employeePage.deleteEmployee(employeeData.employeeId);
+  await searchEmployee(page, employeeData.employeeId);
+  await expect(employeeRow(page, employeeData.employeeId)).toContainText(employeeData.employeeId, { timeout: 20000 });
+  printStep('Employee found in search results');
+  await employeeRow(page, employeeData.employeeId).locator('.bi-trash').click();
+  await page.getByRole('button', { name: 'Yes, Delete' }).click();
+  printStep('Employee deletion confirmed');
   await waitForToast(page, /Successfully Deleted|Deleted/i);
 
   await page.getByRole('link', { name: 'Employee List' }).click();
-  await employeePage.searchEmployee(employeeData.employeeId);
-  await expect(employeePage.employeeRow(employeeData.employeeId)).toHaveCount(0, { timeout: 20000 });
+  await searchEmployee(page, employeeData.employeeId);
+  await expect(employeeRow(page, employeeData.employeeId)).toHaveCount(0, { timeout: 20000 });
+  printStep('Employee deletion verified');
 });

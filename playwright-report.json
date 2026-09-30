@@ -3,9 +3,7 @@
     "argv": [
       "C:\\Program Files\\nodejs\\node.exe",
       "D:\\Automation Testing\\PlayWright MCP- TypeScript\\node_modules\\@playwright\\test\\cli.js",
-      "test",
-      "tests/pim/employee.spec.ts",
-      "--headed"
+      "test"
     ],
     "configFile": "D:\\Automation Testing\\PlayWright MCP- TypeScript\\playwright.config.ts",
     "rootDir": "D:/Automation Testing/PlayWright MCP- TypeScript/tests",
@@ -73,8 +71,651 @@
   },
   "suites": [
     {
-      "title": "pim\\employee.spec.ts",
-      "file": "pim/employee.spec.ts",
+      "title": "01login.spec.ts",
+      "file": "01login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login to OrangeHRM and verify dashboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 24205,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T06:08:49.624Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ee592985530ba438f719-eb8799d1e48b5d6e2ffa",
+          "file": "01login.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "02logout.spec.ts",
+      "file": "02logout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login and logout from OrangeHRM",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 20071,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T06:09:16.707Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "87ea59525af080f266ac-412681a8570f15668042",
+          "file": "02logout.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "03buzz-post.spec.ts",
+      "file": "03buzz-post.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "post a buzz message in OrangeHRM",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22751,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Posting message: Buzz 1790748594016\n"
+                    },
+                    {
+                      "text": "Composer value: Buzz 1790748594016\n"
+                    },
+                    {
+                      "text": "Post button is ready\n"
+                    },
+                    {
+                      "text": "Post button clicked\n"
+                    },
+                    {
+                      "text": "Successfully verified: Buzz 1790748594016\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T06:09:36.809Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b98084af57022b3bc8ba-c9fb5b97d675d7aba6f3",
+          "file": "03buzz-post.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "04delete-buzz-post.spec.ts",
+      "file": "04delete-buzz-post.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "delete the first buzz post in OrangeHRM",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17445,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Success\n\nSuccessfully Deleted\n\n×\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T06:09:59.587Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4ce23e66b7c0c369f7a5-893d05a7f13f444b9a5a",
+          "file": "04delete-buzz-post.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "05system-user.spec.ts",
+      "file": "05system-user.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "login to OrangeHRM and verify Admin system users page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11805,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T06:10:17.062Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f11d92338701f80a478b-083aa32c2a7ff6b0dd5e",
+          "file": "05system-user.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "06add-user.spec.ts",
+      "file": "06add-user.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "add a new user in OrangeHRM Admin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 24108,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T06:10:28.899Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bd66123795591c21426b-972bb8839f99e540f39c",
+          "file": "06add-user.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "07practice-login.spec.ts",
+      "file": "07practice-login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "logs in and out on the practice test site",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11159,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T06:10:53.035Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1fe8c2af9105fabc6eef-fe4b314f18845d2584d5",
+          "file": "07practice-login.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "08add-vacancy.spec.ts",
+      "file": "08add-vacancy.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "add a new vacancy in OrangeHRM",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 26044,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "Adding Vacancy:\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "Step 1: Navigating to OrangeHRM login page...\n"
+                    },
+                    {
+                      "text": "Login page loaded\n"
+                    },
+                    {
+                      "text": "Entering username...\n"
+                    },
+                    {
+                      "text": "Username entered\n"
+                    },
+                    {
+                      "text": "Entering password...\n"
+                    },
+                    {
+                      "text": "Password entered\n"
+                    },
+                    {
+                      "text": "Clicking login button...\n"
+                    },
+                    {
+                      "text": "Waiting for Dashboard...\n"
+                    },
+                    {
+                      "text": "Login successful - Dashboard loaded\n"
+                    },
+                    {
+                      "text": "Logged-in user: Yuvi Abdurasul\n"
+                    },
+                    {
+                      "text": "Step 2: Navigating to Recruitment...\n"
+                    },
+                    {
+                      "text": "Recruitment page loaded\n"
+                    },
+                    {
+                      "text": "Step 3: Clicking on Vacancies...\n"
+                    },
+                    {
+                      "text": "Vacancies page loaded\n"
+                    },
+                    {
+                      "text": "Step 4: Clicking Add button...\n"
+                    },
+                    {
+                      "text": "Add Vacancy page loaded\n"
+                    },
+                    {
+                      "text": "Step 5: Filling vacancy details...\n"
+                    },
+                    {
+                      "text": "Vacancy name filled\n"
+                    },
+                    {
+                      "text": "Opening Job Title dropdown...\n"
+                    },
+                    {
+                      "text": "Waiting for Job Title option...\n"
+                    },
+                    {
+                      "text": "Selecting Job Title: QA Engineer...\n"
+                    },
+                    {
+                      "text": "Job Title selected\n"
+                    },
+                    {
+                      "text": "Entering description...\n"
+                    },
+                    {
+                      "text": "Description filled\n"
+                    },
+                    {
+                      "text": "Selecting Hiring Manager...\n"
+                    },
+                    {
+                      "text": "Waiting for Hiring Manager autocomplete...\n"
+                    },
+                    {
+                      "text": "Hiring Manager option displayed\n"
+                    },
+                    {
+                      "text": "Hiring Manager selected\n"
+                    },
+                    {
+                      "text": "Entering Number of Positions...\n"
+                    },
+                    {
+                      "text": "Clicking Save...\n"
+                    },
+                    {
+                      "text": "Save button clicked\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "TOAST MESSAGE: \"Success\"\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "message: Success\n"
+                    },
+                    {
+                      "text": "Toast message verified successfully\n"
+                    },
+                    {
+                      "text": "Vacancy name saved: Senior Software Test Engineer 1790748679427\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T06:11:04.219Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "806095565441e01317d9-5b83a830591cc3f2dbff",
+          "file": "08add-vacancy.spec.ts",
+          "line": 5,
+          "column": 7
+        }
+      ]
+    },
+    {
+      "title": "09delete-vacancy.spec.ts",
+      "file": "09delete-vacancy.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "delete the vacancy created by the previous test case",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16246,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "Deleting Vacancy:\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "Step 1: Navigating to OrangeHRM login page...\n"
+                    },
+                    {
+                      "text": "Login page loaded\n"
+                    },
+                    {
+                      "text": "Entering username...\n"
+                    },
+                    {
+                      "text": "Entering password...\n"
+                    },
+                    {
+                      "text": "Clicking login button...\n"
+                    },
+                    {
+                      "text": "Waiting for Dashboard...\n"
+                    },
+                    {
+                      "text": "Login successful - Dashboard loaded\n"
+                    },
+                    {
+                      "text": "Step 2: Navigating to Recruitment...\n"
+                    },
+                    {
+                      "text": "Recruitment page loaded\n"
+                    },
+                    {
+                      "text": "Step 3: Clicking on Vacancies...\n"
+                    },
+                    {
+                      "text": "Vacancies page loaded\n"
+                    },
+                    {
+                      "text": "Step 4: Searching for the vacancy created in the previous test case...\n"
+                    },
+                    {
+                      "text": "Vacancy to delete: Senior Software Test Engineer 1790748679427\n"
+                    },
+                    {
+                      "text": "Waiting for created vacancy to appear...\n"
+                    },
+                    {
+                      "text": "Created vacancy found\n"
+                    },
+                    {
+                      "text": "Scrolling to the created vacancy...\n"
+                    },
+                    {
+                      "text": "Created vacancy is now in view\n"
+                    },
+                    {
+                      "text": "Vacancy found: Senior Software Test Engineer 1790748679427\n"
+                    },
+                    {
+                      "text": "Clicking Delete button for the created vacancy...\n"
+                    },
+                    {
+                      "text": "Delete button clicked\n"
+                    },
+                    {
+                      "text": "Step 5: Deleting the vacancy...\n"
+                    },
+                    {
+                      "text": "Step 6: Preparing deletion toast listener...\n"
+                    },
+                    {
+                      "text": "Deletion toast listener ready\n"
+                    },
+                    {
+                      "text": "Step 7: Clicking Yes, Delete...\n"
+                    },
+                    {
+                      "text": "Yes, Delete button clicked\n"
+                    },
+                    {
+                      "text": "Waiting for deletion toast message...\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "DELETE TOAST MESSAGE: \"Success\"\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "Success\n"
+                    },
+                    {
+                      "text": "Deletion toast message verified successfully\n"
+                    },
+                    {
+                      "text": "Step 8: Verifying vacancy was deleted...\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "VACANCY DELETED SUCCESSFULLY\n"
+                    },
+                    {
+                      "text": "Deleted Vacancy: Senior Software Test Engineer 1790748679427\n"
+                    },
+                    {
+                      "text": "================================\n"
+                    },
+                    {
+                      "text": "Step 7: Verifying deletion...\n"
+                    },
+                    {
+                      "text": "Vacancy deletion verified successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T06:11:30.284Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "755772d698ce0ccab920-687097d75141bbf2eb8f",
+          "file": "09delete-vacancy.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "10employee.spec.ts",
+      "file": "10employee.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
@@ -94,12 +735,115 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 65235,
+                  "duration": 54610,
                   "errors": [],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "[STEP] Generated employee: Emily Samuel Wilson\n"
+                    },
+                    {
+                      "text": "[STEP] Generated employee ID: 4069\n"
+                    },
+                    {
+                      "text": "[STEP] Generated username: EmilyWilson3bEvWA\n"
+                    },
+                    {
+                      "text": "[STEP] Generated password: Autoc92jw7BWuO9!\n"
+                    },
+                    {
+                      "text": "[STEP] Test data saved to test_data/user_data1.json\n"
+                    },
+                    {
+                      "text": "[STEP] Opening OrangeHRM login page\n"
+                    },
+                    {
+                      "text": "[STEP] Logging in as Admin\n"
+                    },
+                    {
+                      "text": "[STEP] Login successful\n"
+                    },
+                    {
+                      "text": "[STEP] Opening PIM employee list\n"
+                    },
+                    {
+                      "text": "[STEP] Add Employee page opened\n"
+                    },
+                    {
+                      "text": "[STEP] Filling employee basic details\n"
+                    },
+                    {
+                      "text": "[STEP] Employee photo uploaded\n"
+                    },
+                    {
+                      "text": "[STEP] Create Login Details enabled\n"
+                    },
+                    {
+                      "text": "[STEP] Username, password, and confirmation password filled\n"
+                    },
+                    {
+                      "text": "[STEP] Saving new employee\n"
+                    },
+                    {
+                      "text": "[TOAST] Success\n\nSuccessfully Saved\n"
+                    },
+                    {
+                      "text": "[STEP] Personal Details page opened\n"
+                    },
+                    {
+                      "text": "[STEP] Filling personal details\n"
+                    },
+                    {
+                      "text": "[STEP] Opening Nationality dropdown\n"
+                    },
+                    {
+                      "text": "[STEP] Nationality selected: Czech\n"
+                    },
+                    {
+                      "text": "[STEP] Opening Marital Status dropdown\n"
+                    },
+                    {
+                      "text": "[STEP] Marital Status selected: Other\n"
+                    },
+                    {
+                      "text": "[STEP] Opening Blood Type dropdown\n"
+                    },
+                    {
+                      "text": "[STEP] Blood Type selected: AB-\n"
+                    },
+                    {
+                      "text": "[STEP] Personal details filled\n"
+                    },
+                    {
+                      "text": "[STEP] Saving personal details\n"
+                    },
+                    {
+                      "text": "[TOAST] Success\n\nSuccessfully Saved\n"
+                    },
+                    {
+                      "text": "[STEP] Returned to employee list\n"
+                    },
+                    {
+                      "text": "[STEP] Searching employee ID: 4069\n"
+                    },
+                    {
+                      "text": "[STEP] Employee found in search results\n"
+                    },
+                    {
+                      "text": "[STEP] Employee deletion confirmed\n"
+                    },
+                    {
+                      "text": "[TOAST] Success\n\nSuccessfully Deleted\n"
+                    },
+                    {
+                      "text": "[STEP] Searching employee ID: 4069\n"
+                    },
+                    {
+                      "text": "[STEP] Employee deletion verified\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-12T05:44:27.039Z",
+                  "startTime": "2026-09-30T06:11:46.553Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -107,9 +851,9 @@
               "status": "expected"
             }
           ],
-          "id": "bee1601fa4b43aba1af6-e780e92b2b6549a29064",
-          "file": "pim/employee.spec.ts",
-          "line": 86,
+          "id": "580978122853ba59e3d2-48d74a843f7e1204ddf2",
+          "file": "10employee.spec.ts",
+          "line": 141,
           "column": 5
         }
       ]
@@ -117,9 +861,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-12T05:44:26.031Z",
-    "duration": 67614.943,
-    "expected": 1,
+    "startTime": "2026-09-30T06:08:48.740Z",
+    "duration": 232554.401,
+    "expected": 10,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
