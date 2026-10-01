@@ -1,6 +1,10 @@
 {
   "config": {
-    "argv": [],
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\Automation Testing\\PlayWright MCP- TypeScript\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
     "configFile": "D:\\Automation Testing\\PlayWright MCP- TypeScript\\playwright.config.ts",
     "rootDir": "D:/Automation Testing/PlayWright MCP- TypeScript/tests",
     "failOnFlakyTests": false,
@@ -31,7 +35,7 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 120000
       }
     ],
     "quiet": false,
@@ -60,7 +64,7 @@
     "shard": null,
     "tags": [],
     "updateSnapshots": "missing",
-    "updateSourceMethod": "3way",
+    "updateSourceMethod": "patch",
     "version": "1.62.1",
     "workers": 1,
     "webServer": null
@@ -78,7 +82,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 120000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
@@ -88,12 +92,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 14976,
+                  "duration": 13054,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-30T06:15:58.184Z",
+                  "startTime": "2026-10-01T06:27:35.889Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -120,7 +124,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 120000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
@@ -130,12 +134,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 12414,
+                  "duration": 15354,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-30T06:16:15.788Z",
+                  "startTime": "2026-10-01T06:27:49.914Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -172,14 +176,14 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 20127,
+                  "duration": 15118,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "Posting message: Buzz 1790749003537\n"
+                      "text": "Posting message: Buzz 1790836095718\n"
                     },
                     {
-                      "text": "Composer value: Buzz 1790749003537\n"
+                      "text": "Composer value: Buzz 1790836095718\n"
                     },
                     {
                       "text": "Post button is ready\n"
@@ -188,12 +192,12 @@
                       "text": "Post button clicked\n"
                     },
                     {
-                      "text": "Successfully verified: Buzz 1790749003537\n"
+                      "text": "Successfully verified: Buzz 1790836095718\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-30T06:16:28.237Z",
+                  "startTime": "2026-10-01T06:28:05.324Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -230,7 +234,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 15308,
+                  "duration": 19293,
                   "errors": [],
                   "stdout": [
                     {
@@ -239,7 +243,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-30T06:16:48.411Z",
+                  "startTime": "2026-10-01T06:28:20.511Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -266,7 +270,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 120000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
@@ -276,12 +280,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 12015,
+                  "duration": 25103,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-30T06:17:03.752Z",
+                  "startTime": "2026-10-01T06:28:39.858Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -318,12 +322,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 23944,
+                  "duration": 37381,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-30T06:17:15.799Z",
+                  "startTime": "2026-10-01T06:29:05.014Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -350,7 +354,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 120000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
@@ -360,12 +364,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 12020,
+                  "duration": 12817,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-30T06:17:39.771Z",
+                  "startTime": "2026-10-01T06:29:42.446Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -402,7 +406,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 26206,
+                  "duration": 36818,
                   "errors": [],
                   "stdout": [
                     {
@@ -413,6 +417,12 @@
                     },
                     {
                       "text": "================================\n"
+                    },
+                    {
+                      "text": "Vacancy name: Senior Software Test Engineer 1790836195560\n"
+                    },
+                    {
+                      "text": "\n"
                     },
                     {
                       "text": "Step 1: Navigating to OrangeHRM login page...\n"
@@ -445,10 +455,16 @@
                       "text": "Logged-in user: John Doe\n"
                     },
                     {
+                      "text": "\n"
+                    },
+                    {
                       "text": "Step 2: Navigating to Recruitment...\n"
                     },
                     {
                       "text": "Recruitment page loaded\n"
+                    },
+                    {
+                      "text": "\n"
                     },
                     {
                       "text": "Step 3: Clicking on Vacancies...\n"
@@ -457,10 +473,16 @@
                       "text": "Vacancies page loaded\n"
                     },
                     {
+                      "text": "\n"
+                    },
+                    {
                       "text": "Step 4: Clicking Add button...\n"
                     },
                     {
                       "text": "Add Vacancy page loaded\n"
+                    },
+                    {
+                      "text": "\n"
                     },
                     {
                       "text": "Step 5: Filling vacancy details...\n"
@@ -502,33 +524,45 @@
                       "text": "Entering Number of Positions...\n"
                     },
                     {
+                      "text": "\n"
+                    },
+                    {
                       "text": "Clicking Save...\n"
                     },
                     {
                       "text": "Save button clicked\n"
                     },
                     {
+                      "text": "Vacancy saved successfully\n"
+                    },
+                    {
+                      "text": "\n"
+                    },
+                    {
+                      "text": "Step 7: Returning to vacancy list...\n"
+                    },
+                    {
+                      "text": "Searching for created vacancy...\n"
+                    },
+                    {
+                      "text": "Vacancy verified successfully: Senior Software Test Engineer 1790836195560\n"
+                    },
+                    {
+                      "text": "\n"
+                    },
+                    {
                       "text": "================================\n"
                     },
                     {
-                      "text": "TOAST MESSAGE: \"Success\"\n"
+                      "text": "Vacancy Creation Completed\n"
                     },
                     {
                       "text": "================================\n"
-                    },
-                    {
-                      "text": "message: Success\n"
-                    },
-                    {
-                      "text": "Toast message verified successfully\n"
-                    },
-                    {
-                      "text": "Vacancy name saved: Senior Software Test Engineer 1790749087079\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-30T06:17:51.824Z",
+                  "startTime": "2026-10-01T06:29:55.314Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -539,7 +573,7 @@
           "id": "806095565441e01317d9-5b83a830591cc3f2dbff",
           "file": "08add-vacancy.spec.ts",
           "line": 5,
-          "column": 7
+          "column": 5
         }
       ]
     },
@@ -555,7 +589,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 180000,
+              "timeout": 120000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "chromium",
@@ -565,7 +599,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 18049,
+                  "duration": 20469,
                   "errors": [],
                   "stdout": [
                     {
@@ -576,6 +610,12 @@
                     },
                     {
                       "text": "================================\n"
+                    },
+                    {
+                      "text": "Vacancy to delete: Senior Software Test Engineer 1790836195560\n"
+                    },
+                    {
+                      "text": "\n"
                     },
                     {
                       "text": "Step 1: Navigating to OrangeHRM login page...\n"
@@ -599,10 +639,16 @@
                       "text": "Login successful - Dashboard loaded\n"
                     },
                     {
+                      "text": "\n"
+                    },
+                    {
                       "text": "Step 2: Navigating to Recruitment...\n"
                     },
                     {
                       "text": "Recruitment page loaded\n"
+                    },
+                    {
+                      "text": "\n"
                     },
                     {
                       "text": "Step 3: Clicking on Vacancies...\n"
@@ -611,10 +657,10 @@
                       "text": "Vacancies page loaded\n"
                     },
                     {
-                      "text": "Step 4: Searching for the vacancy created in the previous test case...\n"
+                      "text": "\n"
                     },
                     {
-                      "text": "Vacancy to delete: Senior Software Test Engineer 1790749087079\n"
+                      "text": "Step 4: Searching for the vacancy created in the previous test case...\n"
                     },
                     {
                       "text": "Waiting for created vacancy to appear...\n"
@@ -623,78 +669,51 @@
                       "text": "Created vacancy found\n"
                     },
                     {
-                      "text": "Scrolling to the created vacancy...\n"
+                      "text": "\n"
                     },
                     {
-                      "text": "Created vacancy is now in view\n"
-                    },
-                    {
-                      "text": "Vacancy found: Senior Software Test Engineer 1790749087079\n"
-                    },
-                    {
-                      "text": "Clicking Delete button for the created vacancy...\n"
+                      "text": "Step 5: Deleting vacancy...\n"
                     },
                     {
                       "text": "Delete button clicked\n"
                     },
                     {
-                      "text": "Step 5: Deleting the vacancy...\n"
+                      "text": "Waiting for delete confirmation...\n"
                     },
                     {
-                      "text": "Step 6: Preparing deletion toast listener...\n"
+                      "text": "Delete confirmation displayed\n"
                     },
                     {
-                      "text": "Deletion toast listener ready\n"
+                      "text": "Delete confirmation clicked\n"
                     },
                     {
-                      "text": "Step 7: Clicking Yes, Delete...\n"
+                      "text": "Delete Toast: Success\n\nSuccessfully Deleted\n\n×\n"
                     },
                     {
-                      "text": "Yes, Delete button clicked\n"
+                      "text": "Vacancy deleted successfully\n"
                     },
                     {
-                      "text": "Waiting for deletion toast message...\n"
+                      "text": "Verified vacancy no longer exists: Senior Software Test Engineer 1790836195560\n"
                     },
                     {
-                      "text": "================================\n"
+                      "text": "Vacancy tracking file deleted\n"
                     },
                     {
-                      "text": "DELETE TOAST MESSAGE: \"Success\"\n"
-                    },
-                    {
-                      "text": "================================\n"
-                    },
-                    {
-                      "text": "Success\n"
-                    },
-                    {
-                      "text": "Deletion toast message verified successfully\n"
-                    },
-                    {
-                      "text": "Step 8: Verifying vacancy was deleted...\n"
+                      "text": "\n"
                     },
                     {
                       "text": "================================\n"
                     },
                     {
-                      "text": "VACANCY DELETED SUCCESSFULLY\n"
-                    },
-                    {
-                      "text": "Deleted Vacancy: Senior Software Test Engineer 1790749087079\n"
+                      "text": "Vacancy Deletion Completed\n"
                     },
                     {
                       "text": "================================\n"
-                    },
-                    {
-                      "text": "Step 7: Verifying deletion...\n"
-                    },
-                    {
-                      "text": "Vacancy deletion verified successfully\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-30T06:18:18.080Z",
+                  "startTime": "2026-10-01T06:30:32.180Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -731,20 +750,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 67579,
+                  "duration": 56925,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[STEP] Generated employee: Ryan Henry Walker\n"
+                      "text": "[STEP] Generated employee: Emily Marie Lee\n"
                     },
                     {
-                      "text": "[STEP] Generated employee ID: 5576\n"
+                      "text": "[STEP] Generated employee ID: 8379\n"
                     },
                     {
-                      "text": "[STEP] Generated username: RyanWalkerBcy3OT\n"
+                      "text": "[STEP] Generated username: EmilyLeeUQN8BQ\n"
                     },
                     {
-                      "text": "[STEP] Generated password: AutoRItCIwk08u9!\n"
+                      "text": "[STEP] Generated password: AutoMfNyMykreo9!\n"
                     },
                     {
                       "text": "[STEP] Test data saved to test_data/user_data1.json\n"
@@ -792,19 +811,19 @@
                       "text": "[STEP] Opening Nationality dropdown\n"
                     },
                     {
-                      "text": "[STEP] Nationality selected: Danish\n"
+                      "text": "[STEP] Nationality selected: North Korean\n"
                     },
                     {
                       "text": "[STEP] Opening Marital Status dropdown\n"
                     },
                     {
-                      "text": "[STEP] Marital Status selected: Other\n"
+                      "text": "[STEP] Marital Status selected: Single\n"
                     },
                     {
                       "text": "[STEP] Opening Blood Type dropdown\n"
                     },
                     {
-                      "text": "[STEP] Blood Type selected: A+\n"
+                      "text": "[STEP] Blood Type selected: B-\n"
                     },
                     {
                       "text": "[STEP] Personal details filled\n"
@@ -819,7 +838,7 @@
                       "text": "[STEP] Returned to employee list\n"
                     },
                     {
-                      "text": "[STEP] Searching employee ID: 5576\n"
+                      "text": "[STEP] Searching employee ID: 8379\n"
                     },
                     {
                       "text": "[STEP] Employee found in search results\n"
@@ -831,7 +850,7 @@
                       "text": "[TOAST] Success\n\nSuccessfully Deleted\n"
                     },
                     {
-                      "text": "[STEP] Searching employee ID: 5576\n"
+                      "text": "[STEP] Searching employee ID: 8379\n"
                     },
                     {
                       "text": "[STEP] Employee deletion verified\n"
@@ -839,7 +858,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-30T06:18:36.194Z",
+                  "startTime": "2026-10-01T06:30:52.892Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -857,8 +876,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-30T06:15:56.632Z",
-    "duration": 227290.338,
+    "startTime": "2026-10-01T06:27:34.730Z",
+    "duration": 255717.08000000002,
     "expected": 10,
     "skipped": 0,
     "unexpected": 0,

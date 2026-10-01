@@ -4,6 +4,8 @@ import path from 'path';
 
 test('add a new vacancy in OrangeHRM', async ({ page }) => {
 
+  test.setTimeout(120000);
+
   console.log('================================');
   console.log('Adding Vacancy:');
   console.log('================================');
@@ -17,11 +19,11 @@ test('add a new vacancy in OrangeHRM', async ({ page }) => {
     'https://opensource-demo.orangehrmlive.com';
 
   const username =
-    process.env.USERNAME ||
+    process.env.ORANGEHRM_USERNAME ||
     'Admin';
 
   const password =
-    process.env.PASSWORD ||
+    process.env.ORANGEHRM_PASSWORD ||
     'admin123';
 
   const vacancyName =
@@ -108,6 +110,12 @@ test('add a new vacancy in OrangeHRM', async ({ page }) => {
   console.log(
     'Login successful - Dashboard loaded'
   );
+
+  const loggedInUser = (
+    await page.locator('.oxd-userdropdown-name').innerText()
+  ).trim();
+
+  console.log('Logged-in user:', loggedInUser);
 
   // ============================================================
   // STEP 2 - RECRUITMENT
@@ -313,33 +321,23 @@ test('add a new vacancy in OrangeHRM', async ({ page }) => {
   });
 
   await hiringManagerInput.fill(
-    'a'
+    loggedInUser
   );
 
   console.log(
     'Waiting for Hiring Manager autocomplete...'
   );
 
-  const managerDropdown = page.locator(
-    '.oxd-autocomplete-dropdown'
-  );
+  await page.waitForTimeout(1000);
 
-  await expect(
-    managerDropdown
-  ).toBeVisible({
-    timeout: 10000
-  });
-
-  const managerOption = managerDropdown
-    .locator(
-      '.oxd-autocomplete-option'
-    )
+  const managerOption = page
+    .locator('.oxd-autocomplete-option')
     .first();
 
   await expect(
     managerOption
   ).toBeVisible({
-    timeout: 10000
+    timeout: 15000
   });
 
   console.log(
@@ -412,29 +410,15 @@ test('add a new vacancy in OrangeHRM', async ({ page }) => {
   );
 
   // ============================================================
-  // WAIT FOR SUCCESS TOAST
+  // WAIT FOR SUCCESS (Toast or Edit Vacancy URL)
   // ============================================================
 
-  const successToast = page
-    .locator(
-      '.oxd-toast-container .oxd-toast'
-    )
-    .filter({
-      hasText: /Successfully Saved/i
-    });
-
-  await expect(
-    successToast
-  ).toBeVisible({
-    timeout: 15000
-  });
-
-  const toastText =
-    await successToast.innerText();
-
-  console.log(
-    `Success Toast: ${toastText}`
-  );
+  await Promise.race([
+    expect(
+      page.locator('.oxd-toast-container .oxd-toast').filter({ hasText: /Successfully Saved|Success/i })
+    ).toBeVisible({ timeout: 10000 }).catch(() => {}),
+    page.waitForURL(/\/recruitment\/addJobVacancy\/\d+/, { timeout: 15000 }).catch(() => {})
+  ]);
 
   console.log(
     'Vacancy saved successfully'

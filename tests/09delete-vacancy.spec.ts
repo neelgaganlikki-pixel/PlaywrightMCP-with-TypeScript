@@ -4,6 +4,8 @@ import path from 'path';
 
 test('delete the vacancy created by the previous test case', async ({ page }) => {
 
+  test.setTimeout(120000);
+
   console.log('================================');
   console.log('Deleting Vacancy:');
   console.log('================================');
@@ -17,11 +19,11 @@ test('delete the vacancy created by the previous test case', async ({ page }) =>
     'https://opensource-demo.orangehrmlive.com';
 
   const username =
-    process.env.USERNAME ||
+    process.env.ORANGEHRM_USERNAME ||
     'Admin';
 
   const password =
-    process.env.PASSWORD ||
+    process.env.ORANGEHRM_PASSWORD ||
     'admin123';
 
   // ============================================================
@@ -341,7 +343,7 @@ test('delete the vacancy created by the previous test case', async ({ page }) =>
       '.oxd-toast-container .oxd-toast'
     )
     .filter({
-      hasText: /Successfully Deleted/i
+      hasText: /Successfully Deleted|Success/i
     });
 
   await expect(

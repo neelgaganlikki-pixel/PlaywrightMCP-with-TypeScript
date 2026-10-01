@@ -1,26 +1,26 @@
-<testsuites id="" name="" tests="10" failures="0" skipped="0" errors="0" time="227.290338">
-<testsuite name="01login.spec.ts" timestamp="2026-09-30T06:15:57.442Z" hostname="chromium" tests="1" failures="0" skipped="0" time="14.976" errors="0">
-<testcase name="Login to OrangeHRM and verify dashboard" classname="01login.spec.ts" time="14.976">
+<testsuites id="" name="" tests="10" failures="0" skipped="0" errors="0" time="255.71708">
+<testsuite name="01login.spec.ts" timestamp="2026-10-01T06:27:34.876Z" hostname="chromium" tests="1" failures="0" skipped="0" time="13.054" errors="0">
+<testcase name="Login to OrangeHRM and verify dashboard" classname="01login.spec.ts" time="13.054">
 </testcase>
 </testsuite>
-<testsuite name="02logout.spec.ts" timestamp="2026-09-30T06:15:57.442Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.414" errors="0">
-<testcase name="Login and logout from OrangeHRM" classname="02logout.spec.ts" time="12.414">
+<testsuite name="02logout.spec.ts" timestamp="2026-10-01T06:27:34.876Z" hostname="chromium" tests="1" failures="0" skipped="0" time="15.354" errors="0">
+<testcase name="Login and logout from OrangeHRM" classname="02logout.spec.ts" time="15.354">
 </testcase>
 </testsuite>
-<testsuite name="03buzz-post.spec.ts" timestamp="2026-09-30T06:15:57.442Z" hostname="chromium" tests="1" failures="0" skipped="0" time="20.127" errors="0">
-<testcase name="post a buzz message in OrangeHRM" classname="03buzz-post.spec.ts" time="20.127">
+<testsuite name="03buzz-post.spec.ts" timestamp="2026-10-01T06:27:34.876Z" hostname="chromium" tests="1" failures="0" skipped="0" time="15.118" errors="0">
+<testcase name="post a buzz message in OrangeHRM" classname="03buzz-post.spec.ts" time="15.118">
 <system-out>
-<![CDATA[Posting message: Buzz 1790749003537
-Composer value: Buzz 1790749003537
+<![CDATA[Posting message: Buzz 1790836095718
+Composer value: Buzz 1790836095718
 Post button is ready
 Post button clicked
-Successfully verified: Buzz 1790749003537
+Successfully verified: Buzz 1790836095718
 ]]>
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="04delete-buzz-post.spec.ts" timestamp="2026-09-30T06:15:57.442Z" hostname="chromium" tests="1" failures="0" skipped="0" time="15.308" errors="0">
-<testcase name="delete the first buzz post in OrangeHRM" classname="04delete-buzz-post.spec.ts" time="15.308">
+<testsuite name="04delete-buzz-post.spec.ts" timestamp="2026-10-01T06:27:34.876Z" hostname="chromium" tests="1" failures="0" skipped="0" time="19.293" errors="0">
+<testcase name="delete the first buzz post in OrangeHRM" classname="04delete-buzz-post.spec.ts" time="19.293">
 <system-out>
 <![CDATA[Success
 
@@ -31,24 +31,26 @@ Successfully Deleted
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="05system-user.spec.ts" timestamp="2026-09-30T06:15:57.442Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.015" errors="0">
-<testcase name="login to OrangeHRM and verify Admin system users page" classname="05system-user.spec.ts" time="12.015">
+<testsuite name="05system-user.spec.ts" timestamp="2026-10-01T06:27:34.876Z" hostname="chromium" tests="1" failures="0" skipped="0" time="25.103" errors="0">
+<testcase name="login to OrangeHRM and verify Admin system users page" classname="05system-user.spec.ts" time="25.103">
 </testcase>
 </testsuite>
-<testsuite name="06add-user.spec.ts" timestamp="2026-09-30T06:15:57.442Z" hostname="chromium" tests="1" failures="0" skipped="0" time="23.944" errors="0">
-<testcase name="add a new user in OrangeHRM Admin" classname="06add-user.spec.ts" time="23.944">
+<testsuite name="06add-user.spec.ts" timestamp="2026-10-01T06:27:34.876Z" hostname="chromium" tests="1" failures="0" skipped="0" time="37.381" errors="0">
+<testcase name="add a new user in OrangeHRM Admin" classname="06add-user.spec.ts" time="37.381">
 </testcase>
 </testsuite>
-<testsuite name="07practice-login.spec.ts" timestamp="2026-09-30T06:15:57.442Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.02" errors="0">
-<testcase name="logs in and out on the practice test site" classname="07practice-login.spec.ts" time="12.02">
+<testsuite name="07practice-login.spec.ts" timestamp="2026-10-01T06:27:34.876Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.817" errors="0">
+<testcase name="logs in and out on the practice test site" classname="07practice-login.spec.ts" time="12.817">
 </testcase>
 </testsuite>
-<testsuite name="08add-vacancy.spec.ts" timestamp="2026-09-30T06:15:57.442Z" hostname="chromium" tests="1" failures="0" skipped="0" time="26.206" errors="0">
-<testcase name="add a new vacancy in OrangeHRM" classname="08add-vacancy.spec.ts" time="26.206">
+<testsuite name="08add-vacancy.spec.ts" timestamp="2026-10-01T06:27:34.876Z" hostname="chromium" tests="1" failures="0" skipped="0" time="36.818" errors="0">
+<testcase name="add a new vacancy in OrangeHRM" classname="08add-vacancy.spec.ts" time="36.818">
 <system-out>
 <![CDATA[================================
 Adding Vacancy:
 ================================
+Vacancy name: Senior Software Test Engineer 1790836195560
+
 Step 1: Navigating to OrangeHRM login page...
 Login page loaded
 Entering username...
@@ -59,12 +61,16 @@ Clicking login button...
 Waiting for Dashboard...
 Login successful - Dashboard loaded
 Logged-in user: John Doe
+
 Step 2: Navigating to Recruitment...
 Recruitment page loaded
+
 Step 3: Clicking on Vacancies...
 Vacancies page loaded
+
 Step 4: Clicking Add button...
 Add Vacancy page loaded
+
 Step 5: Filling vacancy details...
 Vacancy name filled
 Opening Job Title dropdown...
@@ -78,24 +84,30 @@ Waiting for Hiring Manager autocomplete...
 Hiring Manager option displayed
 Hiring Manager selected
 Entering Number of Positions...
+
 Clicking Save...
 Save button clicked
+Vacancy saved successfully
+
+Step 7: Returning to vacancy list...
+Searching for created vacancy...
+Vacancy verified successfully: Senior Software Test Engineer 1790836195560
+
 ================================
-TOAST MESSAGE: "Success"
+Vacancy Creation Completed
 ================================
-message: Success
-Toast message verified successfully
-Vacancy name saved: Senior Software Test Engineer 1790749087079
 ]]>
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="09delete-vacancy.spec.ts" timestamp="2026-09-30T06:15:57.442Z" hostname="chromium" tests="1" failures="0" skipped="0" time="18.049" errors="0">
-<testcase name="delete the vacancy created by the previous test case" classname="09delete-vacancy.spec.ts" time="18.049">
+<testsuite name="09delete-vacancy.spec.ts" timestamp="2026-10-01T06:27:34.876Z" hostname="chromium" tests="1" failures="0" skipped="0" time="20.469" errors="0">
+<testcase name="delete the vacancy created by the previous test case" classname="09delete-vacancy.spec.ts" time="20.469">
 <system-out>
 <![CDATA[================================
 Deleting Vacancy:
 ================================
+Vacancy to delete: Senior Software Test Engineer 1790836195560
+
 Step 1: Navigating to OrangeHRM login page...
 Login page loaded
 Entering username...
@@ -103,48 +115,45 @@ Entering password...
 Clicking login button...
 Waiting for Dashboard...
 Login successful - Dashboard loaded
+
 Step 2: Navigating to Recruitment...
 Recruitment page loaded
+
 Step 3: Clicking on Vacancies...
 Vacancies page loaded
+
 Step 4: Searching for the vacancy created in the previous test case...
-Vacancy to delete: Senior Software Test Engineer 1790749087079
 Waiting for created vacancy to appear...
 Created vacancy found
-Scrolling to the created vacancy...
-Created vacancy is now in view
-Vacancy found: Senior Software Test Engineer 1790749087079
-Clicking Delete button for the created vacancy...
+
+Step 5: Deleting vacancy...
 Delete button clicked
-Step 5: Deleting the vacancy...
-Step 6: Preparing deletion toast listener...
-Deletion toast listener ready
-Step 7: Clicking Yes, Delete...
-Yes, Delete button clicked
-Waiting for deletion toast message...
+Waiting for delete confirmation...
+Delete confirmation displayed
+Delete confirmation clicked
+Delete Toast: Success
+
+Successfully Deleted
+
+×
+Vacancy deleted successfully
+Verified vacancy no longer exists: Senior Software Test Engineer 1790836195560
+Vacancy tracking file deleted
+
 ================================
-DELETE TOAST MESSAGE: "Success"
+Vacancy Deletion Completed
 ================================
-Success
-Deletion toast message verified successfully
-Step 8: Verifying vacancy was deleted...
-================================
-VACANCY DELETED SUCCESSFULLY
-Deleted Vacancy: Senior Software Test Engineer 1790749087079
-================================
-Step 7: Verifying deletion...
-Vacancy deletion verified successfully
 ]]>
 </system-out>
 </testcase>
 </testsuite>
-<testsuite name="10employee.spec.ts" timestamp="2026-09-30T06:15:57.442Z" hostname="chromium" tests="1" failures="0" skipped="0" time="67.579" errors="0">
-<testcase name="PIM employee creation flow in OrangeHRM" classname="10employee.spec.ts" time="67.579">
+<testsuite name="10employee.spec.ts" timestamp="2026-10-01T06:27:34.876Z" hostname="chromium" tests="1" failures="0" skipped="0" time="56.925" errors="0">
+<testcase name="PIM employee creation flow in OrangeHRM" classname="10employee.spec.ts" time="56.925">
 <system-out>
-<![CDATA[[STEP] Generated employee: Ryan Henry Walker
-[STEP] Generated employee ID: 5576
-[STEP] Generated username: RyanWalkerBcy3OT
-[STEP] Generated password: AutoRItCIwk08u9!
+<![CDATA[[STEP] Generated employee: Emily Marie Lee
+[STEP] Generated employee ID: 8379
+[STEP] Generated username: EmilyLeeUQN8BQ
+[STEP] Generated password: AutoMfNyMykreo9!
 [STEP] Test data saved to test_data/user_data1.json
 [STEP] Opening OrangeHRM login page
 [STEP] Logging in as Admin
@@ -162,24 +171,24 @@ Successfully Saved
 [STEP] Personal Details page opened
 [STEP] Filling personal details
 [STEP] Opening Nationality dropdown
-[STEP] Nationality selected: Danish
+[STEP] Nationality selected: North Korean
 [STEP] Opening Marital Status dropdown
-[STEP] Marital Status selected: Other
+[STEP] Marital Status selected: Single
 [STEP] Opening Blood Type dropdown
-[STEP] Blood Type selected: A+
+[STEP] Blood Type selected: B-
 [STEP] Personal details filled
 [STEP] Saving personal details
 [TOAST] Success
 
 Successfully Saved
 [STEP] Returned to employee list
-[STEP] Searching employee ID: 5576
+[STEP] Searching employee ID: 8379
 [STEP] Employee found in search results
 [STEP] Employee deletion confirmed
 [TOAST] Success
 
 Successfully Deleted
-[STEP] Searching employee ID: 5576
+[STEP] Searching employee ID: 8379
 [STEP] Employee deletion verified
 ]]>
 </system-out>
