@@ -128,3 +128,4 @@ npx playwright show-report
 The framework is configured with a declarative `Jenkinsfile`:
 - **Triggers:** Automatically triggered on code pushes to the `main` branch via GitHub Webhook (`githubPush()`), or scheduled nightly via cron.
 - **Reporting:** Archives test results, publishes JUnit reports, and parses JSON output to deliver email summaries.
+
