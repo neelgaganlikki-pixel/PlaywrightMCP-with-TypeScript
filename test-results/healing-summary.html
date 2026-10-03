@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Self-Healing Test Automation Report</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 24px; background: #f9fafb; color: #111827; }
+    .card { background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 24px; margin-bottom: 24px; }
+    .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e5e7eb; padding-bottom: 16px; margin-bottom: 20px; }
+    .metric-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+    .metric-box { background: #f3f4f6; border-radius: 6px; padding: 16px; text-align: center; }
+    .metric-value { font-size: 28px; font-weight: bold; color: #1f2937; margin-top: 4px; }
+    .metric-label { font-size: 13px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; }
+    th { background: #f9fafb; padding: 10px; font-weight: 600; color: #374151; border-bottom: 2px solid #e5e7eb; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <div>
+        <h1 style="margin:0;font-size:22px;color:#1e40af;">🛡️ Self-Healing Automation Execution Report</h1>
+        <p style="margin:4px 0 0 0;color:#6b7280;font-size:13px;">Generated at 2026-10-03T18:25:39.842Z</p>
+      </div>
+      <div>
+        <span style="background:#dbeafe;color:#1e40af;padding:6px 12px;border-radius:16px;font-weight:600;font-size:13px;">Playwright Self-Healing Engine v1.0</span>
+      </div>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric-box">
+        <div class="metric-label">Healing Attempts</div>
+        <div class="metric-value">14</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-label">Successful Heals</div>
+        <div class="metric-value" style="color:#059669;">9</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-label">Failed Heals</div>
+        <div class="metric-value" style="color:#dc2626;">5</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-label">Healing Recovery Rate</div>
+        <div class="metric-value" style="color:#2563eb;">64%</div>
+      </div>
+    </div>
+
+    <h2 style="font-size:16px;margin:24px 0 12px 0;">Detailed Healing Incidents</h2>
+    <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Test</th>
+            <th>Element</th>
+            <th>Action</th>
+            <th>Primary (Failed)</th>
+            <th>Healed Locator</th>
+            <th style="text-align:center;">Status</th>
+            <th style="text-align:center;">Confidence</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">1</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><strong>Playwright Test</strong></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">GenericPage :: FailedPrimaryBtn</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;">click</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#b91c1c;background:#fee2e2;padding:2px 6px;border-radius:4px;">#nonExistentPrimaryId</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#047857;background:#d1fae5;padding:2px 6px;border-radius:4px;">[data-testid=&quot;submit-btn&quot;]</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;"><span style="background:#10b981;color:#fff;padding:3px 8px;border-radius:12px;font-size:12px;font-weight:bold;">HEALED</span></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;">92%</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;font-size:11px;color:#6b7280;">11:54:47 pm</td>
+        </tr>
+      
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">2</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><strong>Playwright Test</strong></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">GenericPage :: FirstFallbackBtn</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;">click</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#b91c1c;background:#fee2e2;padding:2px 6px;border-radius:4px;">#brokenPrimaryId</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#047857;background:#d1fae5;padding:2px 6px;border-radius:4px;">[data-testid=&quot;submit-btn&quot;]</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;"><span style="background:#10b981;color:#fff;padding:3px 8px;border-radius:12px;font-size:12px;font-weight:bold;">HEALED</span></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;">92%</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;font-size:11px;color:#6b7280;">11:54:52 pm</td>
+        </tr>
+      
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">3</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><strong>Playwright Test</strong></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">GenericPage :: SecondFallbackBtn</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;">click</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#b91c1c;background:#fee2e2;padding:2px 6px;border-radius:4px;">#brokenPrimaryId</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#047857;background:#d1fae5;padding:2px 6px;border-radius:4px;">button[name=&quot;secondFallbackBtn&quot;]</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;"><span style="background:#10b981;color:#fff;padding:3px 8px;border-radius:12px;font-size:12px;font-weight:bold;">HEALED</span></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;">92%</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;font-size:11px;color:#6b7280;">11:54:56 pm</td>
+        </tr>
+      
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">4</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><strong>Playwright Test</strong></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">GenericPage :: AllFailBtn</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;">click</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#b91c1c;background:#fee2e2;padding:2px 6px;border-radius:4px;">#broken1</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#047857;background:#d1fae5;padding:2px 6px;border-radius:4px;">NONE</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;"><span style="background:#ef4444;color:#fff;padding:3px 8px;border-radius:12px;font-size:12px;font-weight:bold;">FAILED</span></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;">0%</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;font-size:11px;color:#6b7280;">11:55:02 pm</td>
+        </tr>
+      
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">5</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><strong>Playwright Test</strong></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">GenericPage :: AmbiguousBtn</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;">click</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#b91c1c;background:#fee2e2;padding:2px 6px;border-radius:4px;">#nonExistent</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#047857;background:#d1fae5;padding:2px 6px;border-radius:4px;">NONE</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;"><span style="background:#ef4444;color:#fff;padding:3px 8px;border-radius:12px;font-size:12px;font-weight:bold;">FAILED</span></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;">0%</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;font-size:11px;color:#6b7280;">11:55:05 pm</td>
+        </tr>
+      
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">6</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><strong>Playwright Test</strong></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">GenericPage :: CardBAction</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;">click</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#b91c1c;background:#fee2e2;padding:2px 6px;border-radius:4px;">#brokenCardBButton</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#047857;background:#d1fae5;padding:2px 6px;border-radius:4px;">.action-btn</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;"><span style="background:#10b981;color:#fff;padding:3px 8px;border-radius:12px;font-size:12px;font-weight:bold;">HEALED</span></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;">92%</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;font-size:11px;color:#6b7280;">11:55:09 pm</td>
+        </tr>
+      
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">7</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><strong>Playwright Test</strong></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">GenericPage :: ClickTargetBtn</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;">click</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#b91c1c;background:#fee2e2;padding:2px 6px;border-radius:4px;">#oldClickButtonId</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#047857;background:#d1fae5;padding:2px 6px;border-radius:4px;">[data-testid=&quot;click-target&quot;]</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;"><span style="background:#10b981;color:#fff;padding:3px 8px;border-radius:12px;font-size:12px;font-weight:bold;">HEALED</span></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;">92%</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;font-size:11px;color:#6b7280;">11:55:13 pm</td>
+        </tr>
+      
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">8</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><strong>Playwright Test</strong></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">GenericPage :: EmailInput</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;">fill</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#b91c1c;background:#fee2e2;padding:2px 6px;border-radius:4px;">#oldEmailInput</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#047857;background:#d1fae5;padding:2px 6px;border-radius:4px;">[data-testid=&quot;email-field&quot;]</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;"><span style="background:#10b981;color:#fff;padding:3px 8px;border-radius:12px;font-size:12px;font-weight:bold;">HEALED</span></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;">92%</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;font-size:11px;color:#6b7280;">11:55:17 pm</td>
+        </tr>
+      
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">9</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><strong>Playwright Test</strong></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">GenericPage :: StatusBadge</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;">isVisible</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#b91c1c;background:#fee2e2;padding:2px 6px;border-radius:4px;">#oldBadgeId</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#047857;background:#d1fae5;padding:2px 6px;border-radius:4px;">[data-testid=&quot;visible-badge&quot;]</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;"><span style="background:#10b981;color:#fff;padding:3px 8px;border-radius:12px;font-size:12px;font-weight:bold;">HEALED</span></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;">92%</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;font-size:11px;color:#6b7280;">11:55:18 pm</td>
+        </tr>
+      
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">10</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><strong>Playwright Test</strong></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">GenericPage :: DisabledBtn</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;">click</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#b91c1c;background:#fee2e2;padding:2px 6px;border-radius:4px;">#brokenDisabledId</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#047857;background:#d1fae5;padding:2px 6px;border-radius:4px;">NONE</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;"><span style="background:#ef4444;color:#fff;padding:3px 8px;border-radius:12px;font-size:12px;font-weight:bold;">FAILED</span></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;">0%</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;font-size:11px;color:#6b7280;">11:55:21 pm</td>
+        </tr>
+      
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">11</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><strong>Playwright Test</strong></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">GenericPage :: HiddenBtn</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;">click</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#b91c1c;background:#fee2e2;padding:2px 6px;border-radius:4px;">#brokenHiddenId</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#047857;background:#d1fae5;padding:2px 6px;border-radius:4px;">NONE</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;"><span style="background:#ef4444;color:#fff;padding:3px 8px;border-radius:12px;font-size:12px;font-weight:bold;">FAILED</span></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;">0%</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;font-size:11px;color:#6b7280;">11:55:24 pm</td>
+        </tr>
+      
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">12</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><strong>Playwright Test</strong></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">GenericPage :: TimeoutBtn</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;">click</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#b91c1c;background:#fee2e2;padding:2px 6px;border-radius:4px;">#nonExistent1</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#047857;background:#d1fae5;padding:2px 6px;border-radius:4px;">NONE</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;"><span style="background:#ef4444;color:#fff;padding:3px 8px;border-radius:12px;font-size:12px;font-weight:bold;">FAILED</span></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;">0%</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;font-size:11px;color:#6b7280;">11:55:29 pm</td>
+        </tr>
+      
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">13</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><strong>Playwright Test</strong></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">GenericPage :: InvalidLocatorBtn</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;">click</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#b91c1c;background:#fee2e2;padding:2px 6px;border-radius:4px;">///invalid[[[selector</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#047857;background:#d1fae5;padding:2px 6px;border-radius:4px;">[data-testid=&quot;submit-btn&quot;]</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;"><span style="background:#10b981;color:#fff;padding:3px 8px;border-radius:12px;font-size:12px;font-weight:bold;">HEALED</span></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;">92%</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;font-size:11px;color:#6b7280;">11:55:31 pm</td>
+        </tr>
+      
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">14</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><strong>Playwright Test</strong></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;">GenericPage :: LearnedElement</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;">click</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#b91c1c;background:#fee2e2;padding:2px 6px;border-radius:4px;">#oldPrimary</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;"><code style="color:#047857;background:#d1fae5;padding:2px 6px;border-radius:4px;">[data-testid=&quot;submit-btn&quot;]</code></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;"><span style="background:#10b981;color:#fff;padding:3px 8px;border-radius:12px;font-size:12px;font-weight:bold;">HEALED</span></td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;text-align:center;">95%</td>
+          <td style="padding:10px;border-bottom:1px solid #e5e7eb;font-size:11px;color:#6b7280;">11:55:38 pm</td>
+        </tr>
+      
+        </tbody>
+      </table>
+  </div>
+</body>
+</html>

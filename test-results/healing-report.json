@@ -1,0 +1,253 @@
+{
+  "totalAttempts": 14,
+  "successfulHeals": 9,
+  "failedHeals": 5,
+  "healingRate": "64%",
+  "events": [
+    {
+      "id": "heal_1791051887877_ncori",
+      "timestamp": "2026-10-03T18:24:47.877Z",
+      "testName": "Playwright Test",
+      "pageName": "GenericPage",
+      "elementName": "FailedPrimaryBtn",
+      "action": "click",
+      "primaryLocator": "#nonExistentPrimaryId",
+      "healedLocator": "[data-testid=\"submit-btn\"]",
+      "fallbacksAttempted": [
+        "[data-testid=\"submit-btn\"]"
+      ],
+      "attemptCount": 1,
+      "confidence": 0.92,
+      "source": "history",
+      "success": true
+    },
+    {
+      "id": "heal_1791051892040_ifdd0",
+      "timestamp": "2026-10-03T18:24:52.040Z",
+      "testName": "Playwright Test",
+      "pageName": "GenericPage",
+      "elementName": "FirstFallbackBtn",
+      "action": "click",
+      "primaryLocator": "#brokenPrimaryId",
+      "healedLocator": "[data-testid=\"submit-btn\"]",
+      "fallbacksAttempted": [
+        "[data-testid=\"submit-btn\"]"
+      ],
+      "attemptCount": 1,
+      "confidence": 0.92,
+      "source": "history",
+      "success": true
+    },
+    {
+      "id": "heal_1791051896064_pwpeo",
+      "timestamp": "2026-10-03T18:24:56.064Z",
+      "testName": "Playwright Test",
+      "pageName": "GenericPage",
+      "elementName": "SecondFallbackBtn",
+      "action": "click",
+      "primaryLocator": "#brokenPrimaryId",
+      "healedLocator": "button[name=\"secondFallbackBtn\"]",
+      "fallbacksAttempted": [
+        "button[name=\"secondFallbackBtn\"]"
+      ],
+      "attemptCount": 1,
+      "confidence": 0.92,
+      "source": "history",
+      "success": true
+    },
+    {
+      "id": "fail_1791051902061_12p7e",
+      "timestamp": "2026-10-03T18:25:02.061Z",
+      "testName": "Playwright Test",
+      "pageName": "GenericPage",
+      "elementName": "AllFailBtn",
+      "action": "click",
+      "primaryLocator": "#broken1",
+      "healedLocator": "NONE",
+      "fallbacksAttempted": [
+        "#broken2",
+        "#broken3"
+      ],
+      "attemptCount": 2,
+      "confidence": 0,
+      "source": "primary",
+      "success": false,
+      "failureReason": "All 2 fallback candidates failed or were invalid."
+    },
+    {
+      "id": "fail_1791051905122_ek0uq",
+      "timestamp": "2026-10-03T18:25:05.122Z",
+      "testName": "Playwright Test",
+      "pageName": "GenericPage",
+      "elementName": "AmbiguousBtn",
+      "action": "click",
+      "primaryLocator": "#nonExistent",
+      "healedLocator": "NONE",
+      "fallbacksAttempted": [
+        ".duplicate-btn"
+      ],
+      "attemptCount": 1,
+      "confidence": 0,
+      "source": "primary",
+      "success": false,
+      "failureReason": "All 1 fallback candidates failed or were invalid."
+    },
+    {
+      "id": "heal_1791051909528_tjt0j",
+      "timestamp": "2026-10-03T18:25:09.528Z",
+      "testName": "Playwright Test",
+      "pageName": "GenericPage",
+      "elementName": "CardBAction",
+      "action": "click",
+      "primaryLocator": "#brokenCardBButton",
+      "healedLocator": ".action-btn",
+      "fallbacksAttempted": [
+        ".action-btn"
+      ],
+      "attemptCount": 1,
+      "confidence": 0.92,
+      "source": "history",
+      "success": true
+    },
+    {
+      "id": "heal_1791051913624_k268o",
+      "timestamp": "2026-10-03T18:25:13.624Z",
+      "testName": "Playwright Test",
+      "pageName": "GenericPage",
+      "elementName": "ClickTargetBtn",
+      "action": "click",
+      "primaryLocator": "#oldClickButtonId",
+      "healedLocator": "[data-testid=\"click-target\"]",
+      "fallbacksAttempted": [
+        "[data-testid=\"click-target\"]"
+      ],
+      "attemptCount": 1,
+      "confidence": 0.92,
+      "source": "history",
+      "success": true
+    },
+    {
+      "id": "heal_1791051917882_b70bp",
+      "timestamp": "2026-10-03T18:25:17.882Z",
+      "testName": "Playwright Test",
+      "pageName": "GenericPage",
+      "elementName": "EmailInput",
+      "action": "fill",
+      "primaryLocator": "#oldEmailInput",
+      "healedLocator": "[data-testid=\"email-field\"]",
+      "fallbacksAttempted": [
+        "[data-testid=\"email-field\"]"
+      ],
+      "attemptCount": 1,
+      "confidence": 0.92,
+      "source": "history",
+      "success": true
+    },
+    {
+      "id": "heal_1791051918460_mp8kn",
+      "timestamp": "2026-10-03T18:25:18.460Z",
+      "testName": "Playwright Test",
+      "pageName": "GenericPage",
+      "elementName": "StatusBadge",
+      "action": "isVisible",
+      "primaryLocator": "#oldBadgeId",
+      "healedLocator": "[data-testid=\"visible-badge\"]",
+      "fallbacksAttempted": [
+        "[data-testid=\"visible-badge\"]"
+      ],
+      "attemptCount": 1,
+      "confidence": 0.92,
+      "source": "history",
+      "success": true
+    },
+    {
+      "id": "fail_1791051921475_c6dtq",
+      "timestamp": "2026-10-03T18:25:21.475Z",
+      "testName": "Playwright Test",
+      "pageName": "GenericPage",
+      "elementName": "DisabledBtn",
+      "action": "click",
+      "primaryLocator": "#brokenDisabledId",
+      "healedLocator": "NONE",
+      "fallbacksAttempted": [
+        "#disabledButton"
+      ],
+      "attemptCount": 1,
+      "confidence": 0,
+      "source": "primary",
+      "success": false,
+      "failureReason": "All 1 fallback candidates failed or were invalid."
+    },
+    {
+      "id": "fail_1791051924512_zlbpr",
+      "timestamp": "2026-10-03T18:25:24.512Z",
+      "testName": "Playwright Test",
+      "pageName": "GenericPage",
+      "elementName": "HiddenBtn",
+      "action": "click",
+      "primaryLocator": "#brokenHiddenId",
+      "healedLocator": "NONE",
+      "fallbacksAttempted": [
+        "#hiddenButton"
+      ],
+      "attemptCount": 1,
+      "confidence": 0,
+      "source": "primary",
+      "success": false,
+      "failureReason": "All 1 fallback candidates failed or were invalid."
+    },
+    {
+      "id": "fail_1791051929087_xvfmr",
+      "timestamp": "2026-10-03T18:25:29.087Z",
+      "testName": "Playwright Test",
+      "pageName": "GenericPage",
+      "elementName": "TimeoutBtn",
+      "action": "click",
+      "primaryLocator": "#nonExistent1",
+      "healedLocator": "NONE",
+      "fallbacksAttempted": [
+        "#nonExistent2"
+      ],
+      "attemptCount": 1,
+      "confidence": 0,
+      "source": "primary",
+      "success": false,
+      "failureReason": "All 1 fallback candidates failed or were invalid."
+    },
+    {
+      "id": "heal_1791051931690_v0csz",
+      "timestamp": "2026-10-03T18:25:31.690Z",
+      "testName": "Playwright Test",
+      "pageName": "GenericPage",
+      "elementName": "InvalidLocatorBtn",
+      "action": "click",
+      "primaryLocator": "///invalid[[[selector",
+      "healedLocator": "[data-testid=\"submit-btn\"]",
+      "fallbacksAttempted": [
+        "[data-testid=\"submit-btn\"]"
+      ],
+      "attemptCount": 1,
+      "confidence": 0.92,
+      "source": "history",
+      "success": true
+    },
+    {
+      "id": "heal_1791051938830_7iyl3",
+      "timestamp": "2026-10-03T18:25:38.830Z",
+      "testName": "Playwright Test",
+      "pageName": "GenericPage",
+      "elementName": "LearnedElement",
+      "action": "click",
+      "primaryLocator": "#oldPrimary",
+      "healedLocator": "[data-testid=\"submit-btn\"]",
+      "fallbacksAttempted": [
+        "[data-testid=\"submit-btn\"]"
+      ],
+      "attemptCount": 1,
+      "confidence": 0.9500000000000001,
+      "source": "history",
+      "success": true
+    }
+  ],
+  "generatedAt": "2026-10-03T18:25:39.842Z"
+}
