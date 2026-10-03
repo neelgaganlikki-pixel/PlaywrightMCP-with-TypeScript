@@ -1,8 +1,8 @@
-<testsuites id="" name="" tests="19" failures="0" skipped="0" errors="0" time="61.6626">
-<testsuite name="self-healing.spec.ts" timestamp="2026-10-03T18:24:40.040Z" hostname="chromium" tests="19" failures="0" skipped="0" time="57.941" errors="0">
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 1. Primary locator succeeds directly without healing" classname="self-healing.spec.ts" time="2.162">
+<testsuites id="" name="" tests="19" failures="0" skipped="0" errors="0" time="61.25771999999999">
+<testsuite name="self-healing.spec.ts" timestamp="2026-10-03T19:16:46.627Z" hostname="chromium" tests="19" failures="0" skipped="0" time="57.271" errors="0">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 1. Primary locator succeeds directly without healing" classname="self-healing.spec.ts" time="2.127">
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 2. Primary locator fails and initiates healing fallback" classname="self-healing.spec.ts" time="4.111">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 2. Primary locator fails and initiates healing fallback" classname="self-healing.spec.ts" time="4.082">
 <system-out>
 <![CDATA[
 [SELF-HEALING] ================================================================
@@ -16,8 +16,8 @@
 Call log:
 [2m  - waiting for locator('#nonExistentPrimaryId')[22m
 
-[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...
-[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 92%):
+[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...
+[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 95%i:
 [SELF-HEALING]   Selector: [data-testid="submit-btn"]
 [SELF-HEALING] ================================================================
 [SELF-HEALING] SUCCESS: ELEMENT SUCCESSFULLY HEALED!
@@ -25,7 +25,7 @@ Call log:
 [SELF-HEALING] Element:         FailedPrimaryBtn
 [SELF-HEALING] Healed Selector: [data-testid="submit-btn"]
 [SELF-HEALING] Winning Source:  history
-[SELF-HEALING] Confidence:      92%
+[SELF-HEALING] Confidence:      95%
 [SELF-HEALING] Total Attempts:  1
 [SELF-HEALING] Continuing test execution normally.
 [SELF-HEALING] ================================================================
@@ -33,7 +33,7 @@ Call log:
 ]]>
 </system-out>
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 3. First fallback succeeds" classname="self-healing.spec.ts" time="4.067">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 3. First fallback succeeds" classname="self-healing.spec.ts" time="4.023">
 <system-out>
 <![CDATA[
 [SELF-HEALING] ================================================================
@@ -47,8 +47,8 @@ Call log:
 Call log:
 [2m  - waiting for locator('#brokenPrimaryId')[22m
 
-[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...
-[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 92%):
+[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...
+[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 95%i:
 [SELF-HEALING]   Selector: [data-testid="submit-btn"]
 [SELF-HEALING] ================================================================
 [SELF-HEALING] SUCCESS: ELEMENT SUCCESSFULLY HEALED!
@@ -56,7 +56,7 @@ Call log:
 [SELF-HEALING] Element:         FirstFallbackBtn
 [SELF-HEALING] Healed Selector: [data-testid="submit-btn"]
 [SELF-HEALING] Winning Source:  history
-[SELF-HEALING] Confidence:      92%
+[SELF-HEALING] Confidence:      95%
 [SELF-HEALING] Total Attempts:  1
 [SELF-HEALING] Continuing test execution normally.
 [SELF-HEALING] ================================================================
@@ -64,7 +64,7 @@ Call log:
 ]]>
 </system-out>
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 4. Second fallback succeeds when first fallback fails" classname="self-healing.spec.ts" time="3.994">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 4. Second fallback succeeds when first fallback fails" classname="self-healing.spec.ts" time="4.132">
 <system-out>
 <![CDATA[
 [SELF-HEALING] ================================================================
@@ -78,8 +78,8 @@ Call log:
 Call log:
 [2m  - waiting for locator('#brokenPrimaryId')[22m
 
-[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...
-[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 92%):
+[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...
+[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 95%i:
 [SELF-HEALING]   Selector: button[name="secondFallbackBtn"]
 [SELF-HEALING] ================================================================
 [SELF-HEALING] SUCCESS: ELEMENT SUCCESSFULLY HEALED!
@@ -87,7 +87,7 @@ Call log:
 [SELF-HEALING] Element:         SecondFallbackBtn
 [SELF-HEALING] Healed Selector: button[name="secondFallbackBtn"]
 [SELF-HEALING] Winning Source:  history
-[SELF-HEALING] Confidence:      92%
+[SELF-HEALING] Confidence:      95%
 [SELF-HEALING] Total Attempts:  1
 [SELF-HEALING] Continuing test execution normally.
 [SELF-HEALING] ================================================================
@@ -95,7 +95,7 @@ Call log:
 ]]>
 </system-out>
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 5. All fallbacks fail and preserves genuine error" classname="self-healing.spec.ts" time="5.993">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 5. All fallbacks fail and preserves genuine error" classname="self-healing.spec.ts" time="5.99">
 <system-out>
 <![CDATA[
 [SELF-HEALING] ================================================================
@@ -109,10 +109,10 @@ Call log:
 Call log:
 [2m  - waiting for locator('#broken1')[22m
 
-[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...
-[SELF-HEALING] Attempt [1/2] via [REPOSITORY] (Confidence: 90%):
+[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...
+[SELF-HEALING] Attempt [1/2] via [REPOSITORY] (Confidence: 90%i:
 [SELF-HEALING]   Selector: #broken2
-[SELF-HEALING] Attempt [2/2] via [REPOSITORY] (Confidence: 85%):
+[SELF-HEALING] Attempt [2/2] via [REPOSITORY] (Confidence: 85%i:
 [SELF-HEALING]   Selector: #broken3
 ]]>
 </system-out>
@@ -134,7 +134,7 @@ Call log:
 ]]>
 </system-err>
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 6. Multiple matching elements without context fails safely" classname="self-healing.spec.ts" time="3.053">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 6. Multiple matching elements without context fails safely" classname="self-healing.spec.ts" time="2.964">
 <system-out>
 <![CDATA[
 [SELF-HEALING] ================================================================
@@ -148,8 +148,8 @@ Call log:
 Call log:
 [2m  - waiting for locator('#nonExistent')[22m
 
-[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...
-[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%):
+[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...
+[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%i:
 [SELF-HEALING]   Selector: .duplicate-btn
 ]]>
 </system-out>
@@ -171,7 +171,7 @@ Call log:
 ]]>
 </system-err>
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 7. Context-based healing accurately scopes to intended card" classname="self-healing.spec.ts" time="4.302">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 7. Context-based healing accurately scopes to intended card" classname="self-healing.spec.ts" time="4.096">
 <system-out>
 <![CDATA[
 [SELF-HEALING] ================================================================
@@ -185,8 +185,8 @@ Call log:
 Call log:
 [2m  - waiting for locator('#brokenCardBButton')[22m
 
-[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...
-[SELF-HEALING] Attempt [1/3] via [HISTORY] (Confidence: 92%):
+[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...
+[SELF-HEALING] Attempt [1/3] via [HISTORY] (Confidence: 95%i:
 [SELF-HEALING]   Selector: .action-btn
 [SELF-HEALING]   Context:  #cardB
 [SELF-HEALING] ================================================================
@@ -195,7 +195,7 @@ Call log:
 [SELF-HEALING] Element:         CardBAction
 [SELF-HEALING] Healed Selector: .action-btn
 [SELF-HEALING] Winning Source:  history
-[SELF-HEALING] Confidence:      92%
+[SELF-HEALING] Confidence:      95%
 [SELF-HEALING] Total Attempts:  1
 [SELF-HEALING] Continuing test execution normally.
 [SELF-HEALING] ================================================================
@@ -203,7 +203,7 @@ Call log:
 ]]>
 </system-out>
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 8. Click healing handles broken selector and triggers event" classname="self-healing.spec.ts" time="4.035">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 8. Click healing handles broken selector and triggers event" classname="self-healing.spec.ts" time="4.311">
 <system-out>
 <![CDATA[
 [SELF-HEALING] ================================================================
@@ -217,8 +217,8 @@ Call log:
 Call log:
 [2m  - waiting for locator('#oldClickButtonId')[22m
 
-[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...
-[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 92%):
+[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...
+[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 95%i:
 [SELF-HEALING]   Selector: [data-testid="click-target"]
 [SELF-HEALING] ================================================================
 [SELF-HEALING] SUCCESS: ELEMENT SUCCESSFULLY HEALED!
@@ -226,7 +226,7 @@ Call log:
 [SELF-HEALING] Element:         ClickTargetBtn
 [SELF-HEALING] Healed Selector: [data-testid="click-target"]
 [SELF-HEALING] Winning Source:  history
-[SELF-HEALING] Confidence:      92%
+[SELF-HEALING] Confidence:      95%
 [SELF-HEALING] Total Attempts:  1
 [SELF-HEALING] Continuing test execution normally.
 [SELF-HEALING] ================================================================
@@ -234,7 +234,7 @@ Call log:
 ]]>
 </system-out>
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 9. Input healing recovers and fills value" classname="self-healing.spec.ts" time="4.175">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 9. Input healing recovers and fills value" classname="self-healing.spec.ts" time="4.001">
 <system-out>
 <![CDATA[
 [SELF-HEALING] ================================================================
@@ -248,8 +248,8 @@ Call log:
 Call log:
 [2m  - waiting for locator('#oldEmailInput')[22m
 
-[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...
-[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 92%):
+[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...
+[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 95%i:
 [SELF-HEALING]   Selector: [data-testid="email-field"]
 [SELF-HEALING] ================================================================
 [SELF-HEALING] SUCCESS: ELEMENT SUCCESSFULLY HEALED!
@@ -257,7 +257,7 @@ Call log:
 [SELF-HEALING] Element:         EmailInput
 [SELF-HEALING] Healed Selector: [data-testid="email-field"]
 [SELF-HEALING] Winning Source:  history
-[SELF-HEALING] Confidence:      92%
+[SELF-HEALING] Confidence:      95%
 [SELF-HEALING] Total Attempts:  1
 [SELF-HEALING] Continuing test execution normally.
 [SELF-HEALING] ================================================================
@@ -265,7 +265,7 @@ Call log:
 ]]>
 </system-out>
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 10. Visibility healing verifies element through fallback" classname="self-healing.spec.ts" time="0.518">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 10. Visibility healing verifies element through fallback" classname="self-healing.spec.ts" time="0.484">
 <system-out>
 <![CDATA[
 [SELF-HEALING] ================================================================
@@ -276,8 +276,8 @@ Call log:
 [SELF-HEALING] Action:   isVisible
 [SELF-HEALING] Primary:  #oldBadgeId
 [SELF-HEALING] Reason:   Element is not visible for locator: #oldBadgeId
-[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...
-[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 92%):
+[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...
+[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 95%i:
 [SELF-HEALING]   Selector: [data-testid="visible-badge"]
 [SELF-HEALING] ================================================================
 [SELF-HEALING] SUCCESS: ELEMENT SUCCESSFULLY HEALED!
@@ -285,7 +285,7 @@ Call log:
 [SELF-HEALING] Element:         StatusBadge
 [SELF-HEALING] Healed Selector: [data-testid="visible-badge"]
 [SELF-HEALING] Winning Source:  history
-[SELF-HEALING] Confidence:      92%
+[SELF-HEALING] Confidence:      95%
 [SELF-HEALING] Total Attempts:  1
 [SELF-HEALING] Continuing test execution normally.
 [SELF-HEALING] ================================================================
@@ -293,7 +293,7 @@ Call log:
 ]]>
 </system-out>
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 11. Disabled element is rejected during interactive action healing" classname="self-healing.spec.ts" time="2.981">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 11. Disabled element is rejected during interactive action healing" classname="self-healing.spec.ts" time="2.944">
 <system-out>
 <![CDATA[
 [SELF-HEALING] ================================================================
@@ -307,8 +307,8 @@ Call log:
 Call log:
 [2m  - waiting for locator('#brokenDisabledId')[22m
 
-[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...
-[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%):
+[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...
+[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%i:
 [SELF-HEALING]   Selector: #disabledButton
 ]]>
 </system-out>
@@ -330,7 +330,7 @@ Call log:
 ]]>
 </system-err>
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 12. Hidden element is rejected during interactive click healing" classname="self-healing.spec.ts" time="2.983">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 12. Hidden element is rejected during interactive click healing" classname="self-healing.spec.ts" time="2.951">
 <system-out>
 <![CDATA[
 [SELF-HEALING] ================================================================
@@ -344,8 +344,8 @@ Call log:
 Call log:
 [2m  - waiting for locator('#brokenHiddenId')[22m
 
-[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...
-[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%):
+[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...
+[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%i:
 [SELF-HEALING]   Selector: #hiddenButton
 ]]>
 </system-out>
@@ -367,7 +367,7 @@ Call log:
 ]]>
 </system-err>
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 13. Timeout is enforced properly without infinite hanging" classname="self-healing.spec.ts" time="4.528">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 13. Timeout is enforced properly without infinite hanging" classname="self-healing.spec.ts" time="4.443">
 <system-out>
 <![CDATA[
 [SELF-HEALING] ================================================================
@@ -381,8 +381,8 @@ Call log:
 Call log:
 [2m  - waiting for locator('#nonExistent1')[22m
 
-[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...
-[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%):
+[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...
+[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%i:
 [SELF-HEALING]   Selector: #nonExistent2
 ]]>
 </system-out>
@@ -404,7 +404,7 @@ Call log:
 ]]>
 </system-err>
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 14. Invalid locator syntax is handled gracefully without crashing system" classname="self-healing.spec.ts" time="2.582">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 14. Invalid locator syntax is handled gracefully without crashing system" classname="self-healing.spec.ts" time="2.579">
 <system-out>
 <![CDATA[
 [SELF-HEALING] ================================================================
@@ -424,8 +424,8 @@ Call log:
 Call log:
 [2m  - waiting for locator('///invalid[[[selector')[22m
 
-[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...
-[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 92%):
+[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...
+[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 95%i:
 [SELF-HEALING]   Selector: [data-testid="submit-btn"]
 [SELF-HEALING] ================================================================
 [SELF-HEALING] SUCCESS: ELEMENT SUCCESSFULLY HEALED!
@@ -433,7 +433,7 @@ Call log:
 [SELF-HEALING] Element:         InvalidLocatorBtn
 [SELF-HEALING] Healed Selector: [data-testid="submit-btn"]
 [SELF-HEALING] Winning Source:  history
-[SELF-HEALING] Confidence:      92%
+[SELF-HEALING] Confidence:      95%
 [SELF-HEALING] Total Attempts:  1
 [SELF-HEALING] Continuing test execution normally.
 [SELF-HEALING] ================================================================
@@ -441,9 +441,9 @@ Call log:
 ]]>
 </system-out>
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 15. Healing disabled obeys configuration and fails immediately" classname="self-healing.spec.ts" time="2.995">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 15. Healing disabled obeys configuration and fails immediately" classname="self-healing.spec.ts" time="2.916">
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 16. Previously healed locator is prioritized from history" classname="self-healing.spec.ts" time="4.055">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 16. Previously healed locator is prioritized from history" classname="self-healing.spec.ts" time="4.004">
 <system-out>
 <![CDATA[
 [SELF-HEALING] ================================================================
@@ -457,8 +457,8 @@ Call log:
 Call log:
 [2m  - waiting for locator('#oldPrimary')[22m
 
-[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...
-[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 95%):
+[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...
+[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 99%i:
 [SELF-HEALING]   Selector: [data-testid="submit-btn"]
 [SELF-HEALING] ================================================================
 [SELF-HEALING] SUCCESS: ELEMENT SUCCESSFULLY HEALED!
@@ -466,7 +466,7 @@ Call log:
 [SELF-HEALING] Element:         LearnedElement
 [SELF-HEALING] Healed Selector: [data-testid="submit-btn"]
 [SELF-HEALING] Winning Source:  history
-[SELF-HEALING] Confidence:      95%
+[SELF-HEALING] Confidence:      99%
 [SELF-HEALING] Total Attempts:  1
 [SELF-HEALING] Continuing test execution normally.
 [SELF-HEALING] ================================================================
@@ -474,11 +474,11 @@ Call log:
 ]]>
 </system-out>
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 17. Healing history stores records accurately" classname="self-healing.spec.ts" time="0.435">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 17. Healing history stores records accurately" classname="self-healing.spec.ts" time="0.428">
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 18. CI execution generates valid JSON and HTML reports" classname="self-healing.spec.ts" time="0.488">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › 18. CI execution generates valid JSON and HTML reports" classname="self-healing.spec.ts" time="0.392">
 </testcase>
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › Bonus: LocatorDiscovery extracts semantic interactive elements" classname="self-healing.spec.ts" time="0.484">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › Bonus: LocatorDiscovery extracts semantic interactive elements" classname="self-healing.spec.ts" time="0.404">
 </testcase>
 </testsuite>
 </testsuites>

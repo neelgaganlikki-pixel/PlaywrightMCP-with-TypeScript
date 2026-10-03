@@ -100,12 +100,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2162,
+                      "duration": 2127,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:24:41.139Z",
+                      "startTime": "2026-10-03T19:16:47.748Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -134,7 +134,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4111,
+                      "duration": 4082,
                       "errors": [],
                       "stdout": [
                         {
@@ -162,10 +162,10 @@
                           "text": "[SELF-HEALING] Reason:   locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#nonExistentPrimaryId')\u001b[22m\n\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...\n"
+                          "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 92%):\n"
+                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 95%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: [data-testid=\"submit-btn\"]\n"
@@ -189,7 +189,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      92%\n"
+                          "text": "[SELF-HEALING] Confidence:      95%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -203,7 +203,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:24:43.934Z",
+                      "startTime": "2026-10-03T19:16:50.573Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -232,7 +232,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4067,
+                      "duration": 4023,
                       "errors": [],
                       "stdout": [
                         {
@@ -260,10 +260,10 @@
                           "text": "[SELF-HEALING] Reason:   locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#brokenPrimaryId')\u001b[22m\n\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...\n"
+                          "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 92%):\n"
+                          "text": "[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 95%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: [data-testid=\"submit-btn\"]\n"
@@ -287,7 +287,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      92%\n"
+                          "text": "[SELF-HEALING] Confidence:      95%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -301,7 +301,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:24:48.084Z",
+                      "startTime": "2026-10-03T19:16:54.693Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -330,7 +330,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3994,
+                      "duration": 4132,
                       "errors": [],
                       "stdout": [
                         {
@@ -358,10 +358,10 @@
                           "text": "[SELF-HEALING] Reason:   locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#brokenPrimaryId')\u001b[22m\n\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...\n"
+                          "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 92%):\n"
+                          "text": "[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 95%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: button[name=\"secondFallbackBtn\"]\n"
@@ -385,7 +385,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      92%\n"
+                          "text": "[SELF-HEALING] Confidence:      95%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -399,7 +399,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:24:52.183Z",
+                      "startTime": "2026-10-03T19:16:58.746Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -428,7 +428,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5993,
+                      "duration": 5990,
                       "errors": [],
                       "stdout": [
                         {
@@ -456,16 +456,16 @@
                           "text": "[SELF-HEALING] Reason:   locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#broken1')\u001b[22m\n\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...\n"
+                          "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/2] via [REPOSITORY] (Confidence: 90%):\n"
+                          "text": "[SELF-HEALING] Attempt [1/2] via [REPOSITORY] (Confidence: 90%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: #broken2\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [2/2] via [REPOSITORY] (Confidence: 85%):\n"
+                          "text": "[SELF-HEALING] Attempt [2/2] via [REPOSITORY] (Confidence: 85%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: #broken3\n"
@@ -501,7 +501,7 @@
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:24:56.217Z",
+                      "startTime": "2026-10-03T19:17:02.910Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -530,7 +530,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3053,
+                      "duration": 2964,
                       "errors": [],
                       "stdout": [
                         {
@@ -558,10 +558,10 @@
                           "text": "[SELF-HEALING] Reason:   locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#nonExistent')\u001b[22m\n\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...\n"
+                          "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%):\n"
+                          "text": "[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: .duplicate-btn\n"
@@ -597,7 +597,7 @@
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:25:02.252Z",
+                      "startTime": "2026-10-03T19:17:08.943Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -626,7 +626,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4302,
+                      "duration": 4096,
                       "errors": [],
                       "stdout": [
                         {
@@ -654,10 +654,10 @@
                           "text": "[SELF-HEALING] Reason:   locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#brokenCardBButton')\u001b[22m\n\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...\n"
+                          "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/3] via [HISTORY] (Confidence: 92%):\n"
+                          "text": "[SELF-HEALING] Attempt [1/3] via [HISTORY] (Confidence: 95%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: .action-btn\n"
@@ -684,7 +684,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      92%\n"
+                          "text": "[SELF-HEALING] Confidence:      95%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -698,7 +698,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:25:05.356Z",
+                      "startTime": "2026-10-03T19:17:11.958Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -727,7 +727,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4035,
+                      "duration": 4311,
                       "errors": [],
                       "stdout": [
                         {
@@ -755,10 +755,10 @@
                           "text": "[SELF-HEALING] Reason:   locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#oldClickButtonId')\u001b[22m\n\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...\n"
+                          "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 92%):\n"
+                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 95%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: [data-testid=\"click-target\"]\n"
@@ -782,7 +782,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      92%\n"
+                          "text": "[SELF-HEALING] Confidence:      95%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -796,7 +796,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:25:09.718Z",
+                      "startTime": "2026-10-03T19:17:16.096Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -825,7 +825,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4175,
+                      "duration": 4001,
                       "errors": [],
                       "stdout": [
                         {
@@ -853,10 +853,10 @@
                           "text": "[SELF-HEALING] Reason:   locator.fill: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#oldEmailInput')\u001b[22m\n\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...\n"
+                          "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 92%):\n"
+                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 95%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: [data-testid=\"email-field\"]\n"
@@ -880,7 +880,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      92%\n"
+                          "text": "[SELF-HEALING] Confidence:      95%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -894,7 +894,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:25:13.823Z",
+                      "startTime": "2026-10-03T19:17:20.453Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -923,7 +923,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 518,
+                      "duration": 484,
                       "errors": [],
                       "stdout": [
                         {
@@ -951,10 +951,10 @@
                           "text": "[SELF-HEALING] Reason:   Element is not visible for locator: #oldBadgeId\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...\n"
+                          "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 92%):\n"
+                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 95%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: [data-testid=\"visible-badge\"]\n"
@@ -978,7 +978,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      92%\n"
+                          "text": "[SELF-HEALING] Confidence:      95%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -992,7 +992,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:25:18.059Z",
+                      "startTime": "2026-10-03T19:17:24.489Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1021,7 +1021,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2981,
+                      "duration": 2944,
                       "errors": [],
                       "stdout": [
                         {
@@ -1049,10 +1049,10 @@
                           "text": "[SELF-HEALING] Reason:   locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#brokenDisabledId')\u001b[22m\n\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...\n"
+                          "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%):\n"
+                          "text": "[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: #disabledButton\n"
@@ -1088,7 +1088,7 @@
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:25:18.611Z",
+                      "startTime": "2026-10-03T19:17:25.010Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1117,7 +1117,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2983,
+                      "duration": 2951,
                       "errors": [],
                       "stdout": [
                         {
@@ -1145,10 +1145,10 @@
                           "text": "[SELF-HEALING] Reason:   locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#brokenHiddenId')\u001b[22m\n\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...\n"
+                          "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%):\n"
+                          "text": "[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: #hiddenButton\n"
@@ -1184,7 +1184,7 @@
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:25:21.627Z",
+                      "startTime": "2026-10-03T19:17:27.988Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1213,7 +1213,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4528,
+                      "duration": 4443,
                       "errors": [],
                       "stdout": [
                         {
@@ -1241,10 +1241,10 @@
                           "text": "[SELF-HEALING] Reason:   locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#nonExistent1')\u001b[22m\n\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...\n"
+                          "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%):\n"
+                          "text": "[SELF-HEALING] Attempt [1/1] via [REPOSITORY] (Confidence: 90%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: #nonExistent2\n"
@@ -1280,7 +1280,7 @@
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:25:24.666Z",
+                      "startTime": "2026-10-03T19:17:30.972Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1309,7 +1309,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2582,
+                      "duration": 2579,
                       "errors": [],
                       "stdout": [
                         {
@@ -1337,10 +1337,10 @@
                           "text": "[SELF-HEALING] Reason:   locator.click: SyntaxError: Failed to execute 'evaluate' on 'Document': The string '///invalid[[[selector' is not a valid XPath expression.\n    at Object.queryAll (<anonymous>:6296:25)\n    at InjectedScript._queryEngineAll (<anonymous>:6969:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6956:30)\n    at callMatchedElements (eval at evaluate (:311:30), <anonymous>:2:29)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\nCall log:\n\u001b[2m  - waiting for locator('///invalid[[[selector')\u001b[22m\n\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...\n"
+                          "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 92%):\n"
+                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 95%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: [data-testid=\"submit-btn\"]\n"
@@ -1364,7 +1364,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      92%\n"
+                          "text": "[SELF-HEALING] Confidence:      95%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -1378,7 +1378,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:25:29.227Z",
+                      "startTime": "2026-10-03T19:17:35.457Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1407,12 +1407,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2995,
+                      "duration": 2916,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:25:31.843Z",
+                      "startTime": "2026-10-03T19:17:38.074Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1441,7 +1441,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4055,
+                      "duration": 4004,
                       "errors": [],
                       "stdout": [
                         {
@@ -1469,10 +1469,10 @@
                           "text": "[SELF-HEALING] Reason:   locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#oldPrimary')\u001b[22m\n\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Primary locator failed. Evaluating candidate fallbacks...\n"
+                          "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 95%):\n"
+                          "text": "[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 99%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: [data-testid=\"submit-btn\"]\n"
@@ -1496,7 +1496,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      95%\n"
+                          "text": "[SELF-HEALING] Confidence:      99%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -1510,7 +1510,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:25:34.877Z",
+                      "startTime": "2026-10-03T19:17:41.026Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1539,12 +1539,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 435,
+                      "duration": 428,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:25:38.977Z",
+                      "startTime": "2026-10-03T19:17:45.067Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1573,12 +1573,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 488,
+                      "duration": 392,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:25:39.452Z",
+                      "startTime": "2026-10-03T19:17:45.526Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1607,12 +1607,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 484,
+                      "duration": 404,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-03T18:25:39.977Z",
+                      "startTime": "2026-10-03T19:17:45.953Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1632,8 +1632,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-03T18:24:39.314Z",
-    "duration": 61662.6,
+    "startTime": "2026-10-03T19:16:45.654Z",
+    "duration": 61257.719999999994,
     "expected": 19,
     "skipped": 0,
     "unexpected": 0,
