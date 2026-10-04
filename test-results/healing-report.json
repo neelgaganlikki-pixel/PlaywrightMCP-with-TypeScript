@@ -5,8 +5,8 @@
   "healingRate": "64%",
   "events": [
     {
-      "id": "heal_1791055014504_89jdo",
-      "timestamp": "2026-10-03T19:16:54.504Z",
+      "id": "heal_1791087486525_y3zcr",
+      "timestamp": "2026-10-04T04:18:06.525Z",
       "testName": "Playwright Test",
       "pageName": "GenericPage",
       "elementName": "FailedPrimaryBtn",
@@ -17,13 +17,13 @@
         "[data-testid=\"submit-btn\"]"
       ],
       "attemptCount": 1,
-      "confidence": 0.9500000000000001,
+      "confidence": 0.99,
       "source": "history",
       "success": true
     },
     {
-      "id": "heal_1791055018598_dnepb",
-      "timestamp": "2026-10-03T19:16:58.598Z",
+      "id": "heal_1791087490134_w5udo",
+      "timestamp": "2026-10-04T04:18:10.134Z",
       "testName": "Playwright Test",
       "pageName": "GenericPage",
       "elementName": "FirstFallbackBtn",
@@ -34,13 +34,13 @@
         "[data-testid=\"submit-btn\"]"
       ],
       "attemptCount": 1,
-      "confidence": 0.9500000000000001,
+      "confidence": 0.99,
       "source": "history",
       "success": true
     },
     {
-      "id": "heal_1791055022754_hs247",
-      "timestamp": "2026-10-03T19:17:02.754Z",
+      "id": "heal_1791087493700_76o9j",
+      "timestamp": "2026-10-04T04:18:13.700Z",
       "testName": "Playwright Test",
       "pageName": "GenericPage",
       "elementName": "SecondFallbackBtn",
@@ -51,13 +51,13 @@
         "button[name=\"secondFallbackBtn\"]"
       ],
       "attemptCount": 1,
-      "confidence": 0.9500000000000001,
+      "confidence": 0.99,
       "source": "history",
       "success": true
     },
     {
-      "id": "fail_1791055028766_9g9ln",
-      "timestamp": "2026-10-03T19:17:08.766Z",
+      "id": "fail_1791087499251_cri36",
+      "timestamp": "2026-10-04T04:18:19.251Z",
       "testName": "Playwright Test",
       "pageName": "GenericPage",
       "elementName": "AllFailBtn",
@@ -75,8 +75,8 @@
       "failureReason": "All 2 fallback candidates failed or were invalid."
     },
     {
-      "id": "fail_1791055031821_e2osp",
-      "timestamp": "2026-10-03T19:17:11.821Z",
+      "id": "fail_1791087501787_0lcjo",
+      "timestamp": "2026-10-04T04:18:21.787Z",
       "testName": "Playwright Test",
       "pageName": "GenericPage",
       "elementName": "AmbiguousBtn",
@@ -93,8 +93,8 @@
       "failureReason": "All 1 fallback candidates failed or were invalid."
     },
     {
-      "id": "heal_1791055035923_c3bqt",
-      "timestamp": "2026-10-03T19:17:15.923Z",
+      "id": "heal_1791087505373_apbyt",
+      "timestamp": "2026-10-04T04:18:25.373Z",
       "testName": "Playwright Test",
       "pageName": "GenericPage",
       "elementName": "CardBAction",
@@ -105,13 +105,13 @@
         ".action-btn"
       ],
       "attemptCount": 1,
-      "confidence": 0.9500000000000001,
+      "confidence": 0.99,
       "source": "history",
       "success": true
     },
     {
-      "id": "heal_1791055040307_uij8x",
-      "timestamp": "2026-10-03T19:17:20.307Z",
+      "id": "heal_1791087508965_t4mwx",
+      "timestamp": "2026-10-04T04:18:28.965Z",
       "testName": "Playwright Test",
       "pageName": "GenericPage",
       "elementName": "ClickTargetBtn",
@@ -122,13 +122,13 @@
         "[data-testid=\"click-target\"]"
       ],
       "attemptCount": 1,
-      "confidence": 0.9500000000000001,
+      "confidence": 0.99,
       "source": "history",
       "success": true
     },
     {
-      "id": "heal_1791055044329_70ph4",
-      "timestamp": "2026-10-03T19:17:24.329Z",
+      "id": "heal_1791087512522_zu4wq",
+      "timestamp": "2026-10-04T04:18:32.522Z",
       "testName": "Playwright Test",
       "pageName": "GenericPage",
       "elementName": "EmailInput",
@@ -139,13 +139,13 @@
         "[data-testid=\"email-field\"]"
       ],
       "attemptCount": 1,
-      "confidence": 0.9500000000000001,
+      "confidence": 0.99,
       "source": "history",
       "success": true
     },
     {
-      "id": "heal_1791055044861_u5ewf",
-      "timestamp": "2026-10-03T19:17:24.861Z",
+      "id": "heal_1791087512589_mrfyw",
+      "timestamp": "2026-10-04T04:18:32.589Z",
       "testName": "Playwright Test",
       "pageName": "GenericPage",
       "elementName": "StatusBadge",
@@ -156,13 +156,13 @@
         "[data-testid=\"visible-badge\"]"
       ],
       "attemptCount": 1,
-      "confidence": 0.9500000000000001,
+      "confidence": 0.99,
       "source": "history",
       "success": true
     },
     {
-      "id": "fail_1791055047856_vtr6z",
-      "timestamp": "2026-10-03T19:17:27.856Z",
+      "id": "fail_1791087515127_sagp8",
+      "timestamp": "2026-10-04T04:18:35.127Z",
       "testName": "Playwright Test",
       "pageName": "GenericPage",
       "elementName": "DisabledBtn",
@@ -179,8 +179,8 @@
       "failureReason": "All 1 fallback candidates failed or were invalid."
     },
     {
-      "id": "fail_1791055050842_j3xdw",
-      "timestamp": "2026-10-03T19:17:30.842Z",
+      "id": "fail_1791087517674_gbomg",
+      "timestamp": "2026-10-04T04:18:37.674Z",
       "testName": "Playwright Test",
       "pageName": "GenericPage",
       "elementName": "HiddenBtn",
@@ -197,8 +197,8 @@
       "failureReason": "All 1 fallback candidates failed or were invalid."
     },
     {
-      "id": "fail_1791055055299_c9a12",
-      "timestamp": "2026-10-03T19:17:35.299Z",
+      "id": "fail_1791087521713_c2kgs",
+      "timestamp": "2026-10-04T04:18:41.713Z",
       "testName": "Playwright Test",
       "pageName": "GenericPage",
       "elementName": "TimeoutBtn",
@@ -215,8 +215,8 @@
       "failureReason": "All 1 fallback candidates failed or were invalid."
     },
     {
-      "id": "heal_1791055057914_zdnfr",
-      "timestamp": "2026-10-03T19:17:37.914Z",
+      "id": "heal_1791087523805_b3d0u",
+      "timestamp": "2026-10-04T04:18:43.805Z",
       "testName": "Playwright Test",
       "pageName": "GenericPage",
       "elementName": "InvalidLocatorBtn",
@@ -227,13 +227,13 @@
         "[data-testid=\"submit-btn\"]"
       ],
       "attemptCount": 1,
-      "confidence": 0.9500000000000001,
+      "confidence": 0.99,
       "source": "history",
       "success": true
     },
     {
-      "id": "heal_1791055064917_gsfwi",
-      "timestamp": "2026-10-03T19:17:44.917Z",
+      "id": "heal_1791087529904_fnv8p",
+      "timestamp": "2026-10-04T04:18:49.904Z",
       "testName": "Playwright Test",
       "pageName": "GenericPage",
       "elementName": "LearnedElement",
@@ -249,5 +249,5 @@
       "success": true
     }
   ],
-  "generatedAt": "2026-10-03T19:17:45.809Z"
+  "generatedAt": "2026-10-04T04:18:49.917Z"
 }

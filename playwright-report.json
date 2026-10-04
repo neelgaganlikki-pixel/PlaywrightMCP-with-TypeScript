@@ -81,11 +81,11 @@
         {
           "title": "Self-Healing Automation System - Comprehensive Verification Suite",
           "file": "self-healing.spec.ts",
-          "line": 16,
+          "line": 17,
           "column": 6,
           "specs": [
             {
-              "title": "1. Primary locator succeeds directly without healing",
+              "title": "Self-Healing Engine - End-to-End Verification of All 19 Capabilities",
               "ok": true,
               "tags": [],
               "tests": [
@@ -100,41 +100,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2127,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:16:47.748Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-c4d3095cdef362569125",
-              "file": "self-healing.spec.ts",
-              "line": 81,
-              "column": 7
-            },
-            {
-              "title": "2. Primary locator fails and initiates healing fallback",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4082,
+                      "duration": 49081,
                       "errors": [],
                       "stdout": [
                         {
@@ -165,7 +131,7 @@
                           "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 95%i:\n"
+                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 99%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: [data-testid=\"submit-btn\"]\n"
@@ -189,7 +155,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      95%\n"
+                          "text": "[SELF-HEALING] Confidence:      99%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -199,42 +165,7 @@
                         },
                         {
                           "text": "[SELF-HEALING] ================================================================\n\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:16:50.573Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-ed8e735430c747a700a2",
-              "file": "self-healing.spec.ts",
-              "line": 94,
-              "column": 7
-            },
-            {
-              "title": "3. First fallback succeeds",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4023,
-                      "errors": [],
-                      "stdout": [
+                        },
                         {
                           "text": "\n[SELF-HEALING] ================================================================\n"
                         },
@@ -263,7 +194,7 @@
                           "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 95%i:\n"
+                          "text": "[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 99%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: [data-testid=\"submit-btn\"]\n"
@@ -287,7 +218,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      95%\n"
+                          "text": "[SELF-HEALING] Confidence:      99%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -297,42 +228,7 @@
                         },
                         {
                           "text": "[SELF-HEALING] ================================================================\n\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:16:54.693Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-2e1a80e7def98a20d179",
-              "file": "self-healing.spec.ts",
-              "line": 107,
-              "column": 7
-            },
-            {
-              "title": "4. Second fallback succeeds when first fallback fails",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4132,
-                      "errors": [],
-                      "stdout": [
+                        },
                         {
                           "text": "\n[SELF-HEALING] ================================================================\n"
                         },
@@ -361,7 +257,7 @@
                           "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 95%i:\n"
+                          "text": "[SELF-HEALING] Attempt [1/2] via [HISTORY] (Confidence: 99%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: button[name=\"secondFallbackBtn\"]\n"
@@ -385,7 +281,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      95%\n"
+                          "text": "[SELF-HEALING] Confidence:      99%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -395,42 +291,7 @@
                         },
                         {
                           "text": "[SELF-HEALING] ================================================================\n\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:16:58.746Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-f6818b2a2bd190da8890",
-              "file": "self-healing.spec.ts",
-              "line": 120,
-              "column": 7
-            },
-            {
-              "title": "5. All fallbacks fail and preserves genuine error",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 5990,
-                      "errors": [],
-                      "stdout": [
+                        },
                         {
                           "text": "\n[SELF-HEALING] ================================================================\n"
                         },
@@ -469,70 +330,7 @@
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: #broken3\n"
-                        }
-                      ],
-                      "stderr": [
-                        {
-                          "text": "\n[SELF-HEALING] ================================================================\n"
                         },
-                        {
-                          "text": "[SELF-HEALING] HEALING EXHAUSTED: ALL CANDIDATES FAILED\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] ================================================================\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Element:         AllFailBtn\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Action:          click\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Attempts tried:  2\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Terminal Error:  locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#broken1')\u001b[22m\n\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Preserving genuine test failure. Rethrowing.\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] ================================================================\n\n"
-                        }
-                      ],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:17:02.910Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-202f43200f3763da2eb4",
-              "file": "self-healing.spec.ts",
-              "line": 133,
-              "column": 7
-            },
-            {
-              "title": "6. Multiple matching elements without context fails safely",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2964,
-                      "errors": [],
-                      "stdout": [
                         {
                           "text": "\n[SELF-HEALING] ================================================================\n"
                         },
@@ -565,70 +363,7 @@
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: .duplicate-btn\n"
-                        }
-                      ],
-                      "stderr": [
-                        {
-                          "text": "\n[SELF-HEALING] ================================================================\n"
                         },
-                        {
-                          "text": "[SELF-HEALING] HEALING EXHAUSTED: ALL CANDIDATES FAILED\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] ================================================================\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Element:         AmbiguousBtn\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Action:          click\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Attempts tried:  1\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Terminal Error:  locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#nonExistent')\u001b[22m\n\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Preserving genuine test failure. Rethrowing.\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] ================================================================\n\n"
-                        }
-                      ],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:17:08.943Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-9d214f24b5a164c9bbd9",
-              "file": "self-healing.spec.ts",
-              "line": 144,
-              "column": 7
-            },
-            {
-              "title": "7. Context-based healing accurately scopes to intended card",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4096,
-                      "errors": [],
-                      "stdout": [
                         {
                           "text": "\n[SELF-HEALING] ================================================================\n"
                         },
@@ -657,7 +392,7 @@
                           "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/3] via [HISTORY] (Confidence: 95%i:\n"
+                          "text": "[SELF-HEALING] Attempt [1/3] via [HISTORY] (Confidence: 99%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: .action-btn\n"
@@ -684,7 +419,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      95%\n"
+                          "text": "[SELF-HEALING] Confidence:      99%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -694,42 +429,7 @@
                         },
                         {
                           "text": "[SELF-HEALING] ================================================================\n\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:17:11.958Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-11e6fd1e88c02c122556",
-              "file": "self-healing.spec.ts",
-              "line": 156,
-              "column": 7
-            },
-            {
-              "title": "8. Click healing handles broken selector and triggers event",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4311,
-                      "errors": [],
-                      "stdout": [
+                        },
                         {
                           "text": "\n[SELF-HEALING] ================================================================\n"
                         },
@@ -758,7 +458,7 @@
                           "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 95%i:\n"
+                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 99%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: [data-testid=\"click-target\"]\n"
@@ -782,7 +482,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      95%\n"
+                          "text": "[SELF-HEALING] Confidence:      99%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -792,42 +492,7 @@
                         },
                         {
                           "text": "[SELF-HEALING] ================================================================\n\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:17:16.096Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-23c3fda10de3048bbcbc",
-              "file": "self-healing.spec.ts",
-              "line": 174,
-              "column": 7
-            },
-            {
-              "title": "9. Input healing recovers and fills value",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4001,
-                      "errors": [],
-                      "stdout": [
+                        },
                         {
                           "text": "\n[SELF-HEALING] ================================================================\n"
                         },
@@ -856,7 +521,7 @@
                           "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 95%i:\n"
+                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 99%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: [data-testid=\"email-field\"]\n"
@@ -880,7 +545,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      95%\n"
+                          "text": "[SELF-HEALING] Confidence:      99%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -890,42 +555,7 @@
                         },
                         {
                           "text": "[SELF-HEALING] ================================================================\n\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:17:20.453Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-9062119261cc6b139173",
-              "file": "self-healing.spec.ts",
-              "line": 187,
-              "column": 7
-            },
-            {
-              "title": "10. Visibility healing verifies element through fallback",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 484,
-                      "errors": [],
-                      "stdout": [
+                        },
                         {
                           "text": "\n[SELF-HEALING] ================================================================\n"
                         },
@@ -954,7 +584,7 @@
                           "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 95%i:\n"
+                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 99%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: [data-testid=\"visible-badge\"]\n"
@@ -978,7 +608,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      95%\n"
+                          "text": "[SELF-HEALING] Confidence:      99%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -988,42 +618,7 @@
                         },
                         {
                           "text": "[SELF-HEALING] ================================================================\n\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:17:24.489Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-cb16d4eb2dd7698ca3e3",
-              "file": "self-healing.spec.ts",
-              "line": 200,
-              "column": 7
-            },
-            {
-              "title": "11. Disabled element is rejected during interactive action healing",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2944,
-                      "errors": [],
-                      "stdout": [
+                        },
                         {
                           "text": "\n[SELF-HEALING] ================================================================\n"
                         },
@@ -1056,70 +651,7 @@
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: #disabledButton\n"
-                        }
-                      ],
-                      "stderr": [
-                        {
-                          "text": "\n[SELF-HEALING] ================================================================\n"
                         },
-                        {
-                          "text": "[SELF-HEALING] HEALING EXHAUSTED: ALL CANDIDATES FAILED\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] ================================================================\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Element:         DisabledBtn\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Action:          click\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Attempts tried:  1\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Terminal Error:  locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#brokenDisabledId')\u001b[22m\n\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Preserving genuine test failure. Rethrowing.\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] ================================================================\n\n"
-                        }
-                      ],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:17:25.010Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-01a27272f1509f6dec79",
-              "file": "self-healing.spec.ts",
-              "line": 212,
-              "column": 7
-            },
-            {
-              "title": "12. Hidden element is rejected during interactive click healing",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2951,
-                      "errors": [],
-                      "stdout": [
                         {
                           "text": "\n[SELF-HEALING] ================================================================\n"
                         },
@@ -1152,70 +684,7 @@
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: #hiddenButton\n"
-                        }
-                      ],
-                      "stderr": [
-                        {
-                          "text": "\n[SELF-HEALING] ================================================================\n"
                         },
-                        {
-                          "text": "[SELF-HEALING] HEALING EXHAUSTED: ALL CANDIDATES FAILED\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] ================================================================\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Element:         HiddenBtn\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Action:          click\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Attempts tried:  1\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Terminal Error:  locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#brokenHiddenId')\u001b[22m\n\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Preserving genuine test failure. Rethrowing.\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] ================================================================\n\n"
-                        }
-                      ],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:17:27.988Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-32c5a3ae35984e350be2",
-              "file": "self-healing.spec.ts",
-              "line": 223,
-              "column": 7
-            },
-            {
-              "title": "13. Timeout is enforced properly without infinite hanging",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4443,
-                      "errors": [],
-                      "stdout": [
                         {
                           "text": "\n[SELF-HEALING] ================================================================\n"
                         },
@@ -1248,70 +717,7 @@
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: #nonExistent2\n"
-                        }
-                      ],
-                      "stderr": [
-                        {
-                          "text": "\n[SELF-HEALING] ================================================================\n"
                         },
-                        {
-                          "text": "[SELF-HEALING] HEALING EXHAUSTED: ALL CANDIDATES FAILED\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] ================================================================\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Element:         TimeoutBtn\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Action:          click\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Attempts tried:  1\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Terminal Error:  locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#nonExistent1')\u001b[22m\n\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] Preserving genuine test failure. Rethrowing.\n"
-                        },
-                        {
-                          "text": "[SELF-HEALING] ================================================================\n\n"
-                        }
-                      ],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:17:30.972Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-f7c6ac258bec75b49031",
-              "file": "self-healing.spec.ts",
-              "line": 234,
-              "column": 7
-            },
-            {
-              "title": "14. Invalid locator syntax is handled gracefully without crashing system",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2579,
-                      "errors": [],
-                      "stdout": [
                         {
                           "text": "\n[SELF-HEALING] ================================================================\n"
                         },
@@ -1340,7 +746,7 @@
                           "text": "[SELF-HEALING Primary locator failed. Evaluating candidate fallbacks...\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 95%i:\n"
+                          "text": "[SELF-HEALING] Attempt [1/1] via [HISTORY] (Confidence: 99%i:\n"
                         },
                         {
                           "text": "[SELF-HEALING]   Selector: [data-testid=\"submit-btn\"]\n"
@@ -1364,7 +770,7 @@
                           "text": "[SELF-HEALING] Winning Source:  history\n"
                         },
                         {
-                          "text": "[SELF-HEALING] Confidence:      95%\n"
+                          "text": "[SELF-HEALING] Confidence:      99%\n"
                         },
                         {
                           "text": "[SELF-HEALING] Total Attempts:  1\n"
@@ -1374,76 +780,7 @@
                         },
                         {
                           "text": "[SELF-HEALING] ================================================================\n\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:17:35.457Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-ce13ea5e18ebaf41b96c",
-              "file": "self-healing.spec.ts",
-              "line": 249,
-              "column": 7
-            },
-            {
-              "title": "15. Healing disabled obeys configuration and fails immediately",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2916,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:17:38.074Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-5cc4b8a14c20d18b223e",
-              "file": "self-healing.spec.ts",
-              "line": 262,
-              "column": 7
-            },
-            {
-              "title": "16. Previously healed locator is prioritized from history",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 4004,
-                      "errors": [],
-                      "stdout": [
+                        },
                         {
                           "text": "\n[SELF-HEALING] ================================================================\n"
                         },
@@ -1508,9 +845,223 @@
                           "text": "[SELF-HEALING] ================================================================\n\n"
                         }
                       ],
-                      "stderr": [],
+                      "stderr": [
+                        {
+                          "text": "\n[SELF-HEALING] ================================================================\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] HEALING EXHAUSTED: ALL CANDIDATES FAILED\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] ================================================================\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Element:         AllFailBtn\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Action:          click\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Attempts tried:  2\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Terminal Error:  locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#broken1')\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Preserving genuine test failure. Rethrowing.\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] ================================================================\n\n"
+                        },
+                        {
+                          "text": "\n[SELF-HEALING] ================================================================\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] HEALING EXHAUSTED: ALL CANDIDATES FAILED\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] ================================================================\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Element:         AmbiguousBtn\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Action:          click\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Attempts tried:  1\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Terminal Error:  locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#nonExistent')\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Preserving genuine test failure. Rethrowing.\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] ================================================================\n\n"
+                        },
+                        {
+                          "text": "\n[SELF-HEALING] ================================================================\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] HEALING EXHAUSTED: ALL CANDIDATES FAILED\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] ================================================================\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Element:         DisabledBtn\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Action:          click\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Attempts tried:  1\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Terminal Error:  locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#brokenDisabledId')\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Preserving genuine test failure. Rethrowing.\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] ================================================================\n\n"
+                        },
+                        {
+                          "text": "\n[SELF-HEALING] ================================================================\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] HEALING EXHAUSTED: ALL CANDIDATES FAILED\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] ================================================================\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Element:         HiddenBtn\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Action:          click\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Attempts tried:  1\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Terminal Error:  locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#brokenHiddenId')\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Preserving genuine test failure. Rethrowing.\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] ================================================================\n\n"
+                        },
+                        {
+                          "text": "\n[SELF-HEALING] ================================================================\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] HEALING EXHAUSTED: ALL CANDIDATES FAILED\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] ================================================================\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Element:         TimeoutBtn\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Action:          click\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Attempts tried:  1\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Terminal Error:  locator.click: Timeout 1500ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#nonExistent1')\u001b[22m\n\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] Preserving genuine test failure. Rethrowing.\n"
+                        },
+                        {
+                          "text": "[SELF-HEALING] ================================================================\n\n"
+                        }
+                      ],
                       "retry": 0,
-                      "startTime": "2026-10-03T19:17:41.026Z",
+                      "steps": [
+                        {
+                          "title": "1. Primary locator succeeds directly without healing",
+                          "duration": 1430
+                        },
+                        {
+                          "title": "2. Primary locator fails and initiates healing fallback",
+                          "duration": 3643
+                        },
+                        {
+                          "title": "3. First fallback succeeds",
+                          "duration": 3568
+                        },
+                        {
+                          "title": "4. Second fallback succeeds when first fallback fails",
+                          "duration": 3565
+                        },
+                        {
+                          "title": "5. All fallbacks fail and preserves genuine error",
+                          "duration": 5544
+                        },
+                        {
+                          "title": "6. Multiple matching elements without context fails safely",
+                          "duration": 2535
+                        },
+                        {
+                          "title": "7. Context-based healing accurately scopes to intended card",
+                          "duration": 3598
+                        },
+                        {
+                          "title": "8. Click healing handles broken selector and triggers event",
+                          "duration": 3585
+                        },
+                        {
+                          "title": "9. Input healing recovers and fills value",
+                          "duration": 3558
+                        },
+                        {
+                          "title": "10. Visibility healing verifies element through fallback",
+                          "duration": 61
+                        },
+                        {
+                          "title": "11. Disabled element is rejected during interactive action healing",
+                          "duration": 2535
+                        },
+                        {
+                          "title": "12. Hidden element is rejected during interactive click healing",
+                          "duration": 2546
+                        },
+                        {
+                          "title": "13. Timeout is enforced properly without infinite hanging",
+                          "duration": 4041
+                        },
+                        {
+                          "title": "14. Invalid locator syntax is handled gracefully without crashing system",
+                          "duration": 2098
+                        },
+                        {
+                          "title": "15. Healing disabled obeys configuration and fails immediately",
+                          "duration": 2515
+                        },
+                        {
+                          "title": "16. Previously healed locator is prioritized from history",
+                          "duration": 3581
+                        },
+                        {
+                          "title": "17. Healing history stores records accurately",
+                          "duration": 3
+                        },
+                        {
+                          "title": "18. CI execution generates valid JSON and HTML reports",
+                          "duration": 9
+                        },
+                        {
+                          "title": "19. LocatorDiscovery extracts semantic interactive elements",
+                          "duration": 57
+                        }
+                      ],
+                      "startTime": "2026-10-04T04:18:00.468Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1518,111 +1069,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "8d7eec67450fac9c0d7d-5686938f05715631126b",
+              "id": "8d7eec67450fac9c0d7d-7f11d96c292506eafe33",
               "file": "self-healing.spec.ts",
-              "line": 275,
-              "column": 7
-            },
-            {
-              "title": "17. Healing history stores records accurately",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 428,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:17:45.067Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-738ddaf931967d365406",
-              "file": "self-healing.spec.ts",
-              "line": 292,
-              "column": 7
-            },
-            {
-              "title": "18. CI execution generates valid JSON and HTML reports",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 392,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:17:45.526Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-f95d4b7d8421e5c305d6",
-              "file": "self-healing.spec.ts",
-              "line": 302,
-              "column": 7
-            },
-            {
-              "title": "Bonus: LocatorDiscovery extracts semantic interactive elements",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 404,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-03T19:17:45.953Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8d7eec67450fac9c0d7d-0cb1673a1412613d0a8a",
-              "file": "self-healing.spec.ts",
-              "line": 321,
+              "line": 75,
               "column": 7
             }
           ]
@@ -1632,9 +1081,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-03T19:16:45.654Z",
-    "duration": 61257.719999999994,
-    "expected": 19,
+    "startTime": "2026-10-04T04:17:59.585Z",
+    "duration": 50962.316,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
