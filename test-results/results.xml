@@ -1,6 +1,6 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="50.962316">
-<testsuite name="self-healing.spec.ts" timestamp="2026-10-04T04:17:59.671Z" hostname="chromium" tests="1" failures="0" skipped="0" time="49.081" errors="0">
-<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › Self-Healing Engine - End-to-End Verification of All 19 Capabilities" classname="self-healing.spec.ts" time="49.081">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="51.059212">
+<testsuite name="self-healing.spec.ts" timestamp="2026-10-04T13:08:41.266Z" hostname="chromium" tests="1" failures="0" skipped="0" time="49.213" errors="0">
+<testcase name="Self-Healing Automation System - Comprehensive Verification Suite › Self-Healing Engine - End-to-End Verification of All 19 Capabilities" classname="self-healing.spec.ts" time="49.213">
 <system-out>
 <![CDATA[
 [SELF-HEALING] ================================================================

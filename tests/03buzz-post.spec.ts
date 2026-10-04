@@ -68,19 +68,29 @@ test('post a buzz message in OrangeHRM', async ({ page }) => {
 
   console.log('Post button is ready');
 
-  // Step 9: Click Post
-  await postButton.click({ timeout: 10000 });
+  // Step 9: Click Post and wait for submission
+  await Promise.all([
+    page.waitForResponse(
+      (resp) => resp.url().includes('/buzz/posts') && (resp.status() === 200 || resp.status() === 201),
+      { timeout: 15000 }
+    ).catch(() => null),
+    postButton.click({ timeout: 10000 })
+  ]);
 
   console.log('Post button clicked');
 
-  // Step 10: Verify posted message
+  // Step 10: Verify posted message with auto-refresh resilience
   const postedMessage = page
     .locator('p.orangehrm-buzz-post-body-text')
     .filter({ hasText: message });
 
-  await expect(postedMessage).toBeVisible({
-    timeout: 30000
-  });
+  try {
+    await expect(postedMessage).toBeVisible({ timeout: 15000 });
+  } catch {
+    console.log('Feed slow to update on public demo server. Reloading buzz feed...');
+    await page.reload({ waitUntil: 'domcontentloaded' });
+    await expect(postedMessage).toBeVisible({ timeout: 30000 });
+  }
 
   console.log(`Successfully verified: ${message}`);
 });

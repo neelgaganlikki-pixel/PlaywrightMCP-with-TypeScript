@@ -9,7 +9,7 @@ test('delete the first buzz post in OrangeHRM', async ({ page }) => {
   await page.getByPlaceholder('Password').fill('admin123');
   await page.getByRole('button', { name: 'Login' }).click();
 
-  await expect(page).toHaveURL(/dashboard/);
+  await expect(page).toHaveURL(/dashboard/, { timeout: 30000 });
 
   await page.locator('span.oxd-main-menu-item--name').filter({ hasText: 'Buzz' }).click();
 

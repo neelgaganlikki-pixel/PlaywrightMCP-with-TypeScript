@@ -461,11 +461,21 @@ test('add a new vacancy in OrangeHRM', async ({ page }) => {
       hasText: vacancyName
     });
 
-  await expect(
-    vacancyRow
-  ).toHaveCount(1, {
-    timeout: 30000
-  });
+  try {
+    await expect(
+      vacancyRow
+    ).toHaveCount(1, {
+      timeout: 15000
+    });
+  } catch {
+    console.log('Vacancy row not immediately visible in table. Reloading vacancies page...');
+    await page.reload({ waitUntil: 'domcontentloaded' });
+    await expect(
+      vacancyRow
+    ).toHaveCount(1, {
+      timeout: 30000
+    });
+  }
 
   console.log(
     `Vacancy verified successfully: ${vacancyName}`

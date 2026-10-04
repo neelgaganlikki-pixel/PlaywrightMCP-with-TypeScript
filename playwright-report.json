@@ -25,7 +25,7 @@
       {
         "outputDir": "D:/Automation Testing/PlayWright MCP- TypeScript/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 1,
         "metadata": {
           "actualWorkers": 1
         },
@@ -100,7 +100,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 49081,
+                      "duration": 49213,
                       "errors": [],
                       "stdout": [
                         {
@@ -986,82 +986,82 @@
                       "steps": [
                         {
                           "title": "1. Primary locator succeeds directly without healing",
-                          "duration": 1430
+                          "duration": 1280
                         },
                         {
                           "title": "2. Primary locator fails and initiates healing fallback",
-                          "duration": 3643
+                          "duration": 3647
                         },
                         {
                           "title": "3. First fallback succeeds",
-                          "duration": 3568
+                          "duration": 3593
                         },
                         {
                           "title": "4. Second fallback succeeds when first fallback fails",
-                          "duration": 3565
+                          "duration": 3589
                         },
                         {
                           "title": "5. All fallbacks fail and preserves genuine error",
-                          "duration": 5544
+                          "duration": 5539
                         },
                         {
                           "title": "6. Multiple matching elements without context fails safely",
-                          "duration": 2535
+                          "duration": 2549
                         },
                         {
                           "title": "7. Context-based healing accurately scopes to intended card",
-                          "duration": 3598
+                          "duration": 3626
                         },
                         {
                           "title": "8. Click healing handles broken selector and triggers event",
-                          "duration": 3585
+                          "duration": 3592
                         },
                         {
                           "title": "9. Input healing recovers and fills value",
-                          "duration": 3558
+                          "duration": 3584
                         },
                         {
                           "title": "10. Visibility healing verifies element through fallback",
-                          "duration": 61
+                          "duration": 66
                         },
                         {
                           "title": "11. Disabled element is rejected during interactive action healing",
-                          "duration": 2535
+                          "duration": 2545
                         },
                         {
                           "title": "12. Hidden element is rejected during interactive click healing",
-                          "duration": 2546
+                          "duration": 2544
                         },
                         {
                           "title": "13. Timeout is enforced properly without infinite hanging",
-                          "duration": 4041
+                          "duration": 4040
                         },
                         {
                           "title": "14. Invalid locator syntax is handled gracefully without crashing system",
-                          "duration": 2098
+                          "duration": 2114
                         },
                         {
                           "title": "15. Healing disabled obeys configuration and fails immediately",
-                          "duration": 2515
+                          "duration": 2523
                         },
                         {
                           "title": "16. Previously healed locator is prioritized from history",
-                          "duration": 3581
+                          "duration": 3577
                         },
                         {
                           "title": "17. Healing history stores records accurately",
-                          "duration": 3
+                          "duration": 5
                         },
                         {
                           "title": "18. CI execution generates valid JSON and HTML reports",
-                          "duration": 9
+                          "duration": 15
                         },
                         {
                           "title": "19. LocatorDiscovery extracts semantic interactive elements",
-                          "duration": 57
+                          "duration": 61
                         }
                       ],
-                      "startTime": "2026-10-04T04:18:00.468Z",
+                      "startTime": "2026-10-04T13:08:42.156Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1081,8 +1081,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-04T04:17:59.585Z",
-    "duration": 50962.316,
+    "startTime": "2026-10-04T13:08:41.148Z",
+    "duration": 51059.212,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
